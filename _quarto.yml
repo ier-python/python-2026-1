@@ -1,0 +1,86 @@
+lang: es 
+notebook-links: global
+
+project:
+  type: book  
+  output-dir: docs  
+  
+# resources: 
+  # - clases/ejercicios/005_E001.ipynb
+#   title: "Descargar libreta 005_E001"
+#   download: true
+
+  
+book:
+  title: "Proyectos de ciencia de datos con Python"
+  # language: es
+  # author: Guillermo Barrios
+  # version: 0.9.1
+  navbar:
+    search: True
+  sidebar:
+    menu: True
+    collapse-level: 1
+    border: true
+    # logo: img/python.png
+    right: Construido con [Quarto](https://quarto.org/).
+    background: "#f8f9fa"
+  repo-url: https://github.com/altamarmx/python-2026-1/
+  chapters:
+    - index.qmd 
+    # - cuadro_honor.qmd 
+    # - proyecto_final.qmd
+    # - clases/001.qmd 
+    # - clases/002.qmd 
+    # - clases/003_venv_espaciotrabajo.qmd
+    # - clases/004_variables_indentado.ipynb
+    # - clases/005_E001.qmd
+    # - clases/006_comprehension.ipynb
+    # - clases/007_fstrings.ipynb
+    # - clases/008_funciones.ipynb
+    # - clases/009_funciones_variables.ipynb
+    # - clases/010_pandas_Dataframes.ipynb
+    # - clases/011_pandas_Dataframes.ipynb
+    # - clases/012_leyendo_datos.ipynb
+    # - clases/013_E002.qmd
+    # - clases/014_read_csv.ipynb
+    # - clases/015_read_csv.ipynb
+    # - clases/016_series_temporales.ipynb
+    # - clases/017_Series_temporales_con.ipynb
+    # - clases/018_multiple_files.ipynb
+    # - clases/019_lambda_functions.ipynb
+    # - clases/020_Ese_objeto_datetime.ipynb
+    # - clases/021_Anatomy_figure.ipynb
+    # - clases/022_mi_primera_grafica.ipynb
+    # - clases/023a_segunda_grafica.ipynb
+    # - clases/023b_segunda_grafica.ipynb
+    # - clases/024_heatmap.ipynb
+    # - clases/025_numpy.ipynb
+    # - clases/026_numpy_2.ipynb
+    # - clases/027_Paquetes.ipynb
+    # - clases/028_Desarrollo_Clase.ipynb
+    # - clases/029_Prueba_Clase.ipynb
+    # - clases/030_Instalando_paquete.ipynb
+    # - clases/031_copy_pandas_numpy_NOT.ipynb
+    # - clases/032_copy_pandas_numpy.ipynb
+    # - clases/033_solucion_reto_illuminance.ipynb
+    # - clases/034_Reto_lluvia.ipynb
+    # - clases/035_importa_lluvia.ipynb
+    # - clases/036_try_except.ipynb
+    # - clases/037_df_lluvia.ipynb
+    # # - clases/034_Tarea_clase_iluminancia.ipynb
+    # - clases/039_cython.ipynb
+    # - clases/040_importa_datos.ipynb
+    # - clases/041_groupby.ipynb
+    # - clases/042_PruebasUnitarias.ipynb
+
+format:
+  html: 
+    theme: 
+      light: spacelab
+      dark: slate
+    code-link: true    
+    number-sections: true
+    number-depth: 1
+
+
