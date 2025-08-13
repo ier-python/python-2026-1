@@ -1,0 +1,229 @@
+---
+title: "Instalar Miniconda en Windows, Linux y macOS"
+subtitle: "Guía breve en formato Quarto (texto plano)"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    theme: cosmo
+  pdf: default
+execute:
+  echo: true
+lang: es
+---
+
+## Por qué usar Miniconda
+
+- Ligero y rápido: instala solo lo esencial (Python + conda).
+- Entornos aislados: cada proyecto con sus propias versiones de Python y paquetes.
+- Reproducibilidad: puedes fijar versiones y exportar el entorno (conda env export).
+- Control de canales: elegir entre defaults o conda-forge según tus necesidades.
+- Multiplataforma: funciona en Windows, Linux y macOS (Intel y Apple Silicon).
+
+Miniconda vs Anaconda: Anaconda trae muchos paquetes preinstalados (más pesado). Miniconda es minimalista y tú instalas solo lo que necesitas.
+
+## Antes de empezar
+
+- Ten a mano tu terminal:
+  - Windows: PowerShell de miniconda
+  - Linux/macOS: Terminal.
+
+## Instalación en Windows 
+
+[https://www.anaconda.com/download/success](https://www.anaconda.com/download/success)
+Opción B (instalador gráfico):
+
+1. Descarga el instalador de Miniconda para Windows (64-bit) desde la página oficial.
+2. Ejecuta el .exe y sigue el asistente:
+
+   * Acepta la licencia.
+   * Instala solo para tu usuario (recomendado).
+   * No marques "Add Miniconda to my PATH".
+3. Ubica la `anaconda power shell` 
+
+![](imagenes/anaconda_power_shell.png)
+
+4. Abre la terminal y ejecuta `python` para verificar la instalación.
+
+![](imagenes/terminal_python.png)
+
+
+## Uso de la terminal
+
+Temas a ver:
+1. Estructura de la compu.
+1. El concepto del `/home/Usuario`
+1. Desktop, Downloads, Documents
+1. Recomendación de donde crear los proyectos
+1. Recomendaciones de nombres
+1. Moverme entre folders 
+1. Llamar el explorador de archivos 
+
+
+
+## Ambientes virtuales: qué son y por qué usarlos
+
+**Definición breve.** Un *ambiente virtual* es una “caja” aislada con su propio Python y paquetes. Así, cada proyecto (o curso) usa EXACTAMENTE las versiones que necesita sin interferir con otros proyectos ni con el Python del sistema operativo.
+
+**Idea clave.** Piensa en laboratorio: cada experimento usa su propio reactivo y protocolo. Si mezclas frascos, contaminas resultados. Con software pasa lo mismo.
+
+### Beneficios para Ingeniería en Energías Renovables
+
+- **Reproducibilidad.** Puedes rehacer un análisis meses después (o en otro equipo) si documentas el entorno.  
+- **Aislamiento.** Evitas choques de versiones: por ejemplo, un proyecto con `pandas 2.2` y otro con `pandas 1.5`.  
+- **Colaboración.** Todo el equipo instala lo mismo con un solo archivo; adiós “en mi compu sí corre”.  
+- **Docencia.** Cada práctica del curso se entrega con su entorno mínimo: estudiantes instalan y corren sin romper nada.  
+- **Portabilidad.** Facilita trabajar en Windows, Linux y macOS (Intel/Apple Silicon) con el mismo conjunto de paquetes.
+
+### Ejemplos concretos (ciencia de datos en ER)
+
+1. **Irradiancia y fotovoltaica (pvlib).** Un entorno con `python`, `numpy`, `pandas`, `scipy` y `pvlib` para estimar GHI/DNI/POA, pérdidas y energía AC.  
+2. **GIS + datos del INEGI.** Un entorno con `geopandas`, `pyproj`, `shapely` (y a veces `gdal`) para unir capas socioeconómicas con clima (ERA5) y visualizar vulnerabilidad energética.  
+3. **Aprendizaje automático.** Un entorno con `scikit-learn`/`xgboost` para pronóstico de demanda eléctrica/consumo HVAC; en macOS/Apple Silicon puedes usar `pytorch` con backend *MPS* (Metal) y en Linux con CUDA cuando haya GPU NVIDIA.
+
+
+### Buenas prácticas
+
+- **1 entorno por proyecto/curso.** Nombres cortos: `pv-solar-2025`, `gis-inegi`, `ml-hvac`.  
+- **Evita mezclar `pip` y `conda`.** Si necesitas `pip`, primero instala todo lo de `conda`, y **al final** lo que solo exista en `pip`.  
+- **Bloquea versiones mínimas.** Empieza con lo necesario; agrega paquetes conforme avances.  
+- **Documenta el entorno.** `conda env export --from-history > environment.yml` (captura solo lo que instalaste, no todo el árbol).  
+
+
+
+¡listo! aquí tienes las **secciones en texto plano** (listas para pegar en tu `.qmd` de Quarto). Al final te pongo fuentes breves.
+
+````
+## ¿Qué es *uv*?
+
+*uv* es un gestor de proyectos y paquetes para Python, escrito en Rust, pensado para ser “todo en uno”: crea ambientes virtuales, instala dependencias, genera un **lockfile** reproducible y ejecuta comandos y herramientas (similar a `pip`, `pip-tools`, `virtualenv`, `pipx`, e incluso gestiona versiones de Python). Su objetivo: ser muy rápido y simplificar el flujo de trabajo.
+
+### Por qué importa en cursos y proyectos de ER
+- Instalas lo mínimo y vuelas: ideal en laboratorios/docencia.
+- Mismo proyecto corre igual en Windows, Linux y macOS con el lockfile.
+- Menos fricción al empezar prácticas (GIS, pvlib, ML, Jupyter).
+
+
+## Ventajas de *uv* para crear ambientes virtuales
+
+1) **Ambientes por defecto y en segundos**  
+`uv` trabaja con ambientes virtuales de forma nativa. Crea uno con:
+
+```bash
+uv venv               # crea .venv
+# o fija versión de Python:
+uv python install 3.12
+uv venv --python 3.12
+````
+
+2. **Proyectos auto-contenidos**
+   Inicializa un proyecto y agrega dependencias; `uv` crea `.venv` automáticamente:
+
+```bash
+uv init energia-ds
+cd energia-ds
+uv add numpy pandas matplotlib
+uv run python -c "import numpy, pandas, matplotlib; print('ok')"
+```
+
+3. **Flujo tipo “requirements” (compatibilidad pip)**
+   Si ya tienes `requirements.in/.txt`:
+
+```bash
+uv venv
+uv pip compile requirements.in -o requirements.txt   # resuelve versiones
+uv pip sync requirements.txt                        # instala EXACTAMENTE lo resuelto
+```
+
+4. **Herramientas efímeras estilo pipx (sin “ensuciar” tu entorno)**
+
+```bash
+uvx ruff --version      # corre ruff en un entorno desechable
+uv tool install ruff    # o instálalo como herramienta de usuario
+```
+
+## Rapidez (énfasis práctico)
+
+* Resolver e instalar paquetes es **mucho más veloz** que con pip tradicional (compilado en Rust, caché global y resolución paralela).
+* En clase/taller, eso significa pasar de “esperar” a “trabajar”: crear `.venv`, instalar `numpy/pandas/scikit-learn` y abrir Jupyter en segundos, incluso en equipos modestos.
+
+Ejemplo “de cero a análisis”:
+
+```bash
+uv init pv-practica
+cd pv-practica
+uv add numpy pandas scipy pvlib jupyterlab
+uv run  jupyter notebook
+```
+
+> Tip: la caché global de `uv` acelera instalaciones repetidas entre proyectos del mismo curso.
+
+## Reproducibilidad fácil (lockfile)
+
+1. **Lockfile universal (`uv.lock`)**
+   El proyecto guarda el resultado exacto de la resolución de dependencias (versiones y hashes). Se versiona en Git para que todes instalen lo mismo.
+
+2. **Instalación que calca el lockfile**
+
+```bash
+# dentro del proyecto con pyproject.toml y uv.lock
+uv lock         # (re-resuelve si cambiaste dependencias)
+uv sync         # crea/actualiza .venv según uv.lock
+uv sync --frozen  # falla si el lockfile no coincide (CI/clase)
+```
+
+3. **Compatibilidad con “requirements”**
+   Si prefieres `requirements.txt`, usa:
+
+```bash
+uv pip compile requirements.in -o requirements.txt
+uv pip sync requirements.txt        # asegura coincidencia exacta
+```
+
+Resultado: el mismo entorno en Windows/Linux/macOS —ideal para prácticas, calificaciones automáticas y trabajos finales.
+
+## Ejemplos por área (ER)
+
+* **Fotovoltaica (pvlib)**
+
+  ```bash
+  uv init pv-modelo
+  cd pv-modelo
+  uv add numpy pandas scipy pvlib matplotlib
+  uv run python script_pv.py
+  ```
+
+* **ML para demanda/HVAC**
+
+  ```bash
+  uv init hvac-ml
+  cd hvac-ml
+  uv add scikit-learn xgboost pandas numpy matplotlib
+  uv run python train.py
+  ```
+
+* **GIS ligero (cuando no requieres GDAL “puro”)**
+
+  ```bash
+  uv init gis-vulnerabilidad
+  cd gis-vulnerabilidad
+  uv add geopandas pyproj shapely matplotlib
+  uv run python mapas.py
+  ```
+
+  Nota: si necesitas **GDAL/GEOS/PROJ** nativos muy específicos, considera un contenedor o conda/mamba para esas binarizaciones pesadas. Para muchos casos, las wheels de `geopandas` bastan.
+
+## Buenas prácticas y “gotchas” (Windows/Linux/macOS)
+
+* **No mezcles gestores** en el mismo entorno (no instales con Homebrew/apt + pip dentro del mismo `.venv`).
+* **Jupyter**: con `uv run --with jupyter jupyter lab` usas el entorno del proyecto. Si quieres ver el kernel en VS Code, crea el kernel (`ipykernel`) como arriba.
+* **Mac ARM vs Intel**: `uv` gestiona Python por versión/arquitectura; evita mezclar intérpretes del sistema con el `.venv`.
+* **Linux**: no uses el Python del sistema para proyectos (evitas romper herramientas del SO).
+* **CI/Clases**: usa `uv sync --frozen` para asegurar que todes tienen exactamente las mismas versiones.
+
+
+## Objetivo final de la clase
+
+- Tener un ambiente virtual para el uso general del curso 
+- Instalar jupyter notebook
+- `Hola mundo` en Jupyter notebook

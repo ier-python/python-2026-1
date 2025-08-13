@@ -1,0 +1,26 @@
+
+## Temario
+
+| Unidad | Tema                                                                   | Subtemas                                                                                                                                                        |
+| ------ | ---------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 0      | **Herramientas para una ciencia de datos reproducible y colaborativa** | Interoperabilidad de datos · Narrativa computacional · Control de versiones con git · Organización del workspace                                                |
+| 1      | **Entorno de trabajo en Python**                                       | Instalación con miniconda · uv, entornos virtuales,  gestión de paquetes · Estructura de carpetas                                                               |
+| 2      | **Python y Jupyter Notebook**                                          | Jupyter vs JupyterLab vs marimo· Tipado dinámico · Strings & list comprehensions · f-strings · Funciones                                                        |
+| 3      | ** Sintáxis, herramientas de control y métodos de Python               | Sintaxis; tipos de variables; iterables; estructuras de control; cadenas; f-strings; funciones; tipado de funciones, list-comprehensions                        |
+| 4      | **Pandas I: importación y limpieza**                                   | pair-wise data; series temporales; datos categóricos; `read_csv`/`read_parquet`; Múltiples archivos; Fechas y `datetime` · Helpers `lambda` · Limpieza básica   |
+| 5      | **Visualización con matplotlib**                                       | Anatomía de la figura; OOP en matplotlib; fig, ax; esquemas complejos specgrid;  Formato de figura                                                              |
+| 6      | **NumPy y cálculo numérico**                                           | arrays, size, shape; estadística de arreglos; Slicing & fancy indexing; Mallas                                                                                  |
+| 7      | **Pandas II: análisis avanzado**                                       | Datos faltantes · Resampling · `groupby` y ventanas móviles · Agrupación y pivot tables                                                                         |
+| 9      | **Código robusto y rendimiento**                                       | Manejo de excepciones · Profiling · Cython · Empaquetado · Pruebas unitarias de datos                                                                           |
+| 9      | **Datos oficiales del INEGI: acceso y análisis**                       | Descarga masiva de microdatos · API Banco de Indicadores · API DENUE · Estructura PC-AXIS/JSON-Stat · Etiquetado de variables · Limpieza y resumen de encuestas |
+| 8      | **GIS y análisis geoespacial con Python**                              | Fundamentos GIS · GeoPandas (Shapefile, GeoJSON) · Basemaps con contextily · Mapas interactivos con Folium/Leaflet · Indicadores espaciales · Coropléticos      |
+| 10     | **Aplicaciones integradoras**                                          | Retos con bases reales (ejemplo: lluvia, irradiancia, INEGI) · Mini-dashboards web · Presentación del proyecto final                                                     |
+
+> *El temario conserva los contenidos originales y solo reordena para que el análisis de datos del INEGI preceda al trabajo geoespacial.*
+
+[1]: https://www.inegi.org.mx/servicios/api_indicadores.html?utm_source=chatgpt.com "API del Banco de Indicadores"
+[2]: https://en.www.inegi.org.mx/servicios/api_indicadores.html?utm_source=chatgpt.com "Indicator Bank API"
+[3]: https://medium.com/tacosdedatos/explora-los-microdatos-del-inegi-con-python-b803650b0501?utm_source=chatgpt.com "Explora los microdatos del INEGI con Python"
+[4]: https://blog.jjsantoso.com/etiquetas-encuestas-inegi/?utm_source=chatgpt.com "Etiquetado de variables y valores en las encuestas de INEGI ..."
+[5]: https://contextily.readthedocs.io/en/latest/intro_guide.html?utm_source=chatgpt.com "Introduction guide to contextily - Read the Docs"
+[6]: https://dlab.berkeley.edu/news/adding-basemaps-python-contextily?utm_source=chatgpt.com "Adding Basemaps In Python With Contextily"
