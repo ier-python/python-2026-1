@@ -91,9 +91,6 @@ Temas a ver:
 
 
 
-¡listo! aquí tienes las **secciones en texto plano** (listas para pegar en tu `.qmd` de Quarto). Al final te pongo fuentes breves.
-
-````
 ## ¿Qué es *uv*?
 
 *uv* es un gestor de proyectos y paquetes para Python, escrito en Rust, pensado para ser “todo en uno”: crea ambientes virtuales, instala dependencias, genera un **lockfile** reproducible y ejecuta comandos y herramientas (similar a `pip`, `pip-tools`, `virtualenv`, `pipx`, e incluso gestiona versiones de Python). Su objetivo: ser muy rápido y simplificar el flujo de trabajo.
@@ -110,108 +107,40 @@ Temas a ver:
 `uv` trabaja con ambientes virtuales de forma nativa. Crea uno con:
 
 ```bash
-uv venv               # crea .venv
-# o fija versión de Python:
-uv python install 3.12
-uv venv --python 3.12
+cd /directorio/proyecto/
+uv init               # crea espacio de trabajo
+# instala programas, solo necesario una vez 
+uv add jupyter notebook
+#corre libreta de Jupyter
+uv run jupyter notebook 
 ````
 
-2. **Proyectos auto-contenidos**
-   Inicializa un proyecto y agrega dependencias; `uv` crea `.venv` automáticamente:
-
-```bash
-uv init energia-ds
-cd energia-ds
-uv add numpy pandas matplotlib
-uv run python -c "import numpy, pandas, matplotlib; print('ok')"
-```
-
-3. **Flujo tipo “requirements” (compatibilidad pip)**
-   Si ya tienes `requirements.in/.txt`:
-
-```bash
-uv venv
-uv pip compile requirements.in -o requirements.txt   # resuelve versiones
-uv pip sync requirements.txt                        # instala EXACTAMENTE lo resuelto
-```
-
-4. **Herramientas efímeras estilo pipx (sin “ensuciar” tu entorno)**
-
-```bash
-uvx ruff --version      # corre ruff en un entorno desechable
-uv tool install ruff    # o instálalo como herramienta de usuario
-```
 
 ## Rapidez (énfasis práctico)
 
 * Resolver e instalar paquetes es **mucho más veloz** que con pip tradicional (compilado en Rust, caché global y resolución paralela).
 * En clase/taller, eso significa pasar de “esperar” a “trabajar”: crear `.venv`, instalar `numpy/pandas/scikit-learn` y abrir Jupyter en segundos, incluso en equipos modestos.
 
-Ejemplo “de cero a análisis”:
+Ejemplo “para el curso” creando carpeta desde el home:
 
 ```bash
-uv init pv-practica
-cd pv-practica
-uv add numpy pandas scipy pvlib jupyterlab
+mkdir curso-2026-1 # solo se requiere una vez 
+cd curso-2026-1    # para entrar a la carpeta 
+uv init            # solo se requiere una vez a menos que se borre el venv
+uv add jupyter notebook # solo se requiere una vez por proyecto creado
 uv run  jupyter notebook
 ```
 
-> Tip: la caché global de `uv` acelera instalaciones repetidas entre proyectos del mismo curso.
+> Tip: la caché global de `uv` acelera instalaciones repetidas entre proyectos del mismo curso. 
 
 ## Reproducibilidad fácil (lockfile)
 
 1. **Lockfile universal (`uv.lock`)**
    El proyecto guarda el resultado exacto de la resolución de dependencias (versiones y hashes). Se versiona en Git para que todes instalen lo mismo.
 
-2. **Instalación que calca el lockfile**
-
-```bash
-# dentro del proyecto con pyproject.toml y uv.lock
-uv lock         # (re-resuelve si cambiaste dependencias)
-uv sync         # crea/actualiza .venv según uv.lock
-uv sync --frozen  # falla si el lockfile no coincide (CI/clase)
-```
-
-3. **Compatibilidad con “requirements”**
-   Si prefieres `requirements.txt`, usa:
-
-```bash
-uv pip compile requirements.in -o requirements.txt
-uv pip sync requirements.txt        # asegura coincidencia exacta
-```
 
 Resultado: el mismo entorno en Windows/Linux/macOS —ideal para prácticas, calificaciones automáticas y trabajos finales.
 
-## Ejemplos por área (ER)
-
-* **Fotovoltaica (pvlib)**
-
-  ```bash
-  uv init pv-modelo
-  cd pv-modelo
-  uv add numpy pandas scipy pvlib matplotlib
-  uv run python script_pv.py
-  ```
-
-* **ML para demanda/HVAC**
-
-  ```bash
-  uv init hvac-ml
-  cd hvac-ml
-  uv add scikit-learn xgboost pandas numpy matplotlib
-  uv run python train.py
-  ```
-
-* **GIS ligero (cuando no requieres GDAL “puro”)**
-
-  ```bash
-  uv init gis-vulnerabilidad
-  cd gis-vulnerabilidad
-  uv add geopandas pyproj shapely matplotlib
-  uv run python mapas.py
-  ```
-
-  Nota: si necesitas **GDAL/GEOS/PROJ** nativos muy específicos, considera un contenedor o conda/mamba para esas binarizaciones pesadas. Para muchos casos, las wheels de `geopandas` bastan.
 
 ## Buenas prácticas y “gotchas” (Windows/Linux/macOS)
 

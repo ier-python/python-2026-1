@@ -8,3 +8,17 @@ En este curso,  aprenderemos herramientas para el desarrollo de proyectos de cie
 
 
 {{< include temario.qmd >}}
+
+
+
+
+
+## Método de calificación
+
+|Rubro                 |  Porcentaje |
+|----------------------|-------------|
+|Tareas                | 65%         |
+| Proyecto final       | 35%         |
+
+
+Para aprobar el curso se debe tener calificación aprobatoria en ```Tareas``` y en el ```Proyecto Final```. 

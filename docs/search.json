@@ -10,6 +10,26 @@
     ]
   },
   {
+    "objectID": "index.html#temario",
+    "href": "index.html#temario",
+    "title": "Proyectos de ciencia de datos con Python",
+    "section": "Temario",
+    "text": "Temario\n\n\n\n\n\n\n\n\nUnidad\nTema\nSubtemas\n\n\n\n\n0\nHerramientas para una ciencia de datos reproducible y colaborativa\nInteroperabilidad de datos · Narrativa computacional · Control de versiones con git · Organización del workspace\n\n\n1\nEntorno de trabajo en Python\nInstalación con miniconda · uv, entornos virtuales, gestión de paquetes · Estructura de carpetas\n\n\n2\nPython y Jupyter Notebook\nJupyter vs JupyterLab vs marimo· Tipado dinámico · Strings & list comprehensions · f-strings · Funciones\n\n\n3\n** Sintáxis, herramientas de control y métodos de Python\nSintaxis; tipos de variables; iterables; estructuras de control; cadenas; f-strings; funciones; tipado de funciones, list-comprehensions\n\n\n4\nPandas I: importación y limpieza\npair-wise data; series temporales; datos categóricos; read_csv/read_parquet; Múltiples archivos; Fechas y datetime · Helpers lambda · Limpieza básica\n\n\n5\nVisualización con matplotlib\nAnatomía de la figura; OOP en matplotlib; fig, ax; esquemas complejos specgrid; Formato de figura\n\n\n6\nNumPy y cálculo numérico\narrays, size, shape; estadística de arreglos; Slicing & fancy indexing; Mallas\n\n\n7\nPandas II: análisis avanzado\nDatos faltantes · Resampling · groupby y ventanas móviles · Agrupación y pivot tables\n\n\n9\nCódigo robusto y rendimiento\nManejo de excepciones · Profiling · Cython · Empaquetado · Pruebas unitarias de datos\n\n\n9\nDatos oficiales del INEGI: acceso y análisis\nDescarga masiva de microdatos · API Banco de Indicadores · API DENUE · Estructura PC-AXIS/JSON-Stat · Etiquetado de variables · Limpieza y resumen de encuestas\n\n\n8\nGIS y análisis geoespacial con Python\nFundamentos GIS · GeoPandas (Shapefile, GeoJSON) · Basemaps con contextily · Mapas interactivos con Folium/Leaflet · Indicadores espaciales · Coropléticos\n\n\n10\nAplicaciones integradoras\nRetos con bases reales (ejemplo: lluvia, irradiancia, INEGI) · Mini-dashboards web · Presentación del proyecto final\n\n\n\n\nEl temario conserva los contenidos originales y solo reordena para que el análisis de datos del INEGI preceda al trabajo geoespacial.",
+    "crumbs": [
+      "Objetivo General"
+    ]
+  },
+  {
+    "objectID": "index.html#método-de-calificación",
+    "href": "index.html#método-de-calificación",
+    "title": "Proyectos de ciencia de datos con Python",
+    "section": "Método de calificación",
+    "text": "Método de calificación\n\n\n\nRubro\nPorcentaje\n\n\n\n\nTareas\n65%\n\n\nProyecto final\n35%\n\n\n\nPara aprobar el curso se debe tener calificación aprobatoria en Tareas y en el Proyecto Final.",
+    "crumbs": [
+      "Objetivo General"
+    ]
+  },
+  {
     "objectID": "clases/001_terminal_python_uv.html",
     "href": "clases/001_terminal_python_uv.html",
     "title": "1  Instalar Miniconda en Windows, Linux y macOS",
@@ -30,16 +50,6 @@
     ]
   },
   {
-    "objectID": "index.html#temario",
-    "href": "index.html#temario",
-    "title": "Proyectos de ciencia de datos con Python",
-    "section": "Temario",
-    "text": "Temario\n\n\n\n\n\n\n\n\nUnidad\nTema\nSubtemas\n\n\n\n\n0\nHerramientas para una ciencia de datos reproducible y colaborativa\nInteroperabilidad de datos · Narrativa computacional · Control de versiones con git · Organización del workspace\n\n\n1\nEntorno de trabajo en Python\nInstalación con miniconda · uv, entornos virtuales, gestión de paquetes · Estructura de carpetas\n\n\n2\nPython y Jupyter Notebook\nJupyter vs JupyterLab vs marimo· Tipado dinámico · Strings & list comprehensions · f-strings · Funciones\n\n\n3\n** Sintáxis, herramientas de control y métodos de Python\nSintaxis; tipos de variables; iterables; estructuras de control; cadenas; f-strings; funciones; tipado de funciones, list-comprehensions\n\n\n4\nPandas I: importación y limpieza\npair-wise data; series temporales; datos categóricos; read_csv/read_parquet; Múltiples archivos; Fechas y datetime · Helpers lambda · Limpieza básica\n\n\n5\nVisualización con matplotlib\nAnatomía de la figura; OOP en matplotlib; fig, ax; esquemas complejos specgrid; Formato de figura\n\n\n6\nNumPy y cálculo numérico\narrays, size, shape; estadística de arreglos; Slicing & fancy indexing; Mallas\n\n\n7\nPandas II: análisis avanzado\nDatos faltantes · Resampling · groupby y ventanas móviles · Agrupación y pivot tables\n\n\n9\nCódigo robusto y rendimiento\nManejo de excepciones · Profiling · Cython · Empaquetado · Pruebas unitarias de datos\n\n\n9\nDatos oficiales del INEGI: acceso y análisis\nDescarga masiva de microdatos · API Banco de Indicadores · API DENUE · Estructura PC-AXIS/JSON-Stat · Etiquetado de variables · Limpieza y resumen de encuestas\n\n\n8\nGIS y análisis geoespacial con Python\nFundamentos GIS · GeoPandas (Shapefile, GeoJSON) · Basemaps con contextily · Mapas interactivos con Folium/Leaflet · Indicadores espaciales · Coropléticos\n\n\n10\nAplicaciones integradoras\nRetos con bases reales (ejemplo: lluvia, irradiancia, INEGI) · Mini-dashboards web · Presentación del proyecto final\n\n\n\n\nEl temario conserva los contenidos originales y solo reordena para que el análisis de datos del INEGI preceda al trabajo geoespacial.",
-    "crumbs": [
-      "Objetivo General"
-    ]
-  },
-  {
     "objectID": "clases/001_terminal_python_uv.html#antes-de-empezar",
     "href": "clases/001_terminal_python_uv.html#antes-de-empezar",
     "title": "1  Instalar Miniconda en Windows, Linux y macOS",
@@ -50,111 +60,11 @@
     ]
   },
   {
-    "objectID": "clases/001_terminal_python_uv.html#instalación",
-    "href": "clases/001_terminal_python_uv.html#instalación",
-    "title": "1  Instalar Miniconda en Windows, Linux y macOS",
-    "section": "Instalación",
-    "text": "Instalación\n\nWindows\n\n\nOpción A · Winget (recomendada)\n```powershell # Ejecuta en PowerShell (como usuario normal) winget install -e –id Anaconda.Miniconda3",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Instalar Miniconda en Windows, Linux y macOS</span>"
-    ]
-  },
-  {
     "objectID": "clases/001_terminal_python_uv.html#instalación-en-windows",
     "href": "clases/001_terminal_python_uv.html#instalación-en-windows",
     "title": "1  Instalar Miniconda en Windows, Linux y macOS",
     "section": "Instalación en Windows",
     "text": "Instalación en Windows\nhttps://www.anaconda.com/download/success Opción B (instalador gráfico):\n\nDescarga el instalador de Miniconda para Windows (64-bit) desde la página oficial.\nEjecuta el .exe y sigue el asistente:\n\nAcepta la licencia.\nInstala solo para tu usuario (recomendado).\nNo marques “Add Miniconda to my PATH”.\n\nUbica la anaconda power shell\n\n\n\nAbre la terminal y ejecuta python para verificar la instalación.",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Instalar Miniconda en Windows, Linux y macOS</span>"
-    ]
-  },
-  {
-    "objectID": "clases/001_terminal_python_uv.html#instalación-en-linux",
-    "href": "clases/001_terminal_python_uv.html#instalación-en-linux",
-    "title": "1  Instalar Miniconda en Windows, Linux y macOS",
-    "section": "Instalación en Linux",
-    "text": "Instalación en Linux\n# Ejemplos de descarga (ajusta según tu arquitectura):\n# x86_64:\nwget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh\n# aarch64:\n# wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-aarch64.sh\n\n# Instalación (ajusta el nombre del archivo si usaste aarch64):\nbash Miniconda3-latest-Linux-x86_64.sh\n\n# Acepta la licencia, confirma ruta por defecto y permite conda init.\n# Aplica cambios:\nsource ~/.bashrc   # o ~/.zshrc si usas zsh",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Instalar Miniconda en Windows, Linux y macOS</span>"
-    ]
-  },
-  {
-    "objectID": "clases/001_terminal_python_uv.html#instalación-en-macos-intel-y-apple-silicon",
-    "href": "clases/001_terminal_python_uv.html#instalación-en-macos-intel-y-apple-silicon",
-    "title": "1  Instalar Miniconda en Windows, Linux y macOS",
-    "section": "Instalación en macOS (Intel y Apple Silicon)",
-    "text": "Instalación en macOS (Intel y Apple Silicon)\n# Verifica arquitectura\nuname -m\n# arm64 = Apple Silicon, x86_64 = Intel\n\n# Descarga según tu arquitectura:\n# Apple Silicon:\nwget https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-arm64.sh\n# Intel:\n# wget https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh\n\n# Instala (ajusta el nombre si usaste x86_64):\nbash Miniconda3-latest-MacOSX-arm64.sh\n\n# Acepta la licencia y permite conda init.\n# Aplica cambios (zsh es la shell por defecto en macOS):\nsource ~/.zshrc    # o ~/.bashrc si usas bash",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Instalar Miniconda en Windows, Linux y macOS</span>"
-    ]
-  },
-  {
-    "objectID": "clases/001_terminal_python_uv.html#comprobación",
-    "href": "clases/001_terminal_python_uv.html#comprobación",
-    "title": "1  Instalar Miniconda en Windows, Linux y macOS",
-    "section": "Comprobación",
-    "text": "Comprobación\nconda --version\nconda info\nDeberías ver la versión de conda y la ruta de instalación del entorno base.",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Instalar Miniconda en Windows, Linux y macOS</span>"
-    ]
-  },
-  {
-    "objectID": "clases/001_terminal_python_uv.html#primeros-pasos-con-entornos",
-    "href": "clases/001_terminal_python_uv.html#primeros-pasos-con-entornos",
-    "title": "1  Instalar Miniconda en Windows, Linux y macOS",
-    "section": "Primeros pasos con entornos",
-    "text": "Primeros pasos con entornos\n# Crear un entorno con Python 3.12\nconda create -n py312 python=3.12 -y\n\n# Activar el entorno\nconda activate py312\n\n# Instalar paquetes de ejemplo\nconda install numpy pandas -y\n\n# Salir del entorno\nconda deactivate",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Instalar Miniconda en Windows, Linux y macOS</span>"
-    ]
-  },
-  {
-    "objectID": "clases/001_terminal_python_uv.html#canales-y-prioridad-opcional",
-    "href": "clases/001_terminal_python_uv.html#canales-y-prioridad-opcional",
-    "title": "1  Instalar Miniconda en Windows, Linux y macOS",
-    "section": "Canales y prioridad (opcional)",
-    "text": "Canales y prioridad (opcional)\n# Usar conda-forge con prioridad estricta\nconda config --add channels conda-forge\nconda config --set channel_priority strict",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Instalar Miniconda en Windows, Linux y macOS</span>"
-    ]
-  },
-  {
-    "objectID": "clases/001_terminal_python_uv.html#acelerar-con-mamba-opcional",
-    "href": "clases/001_terminal_python_uv.html#acelerar-con-mamba-opcional",
-    "title": "1  Instalar Miniconda en Windows, Linux y macOS",
-    "section": "Acelerar con mamba (opcional)",
-    "text": "Acelerar con mamba (opcional)\n# Instala mamba en el entorno base\nconda install -n base -c conda-forge mamba -y\n\n# Uso equivalente a conda, pero más rápido en la resolución:\nmamba create -n py312 python=3.12 -y\nmamba install -n py312 numpy pandas -y",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Instalar Miniconda en Windows, Linux y macOS</span>"
-    ]
-  },
-  {
-    "objectID": "clases/001_terminal_python_uv.html#problemas-comunes",
-    "href": "clases/001_terminal_python_uv.html#problemas-comunes",
-    "title": "1  Instalar Miniconda en Windows, Linux y macOS",
-    "section": "Problemas comunes",
-    "text": "Problemas comunes\n\n“conda no se reconoce”: ejecuta conda init &lt;tu-shell&gt; (powershell, bash o zsh) y reinicia la terminal.\nConflictos de paquetes: activa channel_priority strict y usa conda-forge; prueba mamba para resolver más rápido.\nPATH en Windows: no agregues Miniconda al PATH manualmente; usa una terminal inicializada por conda init.",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Instalar Miniconda en Windows, Linux y macOS</span>"
-    ]
-  },
-  {
-    "objectID": "clases/001_terminal_python_uv.html#actualizar-o-desinstalar",
-    "href": "clases/001_terminal_python_uv.html#actualizar-o-desinstalar",
-    "title": "1  Instalar Miniconda en Windows, Linux y macOS",
-    "section": "Actualizar o desinstalar",
-    "text": "Actualizar o desinstalar\n\nActualizar conda:\n\nconda update -n base -c defaults conda\n\nDesinstalar Miniconda:\n\nWindows: Panel de control &gt; Programas &gt; Desinstalar Miniconda.\nLinux/macOS: elimina la carpeta (por ejemplo ~/miniconda3) y borra las líneas añadidas por conda init en ~/.bashrc o ~/.zshrc.",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Instalar Miniconda en Windows, Linux y macOS</span>"
-    ]
-  },
-  {
-    "objectID": "clases/001_terminal_python_uv.html#referencia-rápida",
-    "href": "clases/001_terminal_python_uv.html#referencia-rápida",
-    "title": "1  Instalar Miniconda en Windows, Linux y macOS",
-    "section": "Referencia rápida",
-    "text": "Referencia rápida\n\nExportar entorno: conda env export &gt; environment.yml\nCrear entorno desde archivo: conda env create -f environment.yml\nListar entornos: conda env list\nBorrar entorno: conda remove -n NOMBRE --all",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Instalar Miniconda en Windows, Linux y macOS</span>"
     ]
@@ -174,7 +84,7 @@
     "href": "clases/001_terminal_python_uv.html#ambientes-virtuales-qué-son-y-por-qué-usarlos",
     "title": "1  Instalar Miniconda en Windows, Linux y macOS",
     "section": "Ambientes virtuales: qué son y por qué usarlos",
-    "text": "Ambientes virtuales: qué son y por qué usarlos\nDefinición breve. Un ambiente virtual es una “caja” aislada con su propio Python y paquetes. Así, cada proyecto (o curso) usa EXACTAMENTE las versiones que necesita sin interferir con otros proyectos ni con el Python del sistema operativo.\nIdea clave. Piensa en laboratorio: cada experimento usa su propio reactivo y protocolo. Si mezclas frascos, contaminas resultados. Con software pasa lo mismo.\n\nBeneficios para Ingeniería en Energías Renovables\n\nReproducibilidad. Puedes rehacer un análisis meses después (o en otro equipo) si documentas el entorno.\n\nAislamiento. Evitas choques de versiones: por ejemplo, un proyecto con pandas 2.2 y otro con pandas 1.5.\n\nColaboración. Todo el equipo instala lo mismo con un solo archivo; adiós “en mi compu sí corre”.\n\nDocencia. Cada práctica del curso se entrega con su entorno mínimo: estudiantes instalan y corren sin romper nada.\n\nPortabilidad. Facilita trabajar en Windows, Linux y macOS (Intel/Apple Silicon) con el mismo conjunto de paquetes.\n\n\n\nEjemplos concretos (ciencia de datos en ER)\n\nIrradiancia y fotovoltaica (pvlib). Un entorno con python, numpy, pandas, scipy y pvlib para estimar GHI/DNI/POA, pérdidas y energía AC.\n\nGIS + datos del INEGI. Un entorno con geopandas, pyproj, shapely (y a veces gdal) para unir capas socioeconómicas con clima (ERA5) y visualizar vulnerabilidad energética.\n\nAprendizaje automático. Un entorno con scikit-learn/xgboost para pronóstico de demanda eléctrica/consumo HVAC; en macOS/Apple Silicon puedes usar pytorch con backend MPS (Metal) y en Linux con CUDA cuando haya GPU NVIDIA.\n\n\n\nBuenas prácticas\n\n1 entorno por proyecto/curso. Nombres cortos: pv-solar-2025, gis-inegi, ml-hvac.\n\nEvita mezclar pip y conda. Si necesitas pip, primero instala todo lo de conda, y al final lo que solo exista en pip.\n\nBloquea versiones mínimas. Empieza con lo necesario; agrega paquetes conforme avances.\n\nDocumenta el entorno. conda env export --from-history &gt; environment.yml (captura solo lo que instalaste, no todo el árbol).\n\n¡listo! aquí tienes las secciones en texto plano (listas para pegar en tu .qmd de Quarto). Al final te pongo fuentes breves.\n## ¿Qué es *uv*?\n\n*uv* es un gestor de proyectos y paquetes para Python, escrito en Rust, pensado para ser “todo en uno”: crea ambientes virtuales, instala dependencias, genera un **lockfile** reproducible y ejecuta comandos y herramientas (similar a `pip`, `pip-tools`, `virtualenv`, `pipx`, e incluso gestiona versiones de Python). Su objetivo: ser muy rápido y simplificar el flujo de trabajo.\n\n### Por qué importa en cursos y proyectos de ER\n- Instalas lo mínimo y vuelas: ideal en laboratorios/docencia.\n- Mismo proyecto corre igual en Windows, Linux y macOS con el lockfile.\n- Menos fricción al empezar prácticas (GIS, pvlib, ML, Jupyter).\n\n\n## Ventajas de *uv* para crear ambientes virtuales\n\n1) **Ambientes por defecto y en segundos**  \n`uv` trabaja con ambientes virtuales de forma nativa. Crea uno con:\n```bash\nuv venv               # crea .venv\n# o fija versión de Python:\nuv python install 3.12\nuv venv --python 3.12\n\nProyectos auto-contenidos Inicializa un proyecto y agrega dependencias; uv crea .venv automáticamente:\n\nuv init energia-ds\ncd energia-ds\nuv add numpy pandas matplotlib\nuv run python -c \"import numpy, pandas, matplotlib; print('ok')\"\n\nFlujo tipo “requirements” (compatibilidad pip) Si ya tienes requirements.in/.txt:\n\nuv venv\nuv pip compile requirements.in -o requirements.txt   # resuelve versiones\nuv pip sync requirements.txt                        # instala EXACTAMENTE lo resuelto\n\nHerramientas efímeras estilo pipx (sin “ensuciar” tu entorno)\n\nuvx ruff --version      # corre ruff en un entorno desechable\nuv tool install ruff    # o instálalo como herramienta de usuario\n\nJupyter simple en el entorno del proyecto\n\nuv run --with jupyter jupyter lab\n# (opcional) kernel dedicado al proyecto\nuv add --dev ipykernel\nuv run ipython kernel install --user --name=energia-ds",
+    "text": "Ambientes virtuales: qué son y por qué usarlos\nDefinición breve. Un ambiente virtual es una “caja” aislada con su propio Python y paquetes. Así, cada proyecto (o curso) usa EXACTAMENTE las versiones que necesita sin interferir con otros proyectos ni con el Python del sistema operativo.\nIdea clave. Piensa en laboratorio: cada experimento usa su propio reactivo y protocolo. Si mezclas frascos, contaminas resultados. Con software pasa lo mismo.\n\nBeneficios para Ingeniería en Energías Renovables\n\nReproducibilidad. Puedes rehacer un análisis meses después (o en otro equipo) si documentas el entorno.\n\nAislamiento. Evitas choques de versiones: por ejemplo, un proyecto con pandas 2.2 y otro con pandas 1.5.\n\nColaboración. Todo el equipo instala lo mismo con un solo archivo; adiós “en mi compu sí corre”.\n\nDocencia. Cada práctica del curso se entrega con su entorno mínimo: estudiantes instalan y corren sin romper nada.\n\nPortabilidad. Facilita trabajar en Windows, Linux y macOS (Intel/Apple Silicon) con el mismo conjunto de paquetes.\n\n\n\nEjemplos concretos (ciencia de datos en ER)\n\nIrradiancia y fotovoltaica (pvlib). Un entorno con python, numpy, pandas, scipy y pvlib para estimar GHI/DNI/POA, pérdidas y energía AC.\n\nGIS + datos del INEGI. Un entorno con geopandas, pyproj, shapely (y a veces gdal) para unir capas socioeconómicas con clima (ERA5) y visualizar vulnerabilidad energética.\n\nAprendizaje automático. Un entorno con scikit-learn/xgboost para pronóstico de demanda eléctrica/consumo HVAC; en macOS/Apple Silicon puedes usar pytorch con backend MPS (Metal) y en Linux con CUDA cuando haya GPU NVIDIA.\n\n\n\nBuenas prácticas\n\n1 entorno por proyecto/curso. Nombres cortos: pv-solar-2025, gis-inegi, ml-hvac.\n\nEvita mezclar pip y conda. Si necesitas pip, primero instala todo lo de conda, y al final lo que solo exista en pip.\n\nBloquea versiones mínimas. Empieza con lo necesario; agrega paquetes conforme avances.\n\nDocumenta el entorno. conda env export --from-history &gt; environment.yml (captura solo lo que instalaste, no todo el árbol).",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Instalar Miniconda en Windows, Linux y macOS</span>"
     ]
@@ -194,7 +104,7 @@
     "href": "clases/001_terminal_python_uv.html#ventajas-de-uv-para-crear-ambientes-virtuales",
     "title": "1  Instalar Miniconda en Windows, Linux y macOS",
     "section": "Ventajas de uv para crear ambientes virtuales",
-    "text": "Ventajas de uv para crear ambientes virtuales\n\nAmbientes por defecto y en segundos\nuv trabaja con ambientes virtuales de forma nativa. Crea uno con:\n\nuv venv               # crea .venv\n# o fija versión de Python:\nuv python install 3.12\nuv venv --python 3.12\n\nProyectos auto-contenidos Inicializa un proyecto y agrega dependencias; uv crea .venv automáticamente:\n\nuv init energia-ds\ncd energia-ds\nuv add numpy pandas matplotlib\nuv run python -c \"import numpy, pandas, matplotlib; print('ok')\"\n\nFlujo tipo “requirements” (compatibilidad pip) Si ya tienes requirements.in/.txt:\n\nuv venv\nuv pip compile requirements.in -o requirements.txt   # resuelve versiones\nuv pip sync requirements.txt                        # instala EXACTAMENTE lo resuelto\n\nHerramientas efímeras estilo pipx (sin “ensuciar” tu entorno)\n\nuvx ruff --version      # corre ruff en un entorno desechable\nuv tool install ruff    # o instálalo como herramienta de usuario\n\nJupyter simple en el entorno del proyecto\n\nuv run --with jupyter jupyter lab\n# (opcional) kernel dedicado al proyecto\nuv add --dev ipykernel\nuv run ipython kernel install --user --name=energia-ds",
+    "text": "Ventajas de uv para crear ambientes virtuales\n\nAmbientes por defecto y en segundos\nuv trabaja con ambientes virtuales de forma nativa. Crea uno con:\n\ncd /directorio/proyecto/\nuv init               # crea espacio de trabajo\n# instala programas, solo necesario una vez \nuv add jupyter notebook\n#corre libreta de Jupyter\nuv run jupyter notebook",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Instalar Miniconda en Windows, Linux y macOS</span>"
     ]
@@ -204,7 +114,7 @@
     "href": "clases/001_terminal_python_uv.html#rapidez-énfasis-práctico",
     "title": "1  Instalar Miniconda en Windows, Linux y macOS",
     "section": "Rapidez (énfasis práctico)",
-    "text": "Rapidez (énfasis práctico)\n\nResolver e instalar paquetes es mucho más veloz que con pip tradicional (compilado en Rust, caché global y resolución paralela).\nEn clase/taller, eso significa pasar de “esperar” a “trabajar”: crear .venv, instalar numpy/pandas/scikit-learn y abrir Jupyter en segundos, incluso en equipos modestos.\n\nEjemplo “de cero a análisis”:\nuv init pv-practica\ncd pv-practica\nuv add numpy pandas scipy pvlib jupyterlab\nuv run --with jupyter jupyter lab\n\nTip: la caché global de uv acelera instalaciones repetidas entre proyectos del mismo curso.",
+    "text": "Rapidez (énfasis práctico)\n\nResolver e instalar paquetes es mucho más veloz que con pip tradicional (compilado en Rust, caché global y resolución paralela).\nEn clase/taller, eso significa pasar de “esperar” a “trabajar”: crear .venv, instalar numpy/pandas/scikit-learn y abrir Jupyter en segundos, incluso en equipos modestos.\n\nEjemplo “para el curso” creando carpeta desde el home:\nmkdir curso-2026-1 # solo se requiere una vez \ncd curso-2026-1    # para entrar a la carpeta \nuv init            # solo se requiere una vez a menos que se borre el venv\nuv add jupyter notebook # solo se requiere una vez por proyecto creado\nuv run  jupyter notebook\n\nTip: la caché global de uv acelera instalaciones repetidas entre proyectos del mismo curso.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Instalar Miniconda en Windows, Linux y macOS</span>"
     ]
@@ -214,17 +124,7 @@
     "href": "clases/001_terminal_python_uv.html#reproducibilidad-fácil-lockfile",
     "title": "1  Instalar Miniconda en Windows, Linux y macOS",
     "section": "Reproducibilidad fácil (lockfile)",
-    "text": "Reproducibilidad fácil (lockfile)\n\nLockfile universal (uv.lock) El proyecto guarda el resultado exacto de la resolución de dependencias (versiones y hashes). Se versiona en Git para que todes instalen lo mismo.\nInstalación que calca el lockfile\n\n# dentro del proyecto con pyproject.toml y uv.lock\nuv lock         # (re-resuelve si cambiaste dependencias)\nuv sync         # crea/actualiza .venv según uv.lock\nuv sync --frozen  # falla si el lockfile no coincide (CI/clase)\n\nCompatibilidad con “requirements” Si prefieres requirements.txt, usa:\n\nuv pip compile requirements.in -o requirements.txt\nuv pip sync requirements.txt        # asegura coincidencia exacta\nResultado: el mismo entorno en Windows/Linux/macOS —ideal para prácticas, calificaciones automáticas y trabajos finales.",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Instalar Miniconda en Windows, Linux y macOS</span>"
-    ]
-  },
-  {
-    "objectID": "clases/001_terminal_python_uv.html#ejemplos-por-área-er",
-    "href": "clases/001_terminal_python_uv.html#ejemplos-por-área-er",
-    "title": "1  Instalar Miniconda en Windows, Linux y macOS",
-    "section": "Ejemplos por área (ER)",
-    "text": "Ejemplos por área (ER)\n\nFotovoltaica (pvlib)\nuv init pv-modelo\ncd pv-modelo\nuv add numpy pandas scipy pvlib matplotlib\nuv run python script_pv.py\nML para demanda/HVAC\nuv init hvac-ml\ncd hvac-ml\nuv add scikit-learn xgboost pandas numpy matplotlib\nuv run python train.py\nGIS ligero (cuando no requieres GDAL “puro”)\nuv init gis-vulnerabilidad\ncd gis-vulnerabilidad\nuv add geopandas pyproj shapely matplotlib\nuv run python mapas.py\nNota: si necesitas GDAL/GEOS/PROJ nativos muy específicos, considera un contenedor o conda/mamba para esas binarizaciones pesadas. Para muchos casos, las wheels de geopandas bastan.",
+    "text": "Reproducibilidad fácil (lockfile)\n\nLockfile universal (uv.lock) El proyecto guarda el resultado exacto de la resolución de dependencias (versiones y hashes). Se versiona en Git para que todes instalen lo mismo.\n\nResultado: el mismo entorno en Windows/Linux/macOS —ideal para prácticas, calificaciones automáticas y trabajos finales.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Instalar Miniconda en Windows, Linux y macOS</span>"
     ]
@@ -247,6 +147,16 @@
     "text": "Objetivo final de la clase\n\nTener un ambiente virtual para el uso general del curso\nInstalar jupyter notebook\nHola mundo en Jupyter notebook",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Instalar Miniconda en Windows, Linux y macOS</span>"
+    ]
+  },
+  {
+    "objectID": "clases/002_hola_mundo.html",
+    "href": "clases/002_hola_mundo.html",
+    "title": "Proyectos de ciencia de datos con Python",
+    "section": "",
+    "text": "print(\"hola mundo\")\n\nhola mundo",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>002_hola_mundo.html</span>"
     ]
   }
 ]
