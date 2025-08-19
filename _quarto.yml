@@ -32,7 +32,7 @@ book:
     # - proyecto_final.qmd
     - clases/001_terminal_python_uv.qmd
     - clases/002_hola_mundo.ipynb
-    # - clases/003_venv_espaciotrabajo.qmd
+    - clases/003_indentado.ipynb
     # - clases/004_variables_indentado.ipynb
     # - clases/005_E001.qmd
     # - clases/006_comprehension.ipynb

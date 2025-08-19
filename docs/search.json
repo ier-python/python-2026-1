@@ -158,5 +158,15 @@
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>002_hola_mundo.html</span>"
     ]
+  },
+  {
+    "objectID": "clases/003_indentado.html",
+    "href": "clases/003_indentado.html",
+    "title": "Proyectos de ciencia de datos con Python",
+    "section": "",
+    "text": "a = 2\n\n\na\n\n2\n\n\n\nb = 2\n\n\na  + b\nc = a + b\n\n\nif c == 3:\n    print(\"c es igual a 3\")",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>003_indentado.html</span>"
+    ]
   }
 ]
