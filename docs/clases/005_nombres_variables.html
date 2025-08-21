@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>1&nbsp; Instalar Miniconda en Windows, Linux y macOS – Proyectos de ciencia de datos con Python</title>
+<title>5&nbsp; PEP 8 – Proyectos de ciencia de datos con Python</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -65,18 +65,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../clases/002_hola_mundo.html" rel="next">
-<link href="../index.html" rel="prev">
+<link href="../clases/006_strings_lists.html" rel="next">
+<link href="../clases/004_variables.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-8ef56b68f8fa1e9d2ba328e99e439f80.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-3b0aad8aa5579c1f618f60b5a08bd5a4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-8c40e8074a9974d9bf841ec8793f006c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-c10af8267f2df204c1ca93a0fb2fa97c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-8c40e8074a9974d9bf841ec8793f006c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -108,7 +112,169 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </head>
 
-<body class="nav-sidebar floating nav-fixed quarto-light">
+<body class="nav-sidebar floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -131,7 +297,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../clases/001_terminal_python_uv.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Instalar Miniconda en Windows, Linux y macOS</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../clases/005_nombres_variables.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">PEP 8</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -151,7 +317,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../clases/001_terminal_python_uv.html" class="sidebar-item-text sidebar-link active">
+  <a href="../clases/001_terminal_python_uv.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Instalar Miniconda en Windows, Linux y macOS</span></span></a>
   </div>
 </li>
@@ -175,7 +341,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../clases/005_nombres_variables.html" class="sidebar-item-text sidebar-link">
+  <a href="../clases/005_nombres_variables.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">PEP 8</span></span></a>
   </div>
 </li>
@@ -190,40 +356,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Tabla de contenidos</h2>
-   
-  <ul>
-  <li><a href="#por-qué-usar-miniconda" id="toc-por-qué-usar-miniconda" class="nav-link active" data-scroll-target="#por-qué-usar-miniconda">Por qué usar Miniconda</a></li>
-  <li><a href="#antes-de-empezar" id="toc-antes-de-empezar" class="nav-link" data-scroll-target="#antes-de-empezar">Antes de empezar</a></li>
-  <li><a href="#instalación-en-windows" id="toc-instalación-en-windows" class="nav-link" data-scroll-target="#instalación-en-windows">Instalación en Windows</a></li>
-  <li><a href="#uso-de-la-terminal" id="toc-uso-de-la-terminal" class="nav-link" data-scroll-target="#uso-de-la-terminal">Uso de la terminal</a></li>
-  <li><a href="#ambientes-virtuales-qué-son-y-por-qué-usarlos" id="toc-ambientes-virtuales-qué-son-y-por-qué-usarlos" class="nav-link" data-scroll-target="#ambientes-virtuales-qué-son-y-por-qué-usarlos">Ambientes virtuales: qué son y por qué usarlos</a>
-  <ul class="collapse">
-  <li><a href="#beneficios-para-ingeniería-en-energías-renovables" id="toc-beneficios-para-ingeniería-en-energías-renovables" class="nav-link" data-scroll-target="#beneficios-para-ingeniería-en-energías-renovables">Beneficios para Ingeniería en Energías Renovables</a></li>
-  <li><a href="#ejemplos-concretos-ciencia-de-datos-en-er" id="toc-ejemplos-concretos-ciencia-de-datos-en-er" class="nav-link" data-scroll-target="#ejemplos-concretos-ciencia-de-datos-en-er">Ejemplos concretos (ciencia de datos en ER)</a></li>
-  <li><a href="#buenas-prácticas" id="toc-buenas-prácticas" class="nav-link" data-scroll-target="#buenas-prácticas">Buenas prácticas</a></li>
-  </ul></li>
-  <li><a href="#qué-es-uv" id="toc-qué-es-uv" class="nav-link" data-scroll-target="#qué-es-uv">¿Qué es <em>uv</em>?</a>
-  <ul class="collapse">
-  <li><a href="#por-qué-importa-en-cursos-y-proyectos-de-er" id="toc-por-qué-importa-en-cursos-y-proyectos-de-er" class="nav-link" data-scroll-target="#por-qué-importa-en-cursos-y-proyectos-de-er">Por qué importa en cursos y proyectos de ER</a></li>
-  </ul></li>
-  <li><a href="#ventajas-de-uv-para-crear-ambientes-virtuales" id="toc-ventajas-de-uv-para-crear-ambientes-virtuales" class="nav-link" data-scroll-target="#ventajas-de-uv-para-crear-ambientes-virtuales">Ventajas de <em>uv</em> para crear ambientes virtuales</a></li>
-  <li><a href="#rapidez-énfasis-práctico" id="toc-rapidez-énfasis-práctico" class="nav-link" data-scroll-target="#rapidez-énfasis-práctico">Rapidez (énfasis práctico)</a></li>
-  <li><a href="#reproducibilidad-fácil-lockfile" id="toc-reproducibilidad-fácil-lockfile" class="nav-link" data-scroll-target="#reproducibilidad-fácil-lockfile">Reproducibilidad fácil (lockfile)</a></li>
-  <li><a href="#buenas-prácticas-y-gotchas-windowslinuxmacos" id="toc-buenas-prácticas-y-gotchas-windowslinuxmacos" class="nav-link" data-scroll-target="#buenas-prácticas-y-gotchas-windowslinuxmacos">Buenas prácticas y “gotchas” (Windows/Linux/macOS)</a></li>
-  <li><a href="#objetivo-final-de-la-clase" id="toc-objetivo-final-de-la-clase" class="nav-link" data-scroll-target="#objetivo-final-de-la-clase">Objetivo final de la clase</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Instalar Miniconda en Windows, Linux y macOS</span></h1>
-<p class="subtitle lead">Guía breve en formato Quarto (texto plano)</p>
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">PEP 8</span></h1>
 </div>
 
 
@@ -240,163 +382,40 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="por-qué-usar-miniconda" class="level2">
-<h2 class="anchored" data-anchor-id="por-qué-usar-miniconda">Por qué usar Miniconda</h2>
-<ul>
-<li>Ligero y rápido: instala solo lo esencial (Python + conda).</li>
-<li>Entornos aislados: cada proyecto con sus propias versiones de Python y paquetes.</li>
-<li>Reproducibilidad: puedes fijar versiones y exportar el entorno (conda env export).</li>
-<li>Control de canales: elegir entre defaults o conda-forge según tus necesidades.</li>
-<li>Multiplataforma: funciona en Windows, Linux y macOS (Intel y Apple Silicon).</li>
-</ul>
-<p>Miniconda vs Anaconda: Anaconda trae muchos paquetes preinstalados (más pesado). Miniconda es minimalista y tú instalas solo lo que necesitas.</p>
-</section>
-<section id="antes-de-empezar" class="level2">
-<h2 class="anchored" data-anchor-id="antes-de-empezar">Antes de empezar</h2>
-<ul>
-<li>Ten a mano tu terminal:
-<ul>
-<li>Windows: PowerShell de miniconda</li>
-<li>Linux/macOS: Terminal.</li>
-</ul></li>
-</ul>
-</section>
-<section id="instalación-en-windows" class="level2">
-<h2 class="anchored" data-anchor-id="instalación-en-windows">Instalación en Windows</h2>
-<p><a href="https://www.anaconda.com/download/success">https://www.anaconda.com/download/success</a> Opción B (instalador gráfico):</p>
-<ol type="1">
-<li><p>Descarga el instalador de Miniconda para Windows (64-bit) desde la página oficial.</p></li>
-<li><p>Ejecuta el .exe y sigue el asistente:</p>
-<ul>
-<li>Acepta la licencia.</li>
-<li>Instala solo para tu usuario (recomendado).</li>
-<li>No marques “Add Miniconda to my PATH”.</li>
-</ul></li>
-<li><p>Ubica la <code>anaconda power shell</code></p></li>
-</ol>
-<p><img src="imagenes/anaconda_power_shell.png" class="img-fluid"></p>
-<ol start="4" type="1">
-<li>Abre la terminal y ejecuta <code>python</code> para verificar la instalación.</li>
-</ol>
-<p><img src="imagenes/terminal_python.png" class="img-fluid"></p>
-</section>
-<section id="uso-de-la-terminal" class="level2">
-<h2 class="anchored" data-anchor-id="uso-de-la-terminal">Uso de la terminal</h2>
-<p>Temas a ver: 1. Estructura de la compu. 1. El concepto del <code>/home/Usuario</code> 1. Desktop, Downloads, Documents 1. Recomendación de donde crear los proyectos 1. Recomendaciones de nombres 1. Moverme entre folders 1. Llamar el explorador de archivos</p>
-</section>
-<section id="ambientes-virtuales-qué-son-y-por-qué-usarlos" class="level2">
-<h2 class="anchored" data-anchor-id="ambientes-virtuales-qué-son-y-por-qué-usarlos">Ambientes virtuales: qué son y por qué usarlos</h2>
-<p><strong>Definición breve.</strong> Un <em>ambiente virtual</em> es una “caja” aislada con su propio Python y paquetes. Así, cada proyecto (o curso) usa EXACTAMENTE las versiones que necesita sin interferir con otros proyectos ni con el Python del sistema operativo.</p>
-<p><strong>Idea clave.</strong> Piensa en laboratorio: cada experimento usa su propio reactivo y protocolo. Si mezclas frascos, contaminas resultados. Con software pasa lo mismo.</p>
-<section id="beneficios-para-ingeniería-en-energías-renovables" class="level3">
-<h3 class="anchored" data-anchor-id="beneficios-para-ingeniería-en-energías-renovables">Beneficios para Ingeniería en Energías Renovables</h3>
-<ul>
-<li><strong>Reproducibilidad.</strong> Puedes rehacer un análisis meses después (o en otro equipo) si documentas el entorno.<br>
-</li>
-<li><strong>Aislamiento.</strong> Evitas choques de versiones: por ejemplo, un proyecto con <code>pandas 2.2</code> y otro con <code>pandas 1.5</code>.<br>
-</li>
-<li><strong>Colaboración.</strong> Todo el equipo instala lo mismo con un solo archivo; adiós “en mi compu sí corre”.<br>
-</li>
-<li><strong>Docencia.</strong> Cada práctica del curso se entrega con su entorno mínimo: estudiantes instalan y corren sin romper nada.<br>
-</li>
-<li><strong>Portabilidad.</strong> Facilita trabajar en Windows, Linux y macOS (Intel/Apple Silicon) con el mismo conjunto de paquetes.</li>
-</ul>
-</section>
-<section id="ejemplos-concretos-ciencia-de-datos-en-er" class="level3">
-<h3 class="anchored" data-anchor-id="ejemplos-concretos-ciencia-de-datos-en-er">Ejemplos concretos (ciencia de datos en ER)</h3>
-<ol type="1">
-<li><strong>Irradiancia y fotovoltaica (pvlib).</strong> Un entorno con <code>python</code>, <code>numpy</code>, <code>pandas</code>, <code>scipy</code> y <code>pvlib</code> para estimar GHI/DNI/POA, pérdidas y energía AC.<br>
-</li>
-<li><strong>GIS + datos del INEGI.</strong> Un entorno con <code>geopandas</code>, <code>pyproj</code>, <code>shapely</code> (y a veces <code>gdal</code>) para unir capas socioeconómicas con clima (ERA5) y visualizar vulnerabilidad energética.<br>
-</li>
-<li><strong>Aprendizaje automático.</strong> Un entorno con <code>scikit-learn</code>/<code>xgboost</code> para pronóstico de demanda eléctrica/consumo HVAC; en macOS/Apple Silicon puedes usar <code>pytorch</code> con backend <em>MPS</em> (Metal) y en Linux con CUDA cuando haya GPU NVIDIA.</li>
-</ol>
-</section>
-<section id="buenas-prácticas" class="level3">
-<h3 class="anchored" data-anchor-id="buenas-prácticas">Buenas prácticas</h3>
-<ul>
-<li><strong>1 entorno por proyecto/curso.</strong> Nombres cortos: <code>pv-solar-2025</code>, <code>gis-inegi</code>, <code>ml-hvac</code>.<br>
-</li>
-<li><strong>Evita mezclar <code>pip</code> y <code>conda</code>.</strong> Si necesitas <code>pip</code>, primero instala todo lo de <code>conda</code>, y <strong>al final</strong> lo que solo exista en <code>pip</code>.<br>
-</li>
-<li><strong>Bloquea versiones mínimas.</strong> Empieza con lo necesario; agrega paquetes conforme avances.<br>
-</li>
-<li><strong>Documenta el entorno.</strong> <code>conda env export --from-history &gt; environment.yml</code> (captura solo lo que instalaste, no todo el árbol).</li>
-</ul>
-</section>
-</section>
-<section id="qué-es-uv" class="level2">
-<h2 class="anchored" data-anchor-id="qué-es-uv">¿Qué es <em>uv</em>?</h2>
-<p><em>uv</em> es un gestor de proyectos y paquetes para Python, escrito en Rust, pensado para ser “todo en uno”: crea ambientes virtuales, instala dependencias, genera un <strong>lockfile</strong> reproducible y ejecuta comandos y herramientas (similar a <code>pip</code>, <code>pip-tools</code>, <code>virtualenv</code>, <code>pipx</code>, e incluso gestiona versiones de Python). Su objetivo: ser muy rápido y simplificar el flujo de trabajo.</p>
-<section id="por-qué-importa-en-cursos-y-proyectos-de-er" class="level3">
-<h3 class="anchored" data-anchor-id="por-qué-importa-en-cursos-y-proyectos-de-er">Por qué importa en cursos y proyectos de ER</h3>
-<ul>
-<li>Instalas lo mínimo y vuelas: ideal en laboratorios/docencia.</li>
-<li>Mismo proyecto corre igual en Windows, Linux y macOS con el lockfile.</li>
-<li>Menos fricción al empezar prácticas (GIS, pvlib, ML, Jupyter).</li>
-</ul>
-</section>
-</section>
-<section id="ventajas-de-uv-para-crear-ambientes-virtuales" class="level2">
-<h2 class="anchored" data-anchor-id="ventajas-de-uv-para-crear-ambientes-virtuales">Ventajas de <em>uv</em> para crear ambientes virtuales</h2>
-<ol type="1">
-<li><strong>Ambientes por defecto y en segundos</strong><br>
-<code>uv</code> trabaja con ambientes virtuales de forma nativa. Crea uno con:</li>
-</ol>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> /directorio/proyecto/</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> init               <span class="co"># crea espacio de trabajo</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># instala programas, solo necesario una vez </span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> add jupyter notebook</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">#corre libreta de Jupyter</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> run jupyter notebook </span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="rapidez-énfasis-práctico" class="level2">
-<h2 class="anchored" data-anchor-id="rapidez-énfasis-práctico">Rapidez (énfasis práctico)</h2>
-<ul>
-<li>Resolver e instalar paquetes es <strong>mucho más veloz</strong> que con pip tradicional (compilado en Rust, caché global y resolución paralela).</li>
-<li>En clase/taller, eso significa pasar de “esperar” a “trabajar”: crear <code>.venv</code>, instalar <code>numpy/pandas/scikit-learn</code> y abrir Jupyter en segundos, incluso en equipos modestos.</li>
-</ul>
-<p>Ejemplo “para el curso” creando carpeta desde el home:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> curso-2026-1 <span class="co"># solo se requiere una vez </span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> curso-2026-1    <span class="co"># para entrar a la carpeta </span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> init            <span class="co"># solo se requiere una vez a menos que se borre el venv</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> add jupyter notebook <span class="co"># solo se requiere una vez por proyecto creado</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> run  jupyter notebook</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<blockquote class="blockquote">
-<p>Tip: la caché global de <code>uv</code> acelera instalaciones repetidas entre proyectos del mismo curso.</p>
-</blockquote>
-</section>
-<section id="reproducibilidad-fácil-lockfile" class="level2">
-<h2 class="anchored" data-anchor-id="reproducibilidad-fácil-lockfile">Reproducibilidad fácil (lockfile)</h2>
-<ol type="1">
-<li><strong>Lockfile universal (<code>uv.lock</code>)</strong> El proyecto guarda el resultado exacto de la resolución de dependencias (versiones y hashes). Se versiona en Git para que todes instalen lo mismo.</li>
-</ol>
-<p>Resultado: el mismo entorno en Windows/Linux/macOS —ideal para prácticas, calificaciones automáticas y trabajos finales.</p>
-</section>
-<section id="buenas-prácticas-y-gotchas-windowslinuxmacos" class="level2">
-<h2 class="anchored" data-anchor-id="buenas-prácticas-y-gotchas-windowslinuxmacos">Buenas prácticas y “gotchas” (Windows/Linux/macOS)</h2>
-<ul>
-<li><strong>No mezcles gestores</strong> en el mismo entorno (no instales con Homebrew/apt + pip dentro del mismo <code>.venv</code>).</li>
-<li><strong>Jupyter</strong>: con <code>uv run --with jupyter jupyter lab</code> usas el entorno del proyecto. Si quieres ver el kernel en VS Code, crea el kernel (<code>ipykernel</code>) como arriba.</li>
-<li><strong>Mac ARM vs Intel</strong>: <code>uv</code> gestiona Python por versión/arquitectura; evita mezclar intérpretes del sistema con el <code>.venv</code>.</li>
-<li><strong>Linux</strong>: no uses el Python del sistema para proyectos (evitas romper herramientas del SO).</li>
-<li><strong>CI/Clases</strong>: usa <code>uv sync --frozen</code> para asegurar que todes tienen exactamente las mismas versiones.</li>
-</ul>
-</section>
-<section id="objetivo-final-de-la-clase" class="level2">
-<h2 class="anchored" data-anchor-id="objetivo-final-de-la-clase">Objetivo final de la clase</h2>
-<ul>
-<li>Tener un ambiente virtual para el uso general del curso</li>
-<li>Instalar jupyter notebook</li>
-<li><code>Hola mundo</code> en Jupyter notebook</li>
-</ul>
+<div id="addac34e-f4d3-4c86-9ee5-62187b6de13d" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>ciudades <span class="op">=</span> [<span class="st">"cuernavaca"</span>,<span class="st">"torreon"</span>,<span class="st">"la Paz"</span>]</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>lista <span class="op">=</span> [<span class="st">"cuernavaca"</span>,<span class="st">"torreon"</span>,<span class="st">"la Paz"</span>]</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">long</span> <span class="op">=</span> <span class="fl">1.1</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="4bd179f2-2e18-440e-ab67-4a424a856b6a" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>ciudades_norte <span class="op">=</span> [<span class="st">"Torreon"</span>,<span class="st">"Hermosillo"</span>,<span class="st">"La Paz"</span>] <span class="co"># snake</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>CiudadesNorte <span class="op">=</span> [<span class="st">"Torreon"</span>,<span class="st">"Hermosillo"</span>,<span class="st">"La Paz"</span>]  <span class="co"># Camel</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>Ciudades_Norte <span class="op">=</span> [<span class="st">"Torreon"</span>,<span class="st">"Hermosillo"</span>,<span class="st">"La Paz"</span>] <span class="co"># mala práctica</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>ciuddadesNorte <span class="op">=</span> [<span class="st">"..."</span>]</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="64066dea-bcf5-4145-90bc-a35da58c9c36" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>canción <span class="op">=</span> <span class="st">"Esta es una canción"</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><a href="https://peps.python.org/pep-0008/">Guía de estilo para Python</a></p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {
@@ -796,13 +815,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../index.html" class="pagination-link" aria-label="Objetivo General">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Objetivo General</span>
+      <a href="../clases/004_variables.html" class="pagination-link" aria-label="Títulos">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Títulos</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../clases/002_hola_mundo.html" class="pagination-link" aria-label="002_hola_mundo.html">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">002_hola_mundo.html</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../clases/006_strings_lists.html" class="pagination-link" aria-label="Modificar una cadena de lo que sea a mayusculas">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Modificar una cadena de lo que sea a mayusculas</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

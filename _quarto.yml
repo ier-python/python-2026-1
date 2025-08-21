@@ -33,44 +33,9 @@ book:
     - clases/001_terminal_python_uv.qmd
     - clases/002_hola_mundo.ipynb
     - clases/003_indentado.ipynb
-    # - clases/004_variables_indentado.ipynb
-    # - clases/005_E001.qmd
-    # - clases/006_comprehension.ipynb
-    # - clases/007_fstrings.ipynb
-    # - clases/008_funciones.ipynb
-    # - clases/009_funciones_variables.ipynb
-    # - clases/010_pandas_Dataframes.ipynb
-    # - clases/011_pandas_Dataframes.ipynb
-    # - clases/012_leyendo_datos.ipynb
-    # - clases/013_E002.qmd
-    # - clases/014_read_csv.ipynb
-    # - clases/015_read_csv.ipynb
-    # - clases/016_series_temporales.ipynb
-    # - clases/017_Series_temporales_con.ipynb
-    # - clases/018_multiple_files.ipynb
-    # - clases/019_lambda_functions.ipynb
-    # - clases/020_Ese_objeto_datetime.ipynb
-    # - clases/021_Anatomy_figure.ipynb
-    # - clases/022_mi_primera_grafica.ipynb
-    # - clases/023a_segunda_grafica.ipynb
-    # - clases/023b_segunda_grafica.ipynb
-    # - clases/024_heatmap.ipynb
-    # - clases/025_numpy.ipynb
-    # - clases/026_numpy_2.ipynb
-    # - clases/027_Paquetes.ipynb
-    # - clases/028_Desarrollo_Clase.ipynb
-    # - clases/029_Prueba_Clase.ipynb
-    # - clases/030_Instalando_paquete.ipynb
-    # - clases/031_copy_pandas_numpy_NOT.ipynb
-    # - clases/032_copy_pandas_numpy.ipynb
-    # - clases/033_solucion_reto_illuminance.ipynb
-    # - clases/034_Reto_lluvia.ipynb
-    # - clases/035_importa_lluvia.ipynb
-    # - clases/036_try_except.ipynb
-    # - clases/037_df_lluvia.ipynb
-    # # - clases/034_Tarea_clase_iluminancia.ipynb
-    # - clases/039_cython.ipynb
-    # - clases/040_importa_datos.ipynb
+    - clases/004_variables.ipynb
+    - clases/005_nombres_variables.ipynb
+    - clases/006_strings_lists.ipynb
     # - clases/041_groupby.ipynb
     # - clases/042_PruebasUnitarias.ipynb
 
