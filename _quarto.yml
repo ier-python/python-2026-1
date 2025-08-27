@@ -36,8 +36,8 @@ book:
     - clases/004_variables.ipynb
     - clases/005_nombres_variables.ipynb
     - clases/006_strings_lists.ipynb
-    # - clases/041_groupby.ipynb
-    # - clases/042_PruebasUnitarias.ipynb
+    - clases/007_strings_cadenas.ipynb
+    - clases/008_list_comprehension.ipynb
 
 format:
   html: 
