@@ -38,6 +38,10 @@ book:
     - clases/006_strings_lists.ipynb
     - clases/007_strings_cadenas.ipynb
     - clases/008_list_comprehension.ipynb
+    - clases/009_built_in_functions.ipynb
+    - clases/010_Operaciones.ipynb
+    - clases/011_bloques_control.ipynb
+    - clases/012_funciones_tipado.ipynb
 
 format:
   html: 
