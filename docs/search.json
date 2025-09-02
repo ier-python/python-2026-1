@@ -258,5 +258,85 @@
     "crumbs": [
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>012_funciones_tipado.html</span>"
     ]
+  },
+  {
+    "objectID": "clases/013_jerarquia.html",
+    "href": "clases/013_jerarquia.html",
+    "title": "13  Jerarquia de variables",
+    "section": "",
+    "text": "Funciones\n#### Tomar una lista de nombres y poner hola a cada persona\ndef suma_tres_cadenas(cad1:str,cad2:str,cad3:str) -&gt; str:\n    \"\"\"cad1 es el primer elemento, ....\"\"\"\n    return cad1 + cad2 + cad3\nsuma_tres_cadenas(\"uno\",\"dos\",\"tres\")\n\n'unodostres'\nsuma_tres_cadenas(\"dos\",\"uno\",\"tres\")\n\n'dosunotres'\ndef documentando_funciones(matriz:str=\"esto ya no es una matriz\"): ## Esto no es documentar\n    return matriz  ## esta es una asignacion de valores por default\nmatriz = documentando_funciones()\ntype(matriz)\n\nstr\ndocumentando_funciones?\n\n\nSignature: documentando_funciones(matriz: str = 'esto ya no es una matriz')\nDocstring: &lt;no docstring&gt;\nFile:      c:\\users\\gbv\\appdata\\local\\temp\\ipykernel_10928\\2245814994.py\nType:      function",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Jerarquia de variables</span>"
+    ]
+  },
+  {
+    "objectID": "clases/013_jerarquia.html#funciones",
+    "href": "clases/013_jerarquia.html#funciones",
+    "title": "13  Jerarquia de variables",
+    "section": "",
+    "text": "Pueden aceptar argumentos sin definir\nPueden aceptar variables con un valor predeterminado\nCon valores predeterminados, ya no importa el orden\n\n\n\n\n\n\n\n\n\nNombres para funciones\nSe sugiere usar snake_case\n\n#camelcase\nNombreApellido  = \"Guillermo Barrios\"\nnombre_apellido = \"Guillermo Barrios\"\n\n\ndef leer_nomina():\n\n\ndef LeerNomina(): # casi no se usa\n\n\nread_excel\nread_csv\nread_parquet",
+    "crumbs": [
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Jerarquia de variables</span>"
+    ]
+  },
+  {
+    "objectID": "clases/014_importando_funciones.html",
+    "href": "clases/014_importando_funciones.html",
+    "title": "Proyectos de ciencia de datos con Python",
+    "section": "",
+    "text": "#from tools.saludos import *\nfrom tools.saludos import ( \n                            saluda_dos_personas, \n                            saluda_personas \n)# importar cada funcion usada\nfrom tools.operaciones import suma_dos_numeros\n\n\nsaluda_personas()\n\n\nsaluda_dos_personas",
+    "crumbs": [
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>014_importando_funciones.html</span>"
+    ]
+  },
+  {
+    "objectID": "clases/015_modificar_funciones.html",
+    "href": "clases/015_modificar_funciones.html",
+    "title": "15  Uso de magic command para cargar un archico/funcion/paquetito",
+    "section": "",
+    "text": "%load tools.saludos.py \n\n# %load tools/saludos.py\ndef saluda_personas(nombres:list=[\"Fernando\",\"Luisa\",\"Lili\",\"Laura\",\"Mitsue\"],\n                    saludo:str=\"hola\")-&gt; None:\n    for nombre in nombres:\n        print(f\"{saludo} {nombre}\")\n        \ndef saluda_dos_personas(nombres:list=[\"Fernando\",\"Luisa\",\"Lili\",\"Laura\",\"Mitsue\"],\n                    saludo:str=\"hola\")-&gt; None:\n    for nombre in nombres:\n        print(f\"{saludo} {nombre}\")",
+    "crumbs": [
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Uso de magic command para cargar un archico/funcion/paquetito</span>"
+    ]
+  },
+  {
+    "objectID": "clases/016_Instalar_paquetes.html",
+    "href": "clases/016_Instalar_paquetes.html",
+    "title": "16  PyPi",
+    "section": "",
+    "text": "requirements.txt\nEs un archivo plano que contiene toda la lista de paquetes (y su version) instalados en un ambiente virtual o una computadora",
+    "crumbs": [
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>PyPi</span>"
+    ]
+  },
+  {
+    "objectID": "clases/016_Instalar_paquetes.html#requirements.txt",
+    "href": "clases/016_Instalar_paquetes.html#requirements.txt",
+    "title": "16  PyPi",
+    "section": "",
+    "text": "Desde donde puedo instalar\n\nuv add paquete # si existe en el pypi\nuv add https://github.com/AltamarMx/iertools.git # desde un repo\nuv add -r requirements.txt\nuv add algo # compilar un paquete e instalarlo",
+    "crumbs": [
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>PyPi</span>"
+    ]
+  },
+  {
+    "objectID": "clases/016_Instalar_paquetes.html#si-no-usaramos-uv",
+    "href": "clases/016_Instalar_paquetes.html#si-no-usaramos-uv",
+    "title": "16  PyPi",
+    "section": "Si no usaramos uv",
+    "text": "Si no usaramos uv\npip freeze &gt; requirements.txt",
+    "crumbs": [
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>PyPi</span>"
+    ]
+  },
+  {
+    "objectID": "clases/016_Instalar_paquetes.html#ejercicio-de-la-clase-del-miercoles",
+    "href": "clases/016_Instalar_paquetes.html#ejercicio-de-la-clase-del-miercoles",
+    "title": "16  PyPi",
+    "section": "Ejercicio de la clase del miercoles",
+    "text": "Ejercicio de la clase del miercoles\n\nUn zip de un repo para recrear un ambiente virtual\nRequirements con algunos paquetes\nUna lista de paquetes a instalar\nEjercicios\nZip de su espacio trabajo sin .venv",
+    "crumbs": [
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>PyPi</span>"
+    ]
   }
 ]

@@ -42,10 +42,10 @@ book:
     - clases/010_Operaciones.ipynb
     - clases/011_bloques_control.ipynb
     - clases/012_funciones_tipado.ipynb
-    - clases/013_funciones.ipynb
+    - clases/013_jerarquia.ipynb
     - clases/014_importando_funciones.ipynb
     - clases/015_modificar_funciones.ipynb
-    - clases/016_instalar_paquetes.ipynb
+    - clases/016_Instalar_paquetes.ipynb
 
 format:
   html: 
