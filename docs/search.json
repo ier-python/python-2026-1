@@ -354,7 +354,7 @@
     "href": "clases/016a_ejercicio_clase.html#objetivo",
     "title": "17  Proyecto: ejercicio-funciones",
     "section": "",
-    "text": "Dos notebooks (001_desarrollo_funciones.ipynb y 002_uso_funciones.ipynb).\nUn paquete externo desde GitHub (iertools).\nDos dependencias de visualización/analítica (windrose y calplot) declaradas en requirements.txt.\nUn pequeño módulo de utilidades con funciones tipadas para manejo de cadenas y números.",
+    "text": "Dos notebooks (001_desarrollo_funciones.ipynb y 002_uso_funciones.ipynb).\nUn paquete externo desde GitHub (iertools).\nUn pequeño módulo de utilidades con funciones tipadas para conteo de cadenas .",
     "crumbs": [
       "<span class='chapter-number'>17</span>  <span class='chapter-title'>Proyecto: ejercicio-funciones</span>"
     ]
@@ -364,7 +364,7 @@
     "href": "clases/016a_ejercicio_clase.html#estructura-mínima",
     "title": "17  Proyecto: ejercicio-funciones",
     "section": "Estructura mínima",
-    "text": "Estructura mínima\nejercicio-funciones/\n├─ pyproject.toml\n├─ data/\n├─ notebooks/\n│  ├─ 001_desarrollo_funciones.ipynb\n│  ├─ 002_uso_funciones.ipynb\n│  └─ herramientas/\n│     ├─ cadenas.py\n│     └─ numeros.py\n└─ pdfs/",
+    "text": "Estructura mínima\nejercicio-funciones/\n├─ pyproject.toml\n├─ data/\n├─ notebooks/\n│  ├─ 001_desarrollo_funciones.ipynb\n│  ├─ 002_uso_funciones.ipynb\n│  └─ herramientas/\n│     ├─ cadenas.py\n└─ pdfs/",
     "crumbs": [
       "<span class='chapter-number'>17</span>  <span class='chapter-title'>Proyecto: ejercicio-funciones</span>"
     ]
@@ -374,7 +374,7 @@
     "href": "clases/016a_ejercicio_clase.html#dependencias-requeridas",
     "title": "17  Proyecto: ejercicio-funciones",
     "section": "Dependencias requeridas",
-    "text": "Dependencias requeridas\n\nPaquete externo: iertools (desde GitHub).\npandas, matplotlib, windrose y calplot",
+    "text": "Dependencias requeridas\n\nPaquete externo: iertools (desde GitHub).\npandas, matplotlib, windrose y calplot desde PyPi",
     "crumbs": [
       "<span class='chapter-number'>17</span>  <span class='chapter-title'>Proyecto: ejercicio-funciones</span>"
     ]

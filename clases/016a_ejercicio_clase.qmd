@@ -7,8 +7,7 @@ Construir un proyecto en Python con **uv** que incluya:
 
 * Dos **notebooks** (`001_desarrollo_funciones.ipynb` y `002_uso_funciones.ipynb`).
 * Un paquete externo desde GitHub (**iertools**).
-* Dos dependencias de visualización/analítica (**windrose** y **calplot**) declaradas en `requirements.txt`.
-* Un pequeño **módulo de utilidades** con funciones tipadas para manejo de **cadenas** y **números**.
+* Un pequeño **módulo de utilidades** con funciones tipadas para conteo de **cadenas** .
 
 ## Estructura mínima
 
@@ -21,14 +20,13 @@ ejercicio-funciones/
 │  ├─ 002_uso_funciones.ipynb
 │  └─ herramientas/
 │     ├─ cadenas.py
-│     └─ numeros.py
 └─ pdfs/
 ```
 
 ## Dependencias requeridas
 
 * Paquete externo: **iertools** (desde GitHub).
-* pandas, matplotlib, windrose y calplot
+* pandas, matplotlib, windrose y calplot desde PyPi
 ---
 
 ## Especificación de funciones
