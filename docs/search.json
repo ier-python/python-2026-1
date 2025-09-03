@@ -342,101 +342,61 @@
   {
     "objectID": "clases/016a_ejercicio_clase.html",
     "href": "clases/016a_ejercicio_clase.html",
-    "title": "17  Ejercicio: Proyecto “ejercicio-funciones” con uv, notebooks y módulos propios",
+    "title": "17  Proyecto: ejercicio-funciones",
     "section": "",
-    "text": "1) Crear el proyecto con uv",
+    "text": "Objetivo\nConstruir un proyecto en Python con uv que incluya:",
     "crumbs": [
-      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Ejercicio: Proyecto “ejercicio-funciones” con **uv**, notebooks y módulos propios</span>"
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Proyecto: ejercicio-funciones</span>"
     ]
   },
   {
-    "objectID": "clases/016a_ejercicio_clase.html#crear-el-proyecto-con-uv",
-    "href": "clases/016a_ejercicio_clase.html#crear-el-proyecto-con-uv",
-    "title": "17  Ejercicio: Proyecto “ejercicio-funciones” con uv, notebooks y módulos propios",
+    "objectID": "clases/016a_ejercicio_clase.html#objetivo",
+    "href": "clases/016a_ejercicio_clase.html#objetivo",
+    "title": "17  Proyecto: ejercicio-funciones",
     "section": "",
-    "text": "# 1.1 Crear carpeta de proyecto e inicializar con uv\nuv init ejercicio-funciones\ncd ejercicio-funciones\n\nEsto creará pyproject.toml.",
+    "text": "Dos notebooks (001_desarrollo_funciones.ipynb y 002_uso_funciones.ipynb).\nUn paquete externo desde GitHub (iertools).\nDos dependencias de visualización/analítica (windrose y calplot) declaradas en requirements.txt.\nUn pequeño módulo de utilidades con funciones tipadas para manejo de cadenas y números.",
     "crumbs": [
-      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Ejercicio: Proyecto “ejercicio-funciones” con **uv**, notebooks y módulos propios</span>"
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Proyecto: ejercicio-funciones</span>"
     ]
   },
   {
-    "objectID": "clases/016a_ejercicio_clase.html#agregar-jupyter-notebook-con-uv",
-    "href": "clases/016a_ejercicio_clase.html#agregar-jupyter-notebook-con-uv",
-    "title": "17  Ejercicio: Proyecto “ejercicio-funciones” con uv, notebooks y módulos propios",
-    "section": "2) Agregar Jupyter Notebook con uv",
-    "text": "2) Agregar Jupyter Notebook con uv",
+    "objectID": "clases/016a_ejercicio_clase.html#estructura-mínima",
+    "href": "clases/016a_ejercicio_clase.html#estructura-mínima",
+    "title": "17  Proyecto: ejercicio-funciones",
+    "section": "Estructura mínima",
+    "text": "Estructura mínima\nejercicio-funciones/\n├─ pyproject.toml\n├─ data/\n├─ notebooks/\n│  ├─ 001_desarrollo_funciones.ipynb\n│  ├─ 002_uso_funciones.ipynb\n│  └─ herramientas/\n│     ├─ cadenas.py\n│     └─ numeros.py\n└─ pdfs/",
     "crumbs": [
-      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Ejercicio: Proyecto “ejercicio-funciones” con **uv**, notebooks y módulos propios</span>"
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Proyecto: ejercicio-funciones</span>"
     ]
   },
   {
-    "objectID": "clases/016a_ejercicio_clase.html#agregar-el-paquete-iertools-desde-github",
-    "href": "clases/016a_ejercicio_clase.html#agregar-el-paquete-iertools-desde-github",
-    "title": "17  Ejercicio: Proyecto “ejercicio-funciones” con uv, notebooks y módulos propios",
-    "section": "3) Agregar el paquete iertools desde GitHub",
-    "text": "3) Agregar el paquete iertools desde GitHub\n\nNecesitas git instalado (prueba con git --version).\n\nWindows: instala “Git for Windows” El repo es https://github.com/AltamarMx/iertools",
+    "objectID": "clases/016a_ejercicio_clase.html#dependencias-requeridas",
+    "href": "clases/016a_ejercicio_clase.html#dependencias-requeridas",
+    "title": "17  Proyecto: ejercicio-funciones",
+    "section": "Dependencias requeridas",
+    "text": "Dependencias requeridas\n\nPaquete externo: iertools (desde GitHub).\npandas, matplotlib, windrose y calplot",
     "crumbs": [
-      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Ejercicio: Proyecto “ejercicio-funciones” con **uv**, notebooks y módulos propios</span>"
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Proyecto: ejercicio-funciones</span>"
     ]
   },
   {
-    "objectID": "clases/016a_ejercicio_clase.html#agregar-windrose-y-calplot-desde-requirements.txt",
-    "href": "clases/016a_ejercicio_clase.html#agregar-windrose-y-calplot-desde-requirements.txt",
-    "title": "17  Ejercicio: Proyecto “ejercicio-funciones” con uv, notebooks y módulos propios",
-    "section": "4) Agregar windrose y calplot desde requirements.txt",
-    "text": "4) Agregar windrose y calplot desde requirements.txt\nToma el archivo requirements.txt e instala los paquetes que trae con uv.",
+    "objectID": "clases/016a_ejercicio_clase.html#especificación-de-funciones",
+    "href": "clases/016a_ejercicio_clase.html#especificación-de-funciones",
+    "title": "17  Proyecto: ejercicio-funciones",
+    "section": "Especificación de funciones",
+    "text": "Especificación de funciones\n\nA) notebooks/herramientas/cadenas.py\nImplementa funciones tipadas y con docstrings:\n\ncontar_letras_unicas(texto: str, *, ignorar_acentos: bool = True) -&gt; int\n\nConvierte a minúsculas, opcionalmente normaliza acentos, ignora puntuación y devuelve el número de letras distintas.\n\n\n\n\n001_desarrollo_funciones.ipynb\n\n\n002_uso_funciones.ipynb\n\nImportación desde notebooks/herramientas/.\nDemostración de uso con ejemplos reales.",
     "crumbs": [
-      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Ejercicio: Proyecto “ejercicio-funciones” con **uv**, notebooks y módulos propios</span>"
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Proyecto: ejercicio-funciones</span>"
     ]
   },
   {
-    "objectID": "clases/016a_ejercicio_clase.html#crear-la-estructura-de-trabajo",
-    "href": "clases/016a_ejercicio_clase.html#crear-la-estructura-de-trabajo",
-    "title": "17  Ejercicio: Proyecto “ejercicio-funciones” con uv, notebooks y módulos propios",
-    "section": "5) Crear la estructura de trabajo",
-    "text": "5) Crear la estructura de trabajo\nCon carpetas data/, notebooks/ y pdfs/.\nEstructura esperada:\nejercicio-funciones/\n├─ pyproject.toml\n├─ requirements.txt\n├─ data/\n├─ notebooks/\n│  ├─ 001_desarrollo_funciones.ipynb\n│  ├─ 002_uso_funciones.ipynb\n│  └─ herramientas/\n│     ├─ cadenas.py\n│     └─ numeros.py\n└─ pdfs/",
+    "objectID": "clases/016a_ejercicio_clase.html#entregables",
+    "href": "clases/016a_ejercicio_clase.html#entregables",
+    "title": "17  Proyecto: ejercicio-funciones",
+    "section": "Entregables",
+    "text": "Entregables\n\nEstructura de proyecto requerida.\nrequirements.txt con windrose y calplot.\nnotebooks/herramientas/cadenas.py y notebooks/herramientas/numeros.py con tipado y docstrings.\n001_desarrollo_funciones.ipynb con pruebas.\n002_uso_funciones.ipynb con ejemplos y verificación de dependencias.",
     "crumbs": [
-      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Ejercicio: Proyecto “ejercicio-funciones” con **uv**, notebooks y módulos propios</span>"
-    ]
-  },
-  {
-    "objectID": "clases/016a_ejercicio_clase.html#propuesta-de-funciones-con-tipado-y-ejercicios",
-    "href": "clases/016a_ejercicio_clase.html#propuesta-de-funciones-con-tipado-y-ejercicios",
-    "title": "17  Ejercicio: Proyecto “ejercicio-funciones” con uv, notebooks y módulos propios",
-    "section": "6) Propuesta de funciones (con tipado) y ejercicios",
-    "text": "6) Propuesta de funciones (con tipado) y ejercicios\n\nA. Módulo de cadenas: notebooks/herramientas/cadenas.py\nFunción 1 (ejercicio de normalización y análisis): contar_palabras_unicas(texto: str, *, ignorar_acentos: bool = True) -&gt; int\n\nDebe normalizar acentos (opcional), convertir a minúsculas y contar cuántas palabras distintas hay.\nIgnorar signos de puntuación.\n\nFunción 2 (ejercicio de lógica de cadenas): es_palindromo(texto: str, *, ignorar_espacios: bool = True, ignorar_acentos: bool = True) -&gt; bool\n\nDevuelve True si el texto es palíndromo bajo las reglas indicadas.\n\nPlantilla sugerida:\n# notebooks/herramientas/cadenas.py\nfrom __future__ import annotations\nimport re\nimport unicodedata\n\ndef _quitar_acentos(s: str) -&gt; str:\n    nfkd = unicodedata.normalize(\"NFKD\", s)\n    return \"\".join(ch for ch in nfkd if not unicodedata.combining(ch))\n\ndef contar_palabras_unicas(texto: str, *, ignorar_acentos: bool = True) -&gt; int:\n    \"\"\"\n    Cuenta el número de palabras distintas en 'texto'.\n    - Normaliza a minúsculas.\n    - Quita acentos si 'ignorar_acentos' es True.\n    - Ignora signos de puntuación.\n    \"\"\"\n    if ignorar_acentos:\n        texto = _quitar_acentos(texto)\n    texto = texto.lower()\n    palabras = re.findall(r\"[a-záéíóúñü]+\", texto, flags=re.IGNORECASE)\n    return len(set(palabras))\n\ndef es_palindromo(\n    texto: str,\n    *,\n    ignorar_espacios: bool = True,\n    ignorar_acentos: bool = True\n) -&gt; bool:\n    \"\"\"\n    Verifica si 'texto' es palíndromo según las opciones.\n    \"\"\"\n    if ignorar_acentos:\n        texto = _quitar_acentos(texto)\n    texto = texto.lower()\n    if ignorar_espacios:\n        texto = re.sub(r\"\\s+\", \"\", texto)\n    # Quitar signos de puntuación\n    texto = re.sub(r\"[^a-z0-9ñü]\", \"\", texto)\n    return texto == texto[::-1]\n\n\nB. Módulo de números: notebooks/herramientas/numeros.py\nFunción 1 (estadística básica): resumen_estadistico(valores: list[float]) -&gt; dict[str, float]\n\nDebe regresar: min, max, media, mediana y stdev (muestral).\n\nFunción 2 (transformación lineal): escalar_rango(x: float, origen: tuple[float, float], destino: tuple[float, float]) -&gt; float\n\nEscala un valor x del rango origen=(a,b) al rango destino=(c,d).\n\nPlantilla sugerida:\n# notebooks/herramientas/numeros.py\nfrom __future__ import annotations\nfrom statistics import mean, median, stdev\nfrom typing import Dict\n\ndef resumen_estadistico(valores: list[float]) -&gt; Dict[str, float]:\n    \"\"\"\n    Devuelve un resumen estadístico básico de 'valores'.\n    Requiere al menos 2 valores para stdev muestral.\n    \"\"\"\n    if len(valores) &lt; 2:\n        raise ValueError(\"Se requieren al menos 2 valores para calcular stdev.\")\n    return {\n        \"min\": float(min(valores)),\n        \"max\": float(max(valores)),\n        \"media\": float(mean(valores)),\n        \"mediana\": float(median(valores)),\n        \"stdev\": float(stdev(valores)),\n    }\n\ndef escalar_rango(x: float, origen: tuple[float, float], destino: tuple[float, float]) -&gt; float:\n    \"\"\"\n    Escala el valor 'x' del rango 'origen=(a,b)' al rango 'destino=(c,d)'.\n    \"\"\"\n    a, b = origen\n    c, d = destino\n    if a == b:\n        raise ValueError(\"El rango de origen no puede tener longitud cero.\")\n    t = (x - a) / (b - a)\n    return c + t * (d - c)",
-    "crumbs": [
-      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Ejercicio: Proyecto “ejercicio-funciones” con **uv**, notebooks y módulos propios</span>"
-    ]
-  },
-  {
-    "objectID": "clases/016a_ejercicio_clase.html#notebooks",
-    "href": "clases/016a_ejercicio_clase.html#notebooks",
-    "title": "17  Ejercicio: Proyecto “ejercicio-funciones” con uv, notebooks y módulos propios",
-    "section": "7) Notebooks",
-    "text": "7) Notebooks\nCrea dos notebooks en notebooks/:\n\n7.1 001_desarrollo_funciones.ipynb\n\nDesarrolla y prueba las funciones aquí.\nPuedes usar estas celdas de ejemplo:\n\n# Pruebas rápidas para cadenas\nfrom herramientas.cadenas import contar_palabras_unicas, es_palindromo\n\ntexto = \"Anita lava la tina. ¡Anita, lava la tina!\"\nprint(contar_palabras_unicas(texto))  # esperado: 4 (anita, lava, la, tina)\nprint(es_palindromo(\"Anita lava la tina\"))  # True\n# Pruebas rápidas para números\nfrom herramientas.numeros import resumen_estadistico, escalar_rango\n\nvalores = [1.0, 2.0, 2.0, 3.5, 10.0]\nprint(resumen_estadistico(valores))\n\nprint(escalar_rango(5.0, (0.0, 10.0), (0.0, 1.0)))  # 0.5\n\nSi prefieres desarrollar el código dentro de este notebook primero y luego guardarlo como .py, puedes usar las “magics” de IPython:\n%%writefile notebooks/herramientas/cadenas.py\n# (pega aquí el contenido final del módulo cadenas.py)\ny lo mismo para numeros.py.\n\n\n\n\n7.2 002_uso_funciones.ipynb\n\nEn este notebook importa y usa las funciones ya definidas en herramientas/.\nAdemás, verifica que las librerías externas están instaladas (iertools, calplot, windrose).\n\nCeldas guía:\n# Ajustar ruta para importar desde \"notebooks/herramientas\"\nimport sys\nfrom pathlib import Path\nsys.path.append(str(Path().resolve() / \"notebooks\"))\n\nfrom herramientas.cadenas import contar_palabras_unicas, es_palindromo\nfrom herramientas.numeros import resumen_estadistico, escalar_rango\n# Uso real de las funciones\nt = \"¿Acaso hubo búhos acá?\"\nprint(\"Únicas:\", contar_palabras_unicas(t))\nprint(\"¿Palíndromo?:\", es_palindromo(t))\n\nvalores = [2.5, 2.7, 3.1, 3.1, 4.0, 5.2]\nprint(resumen_estadistico(valores))\nprint(escalar_rango(42.0, (0.0, 100.0), (10.0, 20.0)))\n# Verificar iertools\nimport iertools as ie\nie.__version__\n# Ejemplo mínimo con calplot (calendario de valores diarios)\nimport pandas as pd\nimport numpy as np\nimport calplot\n\nrng = pd.date_range(\"2025-01-01\", \"2025-12-31\", freq=\"D\")\ns = pd.Series(np.random.randint(0, 5, size=len(rng)), index=rng)\ncalplot.calplot(s)\n# Ejemplo mínimo con windrose\nimport numpy as np\nfrom windrose import WindroseAxes\nimport matplotlib.pyplot as plt\n\nws = np.random.rand(500) * 10.0   # velocidades\nwd = np.random.rand(500) * 360.0  # direcciones\nax = WindroseAxes.from_ax()\nax.bar(wd, ws, normed=True, opening=0.8, edgecolor=\"white\")\nax.set_legend()\nplt.show()",
-    "crumbs": [
-      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Ejercicio: Proyecto “ejercicio-funciones” con **uv**, notebooks y módulos propios</span>"
-    ]
-  },
-  {
-    "objectID": "clases/016a_ejercicio_clase.html#opcional-comandos-útiles",
-    "href": "clases/016a_ejercicio_clase.html#opcional-comandos-útiles",
-    "title": "17  Ejercicio: Proyecto “ejercicio-funciones” con uv, notebooks y módulos propios",
-    "section": "(Opcional) Comandos útiles",
-    "text": "(Opcional) Comandos útiles\n# Ejecutar Jupyter\nuv run jupyter lab\n\n# Congelar dependencias actuales a requirements.txt (si quisieras)\nuv pip freeze &gt; requirements.txt",
-    "crumbs": [
-      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Ejercicio: Proyecto “ejercicio-funciones” con **uv**, notebooks y módulos propios</span>"
-    ]
-  },
-  {
-    "objectID": "clases/016a_ejercicio_clase.html#entregables-esperados",
-    "href": "clases/016a_ejercicio_clase.html#entregables-esperados",
-    "title": "17  Ejercicio: Proyecto “ejercicio-funciones” con uv, notebooks y módulos propios",
-    "section": "Entregables esperados",
-    "text": "Entregables esperados\n\nProyecto ejercicio-funciones con la estructura definida.\nrequirements.txt con windrose y calplot.\nnotebooks/herramientas/cadenas.py y notebooks/herramientas/numeros.py con funciones tipadas y docstrings.\nnotebooks/001_desarrollo_funciones.ipynb: desarrollo y pruebas.\nnotebooks/002_uso_funciones.ipynb: importación y uso (y verificación de librerías externas).\n\n¡Listo! Con esto tienes un ejercicio completo para tu clase de Python que mezcla gestión de entorno con uv, módulos propios, notebooks y uso básico de librerías de visualización/analítica.",
-    "crumbs": [
-      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Ejercicio: Proyecto “ejercicio-funciones” con **uv**, notebooks y módulos propios</span>"
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Proyecto: ejercicio-funciones</span>"
     ]
   }
 ]

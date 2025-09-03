@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.30">
+<meta name="generator" content="quarto-1.7.31">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>17&nbsp; Ejercicio: Proyecto “ejercicio-funciones” con uv, notebooks y módulos propios – Proyectos de ciencia de datos con Python</title>
+<title>17&nbsp; Proyecto: ejercicio-funciones – Proyectos de ciencia de datos con Python</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,41 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -72,14 +37,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-de070a7b0ab54f8780927367ac907214.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-2b3e328b71be8d25427581baeb23079b.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-de070a7b0ab54f8780927367ac907214.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-8ef56b68f8fa1e9d2ba328e99e439f80.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-3fdc0c57fcd691b300e3c41e3e4a687d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-863ab20449d2f3d5951a2e693f5499b5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-3fdc0c57fcd691b300e3c41e3e4a687d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-8c40e8074a9974d9bf841ec8793f006c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-c10af8267f2df204c1ca93a0fb2fa97c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-8c40e8074a9974d9bf841ec8793f006c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -296,7 +261,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../clases/016a_ejercicio_clase.html"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Ejercicio: Proyecto “ejercicio-funciones” con <strong>uv</strong>, notebooks y módulos propios</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../clases/016a_ejercicio_clase.html"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Proyecto: ejercicio-funciones</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -413,7 +378,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../clases/016a_ejercicio_clase.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Ejercicio: Proyecto “ejercicio-funciones” con <strong>uv</strong>, notebooks y módulos propios</span></span></a>
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Proyecto: ejercicio-funciones</span></span></a>
   </div>
 </li>
     </ul>
@@ -426,23 +391,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Tabla de contenidos</h2>
    
   <ul>
-  <li><a href="#crear-el-proyecto-con-uv" id="toc-crear-el-proyecto-con-uv" class="nav-link active" data-scroll-target="#crear-el-proyecto-con-uv">1) Crear el proyecto con <strong>uv</strong></a></li>
-  <li><a href="#agregar-jupyter-notebook-con-uv" id="toc-agregar-jupyter-notebook-con-uv" class="nav-link" data-scroll-target="#agregar-jupyter-notebook-con-uv">2) Agregar <strong>Jupyter Notebook</strong> con <strong>uv</strong></a></li>
-  <li><a href="#agregar-el-paquete-iertools-desde-github" id="toc-agregar-el-paquete-iertools-desde-github" class="nav-link" data-scroll-target="#agregar-el-paquete-iertools-desde-github">3) Agregar el paquete <strong>iertools</strong> desde GitHub</a></li>
-  <li><a href="#agregar-windrose-y-calplot-desde-requirements.txt" id="toc-agregar-windrose-y-calplot-desde-requirements.txt" class="nav-link" data-scroll-target="#agregar-windrose-y-calplot-desde-requirements.txt">4) Agregar <strong>windrose</strong> y <strong>calplot</strong> desde <code>requirements.txt</code></a></li>
-  <li><a href="#crear-la-estructura-de-trabajo" id="toc-crear-la-estructura-de-trabajo" class="nav-link" data-scroll-target="#crear-la-estructura-de-trabajo">5) Crear la estructura de trabajo</a></li>
-  <li><a href="#propuesta-de-funciones-con-tipado-y-ejercicios" id="toc-propuesta-de-funciones-con-tipado-y-ejercicios" class="nav-link" data-scroll-target="#propuesta-de-funciones-con-tipado-y-ejercicios">6) Propuesta de funciones (con tipado) y ejercicios</a>
+  <li><a href="#objetivo" id="toc-objetivo" class="nav-link active" data-scroll-target="#objetivo">Objetivo</a></li>
+  <li><a href="#estructura-mínima" id="toc-estructura-mínima" class="nav-link" data-scroll-target="#estructura-mínima">Estructura mínima</a></li>
+  <li><a href="#dependencias-requeridas" id="toc-dependencias-requeridas" class="nav-link" data-scroll-target="#dependencias-requeridas">Dependencias requeridas</a></li>
+  <li><a href="#especificación-de-funciones" id="toc-especificación-de-funciones" class="nav-link" data-scroll-target="#especificación-de-funciones">Especificación de funciones</a>
   <ul class="collapse">
-  <li><a href="#a.-módulo-de-cadenas-notebooksherramientascadenas.py" id="toc-a.-módulo-de-cadenas-notebooksherramientascadenas.py" class="nav-link" data-scroll-target="#a.-módulo-de-cadenas-notebooksherramientascadenas.py">A. Módulo de cadenas: <code>notebooks/herramientas/cadenas.py</code></a></li>
-  <li><a href="#b.-módulo-de-números-notebooksherramientasnumeros.py" id="toc-b.-módulo-de-números-notebooksherramientasnumeros.py" class="nav-link" data-scroll-target="#b.-módulo-de-números-notebooksherramientasnumeros.py">B. Módulo de números: <code>notebooks/herramientas/numeros.py</code></a></li>
+  <li><a href="#a-notebooksherramientascadenas.py" id="toc-a-notebooksherramientascadenas.py" class="nav-link" data-scroll-target="#a-notebooksherramientascadenas.py">A) <code>notebooks/herramientas/cadenas.py</code></a></li>
+  <li><a href="#desarrollo_funciones.ipynb" id="toc-desarrollo_funciones.ipynb" class="nav-link" data-scroll-target="#desarrollo_funciones.ipynb"><code>001_desarrollo_funciones.ipynb</code></a></li>
+  <li><a href="#uso_funciones.ipynb" id="toc-uso_funciones.ipynb" class="nav-link" data-scroll-target="#uso_funciones.ipynb"><code>002_uso_funciones.ipynb</code></a></li>
   </ul></li>
-  <li><a href="#notebooks" id="toc-notebooks" class="nav-link" data-scroll-target="#notebooks">7) Notebooks</a>
-  <ul class="collapse">
-  <li><a href="#desarrollo_funciones.ipynb" id="toc-desarrollo_funciones.ipynb" class="nav-link" data-scroll-target="#desarrollo_funciones.ipynb">7.1 <code>001_desarrollo_funciones.ipynb</code></a></li>
-  <li><a href="#uso_funciones.ipynb" id="toc-uso_funciones.ipynb" class="nav-link" data-scroll-target="#uso_funciones.ipynb">7.2 <code>002_uso_funciones.ipynb</code></a></li>
-  </ul></li>
-  <li><a href="#opcional-comandos-útiles" id="toc-opcional-comandos-útiles" class="nav-link" data-scroll-target="#opcional-comandos-útiles">(Opcional) Comandos útiles</a></li>
-  <li><a href="#entregables-esperados" id="toc-entregables-esperados" class="nav-link" data-scroll-target="#entregables-esperados">Entregables esperados</a></li>
+  <li><a href="#entregables" id="toc-entregables" class="nav-link" data-scroll-target="#entregables">Entregables</a></li>
   </ul>
 </nav>
     </div>
@@ -452,7 +410,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Ejercicio: Proyecto “ejercicio-funciones” con <strong>uv</strong>, notebooks y módulos propios</span></h1>
+<h1 class="title"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Proyecto: ejercicio-funciones</span></h1>
 </div>
 
 
@@ -469,52 +427,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<blockquote class="blockquote">
-<p>Objetivo: crear un pequeño proyecto en Python usando <strong>uv</strong> que incluya Jupyter Notebook, dos librerías instaladas desde un <code>requirements.txt</code>, un paquete externo desde GitHub y una estructura de carpetas clara. Además, desarrollar e importar funciones (con tipado) para manejo de cadenas y de números.</p>
-</blockquote>
-<section id="crear-el-proyecto-con-uv" class="level2">
-<h2 class="anchored" data-anchor-id="crear-el-proyecto-con-uv">1) Crear el proyecto con <strong>uv</strong></h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1.1 Crear carpeta de proyecto e inicializar con uv</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> init ejercicio-funciones</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ejercicio-funciones</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<blockquote class="blockquote">
-<p>Esto creará <code>pyproject.toml</code>.</p>
-</blockquote>
-</section>
-<section id="agregar-jupyter-notebook-con-uv" class="level2">
-<h2 class="anchored" data-anchor-id="agregar-jupyter-notebook-con-uv">2) Agregar <strong>Jupyter Notebook</strong> con <strong>uv</strong></h2>
-<!-- 
-```bash
-# Instalar jupyter y kernel
-uv add jupyter notebook 
-```
-
-Luego podrás abrir notebooks con:
-
-```bash
-uv run jupyter notebook
-``` -->
-</section>
-<section id="agregar-el-paquete-iertools-desde-github" class="level2">
-<h2 class="anchored" data-anchor-id="agregar-el-paquete-iertools-desde-github">3) Agregar el paquete <strong>iertools</strong> desde GitHub</h2>
-<blockquote class="blockquote">
-<p>Necesitas <strong>git</strong> instalado (prueba con <code>git --version</code>).</p>
+<section id="objetivo" class="level2">
+<h2 class="anchored" data-anchor-id="objetivo">Objetivo</h2>
+<p>Construir un proyecto en Python con <strong>uv</strong> que incluya:</p>
 <ul>
-<li>Windows: instala “Git for Windows” El repo es https://github.com/AltamarMx/iertools</li>
+<li>Dos <strong>notebooks</strong> (<code>001_desarrollo_funciones.ipynb</code> y <code>002_uso_funciones.ipynb</code>).</li>
+<li>Un paquete externo desde GitHub (<strong>iertools</strong>).</li>
+<li>Dos dependencias de visualización/analítica (<strong>windrose</strong> y <strong>calplot</strong>) declaradas en <code>requirements.txt</code>.</li>
+<li>Un pequeño <strong>módulo de utilidades</strong> con funciones tipadas para manejo de <strong>cadenas</strong> y <strong>números</strong>.</li>
 </ul>
-</blockquote>
 </section>
-<section id="agregar-windrose-y-calplot-desde-requirements.txt" class="level2">
-<h2 class="anchored" data-anchor-id="agregar-windrose-y-calplot-desde-requirements.txt">4) Agregar <strong>windrose</strong> y <strong>calplot</strong> desde <code>requirements.txt</code></h2>
-<p>Toma el archivo <strong>requirements.txt</strong> e instala los paquetes que trae con <code>uv</code>.</p>
-</section>
-<section id="crear-la-estructura-de-trabajo" class="level2">
-<h2 class="anchored" data-anchor-id="crear-la-estructura-de-trabajo">5) Crear la estructura de trabajo</h2>
-<p>Con carpetas <code>data/</code>, <code>notebooks/</code> y <code>pdfs/</code>.</p>
-<p>Estructura esperada:</p>
+<section id="estructura-mínima" class="level2">
+<h2 class="anchored" data-anchor-id="estructura-mínima">Estructura mínima</h2>
 <pre><code>ejercicio-funciones/
 ├─ pyproject.toml
-├─ requirements.txt
 ├─ data/
 ├─ notebooks/
 │  ├─ 001_desarrollo_funciones.ipynb
@@ -523,202 +449,47 @@ uv run jupyter notebook
 │     ├─ cadenas.py
 │     └─ numeros.py
 └─ pdfs/</code></pre>
-<hr>
 </section>
-<section id="propuesta-de-funciones-con-tipado-y-ejercicios" class="level2">
-<h2 class="anchored" data-anchor-id="propuesta-de-funciones-con-tipado-y-ejercicios">6) Propuesta de funciones (con tipado) y ejercicios</h2>
-<section id="a.-módulo-de-cadenas-notebooksherramientascadenas.py" class="level3">
-<h3 class="anchored" data-anchor-id="a.-módulo-de-cadenas-notebooksherramientascadenas.py">A. Módulo de cadenas: <code>notebooks/herramientas/cadenas.py</code></h3>
-<p><strong>Función 1 (ejercicio de normalización y análisis):</strong> <code>contar_palabras_unicas(texto: str, *, ignorar_acentos: bool = True) -&gt; int</code></p>
+<section id="dependencias-requeridas" class="level2">
+<h2 class="anchored" data-anchor-id="dependencias-requeridas">Dependencias requeridas</h2>
 <ul>
-<li>Debe normalizar acentos (opcional), convertir a minúsculas y contar cuántas palabras <strong>distintas</strong> hay.</li>
-<li>Ignorar signos de puntuación.</li>
+<li>Paquete externo: <strong>iertools</strong> (desde GitHub).</li>
+<li><h2 id="pandas-matplotlib-windrose-y-calplot" class="anchored">pandas, matplotlib, windrose y calplot</h2></li>
 </ul>
-<p><strong>Función 2 (ejercicio de lógica de cadenas):</strong> <code>es_palindromo(texto: str, *, ignorar_espacios: bool = True, ignorar_acentos: bool = True) -&gt; bool</code></p>
-<ul>
-<li>Devuelve <code>True</code> si el texto es palíndromo bajo las reglas indicadas.</li>
-</ul>
-<p><strong>Plantilla sugerida:</strong></p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># notebooks/herramientas/cadenas.py</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> __future__ <span class="im">import</span> annotations</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> re</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> unicodedata</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> _quitar_acentos(s: <span class="bu">str</span>) <span class="op">-&gt;</span> <span class="bu">str</span>:</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    nfkd <span class="op">=</span> unicodedata.normalize(<span class="st">"NFKD"</span>, s)</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">""</span>.join(ch <span class="cf">for</span> ch <span class="kw">in</span> nfkd <span class="cf">if</span> <span class="kw">not</span> unicodedata.combining(ch))</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> contar_palabras_unicas(texto: <span class="bu">str</span>, <span class="op">*</span>, ignorar_acentos: <span class="bu">bool</span> <span class="op">=</span> <span class="va">True</span>) <span class="op">-&gt;</span> <span class="bu">int</span>:</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="co">    Cuenta el número de palabras distintas en 'texto'.</span></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="co">    - Normaliza a minúsculas.</span></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="co">    - Quita acentos si 'ignorar_acentos' es True.</span></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="co">    - Ignora signos de puntuación.</span></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> ignorar_acentos:</span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>        texto <span class="op">=</span> _quitar_acentos(texto)</span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>    texto <span class="op">=</span> texto.lower()</span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>    palabras <span class="op">=</span> re.findall(<span class="vs">r"</span><span class="pp">[a-záéíóúñü]</span><span class="op">+</span><span class="vs">"</span>, texto, flags<span class="op">=</span>re.IGNORECASE)</span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">len</span>(<span class="bu">set</span>(palabras))</span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> es_palindromo(</span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>    texto: <span class="bu">str</span>,</span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>    <span class="op">*</span>,</span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>    ignorar_espacios: <span class="bu">bool</span> <span class="op">=</span> <span class="va">True</span>,</span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>    ignorar_acentos: <span class="bu">bool</span> <span class="op">=</span> <span class="va">True</span></span>
-<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>) <span class="op">-&gt;</span> <span class="bu">bool</span>:</span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
-<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a><span class="co">    Verifica si 'texto' es palíndromo según las opciones.</span></span>
-<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
-<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> ignorar_acentos:</span>
-<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>        texto <span class="op">=</span> _quitar_acentos(texto)</span>
-<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>    texto <span class="op">=</span> texto.lower()</span>
-<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> ignorar_espacios:</span>
-<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>        texto <span class="op">=</span> re.sub(<span class="vs">r"</span><span class="dv">\s</span><span class="op">+</span><span class="vs">"</span>, <span class="st">""</span>, texto)</span>
-<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Quitar signos de puntuación</span></span>
-<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>    texto <span class="op">=</span> re.sub(<span class="vs">r"</span><span class="pp">[^a-z0-9ñü]</span><span class="vs">"</span>, <span class="st">""</span>, texto)</span>
-<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> texto <span class="op">==</span> texto[::<span class="op">-</span><span class="dv">1</span>]</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="b.-módulo-de-números-notebooksherramientasnumeros.py" class="level3">
-<h3 class="anchored" data-anchor-id="b.-módulo-de-números-notebooksherramientasnumeros.py">B. Módulo de números: <code>notebooks/herramientas/numeros.py</code></h3>
-<p><strong>Función 1 (estadística básica):</strong> <code>resumen_estadistico(valores: list[float]) -&gt; dict[str, float]</code></p>
+<section id="especificación-de-funciones" class="level2">
+<h2 class="anchored" data-anchor-id="especificación-de-funciones">Especificación de funciones</h2>
+<section id="a-notebooksherramientascadenas.py" class="level3">
+<h3 class="anchored" data-anchor-id="a-notebooksherramientascadenas.py">A) <code>notebooks/herramientas/cadenas.py</code></h3>
+<p>Implementa funciones <strong>tipadas</strong> y con <strong>docstrings</strong>:</p>
+<ol type="1">
+<li><p><code>contar_letras_unicas(texto: str, *, ignorar_acentos: bool = True) -&gt; int</code></p>
 <ul>
-<li>Debe regresar: <code>min</code>, <code>max</code>, <code>media</code>, <code>mediana</code> y <code>stdev</code> (muestral).</li>
-</ul>
-<p><strong>Función 2 (transformación lineal):</strong> <code>escalar_rango(x: float, origen: tuple[float, float], destino: tuple[float, float]) -&gt; float</code></p>
-<ul>
-<li>Escala un valor <code>x</code> del rango <code>origen=(a,b)</code> al rango <code>destino=(c,d)</code>.</li>
-</ul>
-<p><strong>Plantilla sugerida:</strong></p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># notebooks/herramientas/numeros.py</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> __future__ <span class="im">import</span> annotations</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> statistics <span class="im">import</span> mean, median, stdev</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> typing <span class="im">import</span> Dict</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> resumen_estadistico(valores: <span class="bu">list</span>[<span class="bu">float</span>]) <span class="op">-&gt;</span> Dict[<span class="bu">str</span>, <span class="bu">float</span>]:</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co">    Devuelve un resumen estadístico básico de 'valores'.</span></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co">    Requiere al menos 2 valores para stdev muestral.</span></span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">len</span>(valores) <span class="op">&lt;</span> <span class="dv">2</span>:</span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">"Se requieren al menos 2 valores para calcular stdev."</span>)</span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> {</span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>        <span class="st">"min"</span>: <span class="bu">float</span>(<span class="bu">min</span>(valores)),</span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>        <span class="st">"max"</span>: <span class="bu">float</span>(<span class="bu">max</span>(valores)),</span>
-<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>        <span class="st">"media"</span>: <span class="bu">float</span>(mean(valores)),</span>
-<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>        <span class="st">"mediana"</span>: <span class="bu">float</span>(median(valores)),</span>
-<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>        <span class="st">"stdev"</span>: <span class="bu">float</span>(stdev(valores)),</span>
-<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> escalar_rango(x: <span class="bu">float</span>, origen: <span class="bu">tuple</span>[<span class="bu">float</span>, <span class="bu">float</span>], destino: <span class="bu">tuple</span>[<span class="bu">float</span>, <span class="bu">float</span>]) <span class="op">-&gt;</span> <span class="bu">float</span>:</span>
-<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
-<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a><span class="co">    Escala el valor 'x' del rango 'origen=(a,b)' al rango 'destino=(c,d)'.</span></span>
-<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
-<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>    a, b <span class="op">=</span> origen</span>
-<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>    c, d <span class="op">=</span> destino</span>
-<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> a <span class="op">==</span> b:</span>
-<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">"El rango de origen no puede tener longitud cero."</span>)</span>
-<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>    t <span class="op">=</span> (x <span class="op">-</span> a) <span class="op">/</span> (b <span class="op">-</span> a)</span>
-<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> c <span class="op">+</span> t <span class="op">*</span> (d <span class="op">-</span> c)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<hr>
+<li>Convierte a minúsculas, opcionalmente normaliza acentos, <strong>ignora puntuación</strong> y devuelve el <strong>número de letras distintas</strong>.</li>
+</ul></li>
+</ol>
 </section>
-</section>
-<section id="notebooks" class="level2">
-<h2 class="anchored" data-anchor-id="notebooks">7) Notebooks</h2>
-<p>Crea dos notebooks en <code>notebooks/</code>:</p>
 <section id="desarrollo_funciones.ipynb" class="level3">
-<h3 class="anchored" data-anchor-id="desarrollo_funciones.ipynb">7.1 <code>001_desarrollo_funciones.ipynb</code></h3>
-<ul>
-<li>Desarrolla y prueba las funciones aquí.</li>
-<li>Puedes usar estas celdas de ejemplo:</li>
-</ul>
-<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Pruebas rápidas para cadenas</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> herramientas.cadenas <span class="im">import</span> contar_palabras_unicas, es_palindromo</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>texto <span class="op">=</span> <span class="st">"Anita lava la tina. ¡Anita, lava la tina!"</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(contar_palabras_unicas(texto))  <span class="co"># esperado: 4 (anita, lava, la, tina)</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(es_palindromo(<span class="st">"Anita lava la tina"</span>))  <span class="co"># True</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Pruebas rápidas para números</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> herramientas.numeros <span class="im">import</span> resumen_estadistico, escalar_rango</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>valores <span class="op">=</span> [<span class="fl">1.0</span>, <span class="fl">2.0</span>, <span class="fl">2.0</span>, <span class="fl">3.5</span>, <span class="fl">10.0</span>]</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(resumen_estadistico(valores))</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(escalar_rango(<span class="fl">5.0</span>, (<span class="fl">0.0</span>, <span class="fl">10.0</span>), (<span class="fl">0.0</span>, <span class="fl">1.0</span>)))  <span class="co"># 0.5</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<blockquote class="blockquote">
-<p>Si prefieres desarrollar el código <strong>dentro</strong> de este notebook primero y luego guardarlo como <code>.py</code>, puedes usar las “magics” de IPython:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="op">%%</span>writefile notebooks<span class="op">/</span>herramientas<span class="op">/</span>cadenas.py</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co"># (pega aquí el contenido final del módulo cadenas.py)</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>y lo mismo para <code>numeros.py</code>.</p>
-</blockquote>
-<hr>
+<h3 class="anchored" data-anchor-id="desarrollo_funciones.ipynb"><code>001_desarrollo_funciones.ipynb</code></h3>
 </section>
 <section id="uso_funciones.ipynb" class="level3">
-<h3 class="anchored" data-anchor-id="uso_funciones.ipynb">7.2 <code>002_uso_funciones.ipynb</code></h3>
+<h3 class="anchored" data-anchor-id="uso_funciones.ipynb"><code>002_uso_funciones.ipynb</code></h3>
 <ul>
-<li>En este notebook <strong>importa</strong> y <strong>usa</strong> las funciones ya definidas en <code>herramientas/</code>.</li>
-<li>Además, verifica que las librerías externas están instaladas (<code>iertools</code>, <code>calplot</code>, <code>windrose</code>).</li>
+<li>Importación desde <code>notebooks/herramientas/</code>.</li>
+<li>Demostración de uso con ejemplos reales.</li>
 </ul>
-<p><strong>Celdas guía:</strong></p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Ajustar ruta para importar desde "notebooks/herramientas"</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>sys.path.append(<span class="bu">str</span>(Path().resolve() <span class="op">/</span> <span class="st">"notebooks"</span>))</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> herramientas.cadenas <span class="im">import</span> contar_palabras_unicas, es_palindromo</span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> herramientas.numeros <span class="im">import</span> resumen_estadistico, escalar_rango</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Uso real de las funciones</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> <span class="st">"¿Acaso hubo búhos acá?"</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Únicas:"</span>, contar_palabras_unicas(t))</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"¿Palíndromo?:"</span>, es_palindromo(t))</span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>valores <span class="op">=</span> [<span class="fl">2.5</span>, <span class="fl">2.7</span>, <span class="fl">3.1</span>, <span class="fl">3.1</span>, <span class="fl">4.0</span>, <span class="fl">5.2</span>]</span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(resumen_estadistico(valores))</span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(escalar_rango(<span class="fl">42.0</span>, (<span class="fl">0.0</span>, <span class="fl">100.0</span>), (<span class="fl">10.0</span>, <span class="fl">20.0</span>)))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Verificar iertools</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> iertools <span class="im">as</span> ie</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>ie.__version__</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Ejemplo mínimo con calplot (calendario de valores diarios)</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> calplot</span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>rng <span class="op">=</span> pd.date_range(<span class="st">"2025-01-01"</span>, <span class="st">"2025-12-31"</span>, freq<span class="op">=</span><span class="st">"D"</span>)</span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>s <span class="op">=</span> pd.Series(np.random.randint(<span class="dv">0</span>, <span class="dv">5</span>, size<span class="op">=</span><span class="bu">len</span>(rng)), index<span class="op">=</span>rng)</span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>calplot.calplot(s)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Ejemplo mínimo con windrose</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> windrose <span class="im">import</span> WindroseAxes</span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>ws <span class="op">=</span> np.random.rand(<span class="dv">500</span>) <span class="op">*</span> <span class="fl">10.0</span>   <span class="co"># velocidades</span></span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>wd <span class="op">=</span> np.random.rand(<span class="dv">500</span>) <span class="op">*</span> <span class="fl">360.0</span>  <span class="co"># direcciones</span></span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> WindroseAxes.from_ax()</span>
-<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>ax.bar(wd, ws, normed<span class="op">=</span><span class="va">True</span>, opening<span class="op">=</span><span class="fl">0.8</span>, edgecolor<span class="op">=</span><span class="st">"white"</span>)</span>
-<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>ax.set_legend()</span>
-<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <hr>
 </section>
 </section>
-<section id="opcional-comandos-útiles" class="level2">
-<h2 class="anchored" data-anchor-id="opcional-comandos-útiles">(Opcional) Comandos útiles</h2>
-<div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Ejecutar Jupyter</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> run jupyter lab</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Congelar dependencias actuales a requirements.txt (si quisieras)</span></span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> pip freeze <span class="op">&gt;</span> requirements.txt</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<hr>
-</section>
-<section id="entregables-esperados" class="level2">
-<h2 class="anchored" data-anchor-id="entregables-esperados">Entregables esperados</h2>
+<section id="entregables" class="level2">
+<h2 class="anchored" data-anchor-id="entregables">Entregables</h2>
 <ul>
-<li>Proyecto <strong>ejercicio-funciones</strong> con la estructura definida.</li>
-<li><code>requirements.txt</code> con <code>windrose</code> y <code>calplot</code>.</li>
-<li><code>notebooks/herramientas/cadenas.py</code> y <code>notebooks/herramientas/numeros.py</code> con funciones <strong>tipadas</strong> y docstrings.</li>
-<li><code>notebooks/001_desarrollo_funciones.ipynb</code>: desarrollo y pruebas.</li>
-<li><code>notebooks/002_uso_funciones.ipynb</code>: importación y uso (y verificación de librerías externas).</li>
+<li>Estructura de proyecto requerida.</li>
+<li><code>requirements.txt</code> con <strong>windrose</strong> y <strong>calplot</strong>.</li>
+<li><code>notebooks/herramientas/cadenas.py</code> y <code>notebooks/herramientas/numeros.py</code> con <strong>tipado</strong> y <strong>docstrings</strong>.</li>
+<li><code>001_desarrollo_funciones.ipynb</code> con pruebas.</li>
+<li><code>002_uso_funciones.ipynb</code> con ejemplos y verificación de dependencias.</li>
 </ul>
-<p>¡Listo! Con esto tienes un ejercicio completo para tu clase de Python que mezcla gestión de entorno con <strong>uv</strong>, módulos propios, notebooks y uso básico de librerías de visualización/analítica.</p>
 
 
 </section>
