@@ -1,0 +1,295 @@
+# Ejercicio: Proyecto “ejercicio-funciones” con **uv**, notebooks y módulos propios
+
+> Objetivo: crear un pequeño proyecto en Python usando **uv** que incluya Jupyter Notebook, dos librerías instaladas desde un `requirements.txt`, un paquete externo desde GitHub y una estructura de carpetas clara. Además, desarrollar e importar funciones (con tipado) para manejo de cadenas y de números.
+
+
+## 1) Crear el proyecto con **uv**
+
+```bash
+# 1.1 Crear carpeta de proyecto e inicializar con uv
+uv init ejercicio-funciones
+cd ejercicio-funciones
+
+```
+
+> Esto creará `pyproject.toml`.
+
+
+## 2) Agregar **Jupyter Notebook** con **uv**
+<!-- 
+```bash
+# Instalar jupyter y kernel
+uv add jupyter notebook 
+```
+
+Luego podrás abrir notebooks con:
+
+```bash
+uv run jupyter notebook
+``` -->
+
+
+## 3) Agregar el paquete **iertools** desde GitHub
+
+> Necesitas **git** instalado (prueba con `git --version`).
+>
+> * Windows: instala “Git for Windows” 
+> El repo es https://github.com/AltamarMx/iertools
+
+
+
+## 4) Agregar **windrose** y **calplot** desde `requirements.txt`
+
+Toma el archivo **requirements.txt** e instala los paquetes que trae con `uv`.
+
+
+## 5) Crear la estructura de trabajo
+
+Con carpetas `data/`, `notebooks/` y `pdfs/`.
+
+Estructura esperada:
+
+```
+ejercicio-funciones/
+├─ pyproject.toml
+├─ requirements.txt
+├─ data/
+├─ notebooks/
+│  ├─ 001_desarrollo_funciones.ipynb
+│  ├─ 002_uso_funciones.ipynb
+│  └─ herramientas/
+│     ├─ cadenas.py
+│     └─ numeros.py
+└─ pdfs/
+```
+
+
+## 6) Propuesta de funciones (con tipado) y ejercicios
+
+### A. Módulo de cadenas: `notebooks/herramientas/cadenas.py`
+
+**Función 1 (ejercicio de normalización y análisis):**
+`contar_palabras_unicas(texto: str, *, ignorar_acentos: bool = True) -> int`
+
+* Debe normalizar acentos (opcional), convertir a minúsculas y contar cuántas palabras **distintas** hay.
+* Ignorar signos de puntuación.
+
+**Función 2 (ejercicio de lógica de cadenas):**
+`es_palindromo(texto: str, *, ignorar_espacios: bool = True, ignorar_acentos: bool = True) -> bool`
+
+* Devuelve `True` si el texto es palíndromo bajo las reglas indicadas.
+
+**Plantilla sugerida:**
+
+```python
+# notebooks/herramientas/cadenas.py
+from __future__ import annotations
+import re
+import unicodedata
+
+def _quitar_acentos(s: str) -> str:
+    nfkd = unicodedata.normalize("NFKD", s)
+    return "".join(ch for ch in nfkd if not unicodedata.combining(ch))
+
+def contar_palabras_unicas(texto: str, *, ignorar_acentos: bool = True) -> int:
+    """
+    Cuenta el número de palabras distintas en 'texto'.
+    - Normaliza a minúsculas.
+    - Quita acentos si 'ignorar_acentos' es True.
+    - Ignora signos de puntuación.
+    """
+    if ignorar_acentos:
+        texto = _quitar_acentos(texto)
+    texto = texto.lower()
+    palabras = re.findall(r"[a-záéíóúñü]+", texto, flags=re.IGNORECASE)
+    return len(set(palabras))
+
+def es_palindromo(
+    texto: str,
+    *,
+    ignorar_espacios: bool = True,
+    ignorar_acentos: bool = True
+) -> bool:
+    """
+    Verifica si 'texto' es palíndromo según las opciones.
+    """
+    if ignorar_acentos:
+        texto = _quitar_acentos(texto)
+    texto = texto.lower()
+    if ignorar_espacios:
+        texto = re.sub(r"\s+", "", texto)
+    # Quitar signos de puntuación
+    texto = re.sub(r"[^a-z0-9ñü]", "", texto)
+    return texto == texto[::-1]
+```
+
+### B. Módulo de números: `notebooks/herramientas/numeros.py`
+
+**Función 1 (estadística básica):**
+`resumen_estadistico(valores: list[float]) -> dict[str, float]`
+
+* Debe regresar: `min`, `max`, `media`, `mediana` y `stdev` (muestral).
+
+**Función 2 (transformación lineal):**
+`escalar_rango(x: float, origen: tuple[float, float], destino: tuple[float, float]) -> float`
+
+* Escala un valor `x` del rango `origen=(a,b)` al rango `destino=(c,d)`.
+
+**Plantilla sugerida:**
+
+```python
+# notebooks/herramientas/numeros.py
+from __future__ import annotations
+from statistics import mean, median, stdev
+from typing import Dict
+
+def resumen_estadistico(valores: list[float]) -> Dict[str, float]:
+    """
+    Devuelve un resumen estadístico básico de 'valores'.
+    Requiere al menos 2 valores para stdev muestral.
+    """
+    if len(valores) < 2:
+        raise ValueError("Se requieren al menos 2 valores para calcular stdev.")
+    return {
+        "min": float(min(valores)),
+        "max": float(max(valores)),
+        "media": float(mean(valores)),
+        "mediana": float(median(valores)),
+        "stdev": float(stdev(valores)),
+    }
+
+def escalar_rango(x: float, origen: tuple[float, float], destino: tuple[float, float]) -> float:
+    """
+    Escala el valor 'x' del rango 'origen=(a,b)' al rango 'destino=(c,d)'.
+    """
+    a, b = origen
+    c, d = destino
+    if a == b:
+        raise ValueError("El rango de origen no puede tener longitud cero.")
+    t = (x - a) / (b - a)
+    return c + t * (d - c)
+```
+
+---
+
+## 7) Notebooks
+
+Crea dos notebooks en `notebooks/`:
+
+### 7.1 `001_desarrollo_funciones.ipynb`
+
+* Desarrolla y prueba las funciones aquí.
+* Puedes usar estas celdas de ejemplo:
+
+```python
+# Pruebas rápidas para cadenas
+from herramientas.cadenas import contar_palabras_unicas, es_palindromo
+
+texto = "Anita lava la tina. ¡Anita, lava la tina!"
+print(contar_palabras_unicas(texto))  # esperado: 4 (anita, lava, la, tina)
+print(es_palindromo("Anita lava la tina"))  # True
+```
+
+```python
+# Pruebas rápidas para números
+from herramientas.numeros import resumen_estadistico, escalar_rango
+
+valores = [1.0, 2.0, 2.0, 3.5, 10.0]
+print(resumen_estadistico(valores))
+
+print(escalar_rango(5.0, (0.0, 10.0), (0.0, 1.0)))  # 0.5
+```
+
+> Si prefieres desarrollar el código **dentro** de este notebook primero y luego guardarlo como `.py`, puedes usar las “magics” de IPython:
+>
+> ```python
+> %%writefile notebooks/herramientas/cadenas.py
+> # (pega aquí el contenido final del módulo cadenas.py)
+> ```
+>
+> y lo mismo para `numeros.py`.
+
+---
+
+### 7.2 `002_uso_funciones.ipynb`
+
+* En este notebook **importa** y **usa** las funciones ya definidas en `herramientas/`.
+* Además, verifica que las librerías externas están instaladas (`iertools`, `calplot`, `windrose`).
+
+**Celdas guía:**
+
+```python
+# Ajustar ruta para importar desde "notebooks/herramientas"
+import sys
+from pathlib import Path
+sys.path.append(str(Path().resolve() / "notebooks"))
+
+from herramientas.cadenas import contar_palabras_unicas, es_palindromo
+from herramientas.numeros import resumen_estadistico, escalar_rango
+```
+
+```python
+# Uso real de las funciones
+t = "¿Acaso hubo búhos acá?"
+print("Únicas:", contar_palabras_unicas(t))
+print("¿Palíndromo?:", es_palindromo(t))
+
+valores = [2.5, 2.7, 3.1, 3.1, 4.0, 5.2]
+print(resumen_estadistico(valores))
+print(escalar_rango(42.0, (0.0, 100.0), (10.0, 20.0)))
+```
+
+```python
+# Verificar iertools
+import iertools as ie
+ie.__version__
+```
+
+```python
+# Ejemplo mínimo con calplot (calendario de valores diarios)
+import pandas as pd
+import numpy as np
+import calplot
+
+rng = pd.date_range("2025-01-01", "2025-12-31", freq="D")
+s = pd.Series(np.random.randint(0, 5, size=len(rng)), index=rng)
+calplot.calplot(s)
+```
+
+```python
+# Ejemplo mínimo con windrose
+import numpy as np
+from windrose import WindroseAxes
+import matplotlib.pyplot as plt
+
+ws = np.random.rand(500) * 10.0   # velocidades
+wd = np.random.rand(500) * 360.0  # direcciones
+ax = WindroseAxes.from_ax()
+ax.bar(wd, ws, normed=True, opening=0.8, edgecolor="white")
+ax.set_legend()
+plt.show()
+```
+
+---
+
+## (Opcional) Comandos útiles
+
+```bash
+# Ejecutar Jupyter
+uv run jupyter lab
+
+# Congelar dependencias actuales a requirements.txt (si quisieras)
+uv pip freeze > requirements.txt
+```
+
+---
+
+## Entregables esperados
+
+* Proyecto **ejercicio-funciones** con la estructura definida.
+* `requirements.txt` con `windrose` y `calplot`.
+* `notebooks/herramientas/cadenas.py` y `notebooks/herramientas/numeros.py` con funciones **tipadas** y docstrings.
+* `notebooks/001_desarrollo_funciones.ipynb`: desarrollo y pruebas.
+* `notebooks/002_uso_funciones.ipynb`: importación y uso (y verificación de librerías externas).
+
+¡Listo! Con esto tienes un ejercicio completo para tu clase de Python que mezcla gestión de entorno con **uv**, módulos propios, notebooks y uso básico de librerías de visualización/analítica.
