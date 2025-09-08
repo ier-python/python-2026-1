@@ -1,0 +1,105 @@
+# uv cheat sheet 
+
+
+> `uv` es un gestor súper rápido para proyectos Python. Crea/gestiona el entorno `.venv`, resuelve dependencias y ejecuta comandos sin “activar” el entorno.
+
+## Resumen rápido
+
+```bash
+# Nuevo proyecto
+uv init mi-proyecto
+cd mi-proyecto
+uv add notebook
+uv run jupyter notebook
+````
+
+::: callout-note
+**“Solo una vez”** por proyecto: `uv init` y el primer `uv add`.
+Puedes repetir `uv add` más adelante solo cuando quieras **agregar** paquetes nuevos.
+:::
+
+---
+
+## Caso 1 · Crear un espacio de trabajo desde cero
+
+Usa esto cuando **aún no existe** la carpeta del proyecto.
+
+```bash
+# 1) Crear el proyecto y entrar
+uv init espacio-trabajo
+cd espacio-trabajo
+
+# 2) Agregar paquetes (solo una vez; incluye el servidor de notebooks)
+uv add notebook
+
+# 3) Abrir Jupyter Notebook (cada vez que trabajes)
+uv run jupyter notebook
+```
+
+**Qué pasa aquí**
+
+* `uv init` crea `pyproject.toml` (metadatos del proyecto).
+* `uv add notebook` escribe la dependencia en `pyproject.toml` e instala en `.venv` (lo crea si no existe).
+* `uv run ...` ejecuta el comando **dentro del entorno** sin tener que activar nada.
+
+---
+
+## Caso 2 · Carpeta existente **sin** ambiente virtual
+
+Usa esto cuando **ya tienes la carpeta** (quizá con algunos archivos), pero **no** hay `.venv` ni `pyproject.toml`.
+
+```bash
+cd espacio-trabajo
+uv init                     # crea pyproject.toml
+uv add notebook             # instala dependencias y crea .venv si no existe
+uv run jupyter notebook     # lo que necesitas para correr la libreta
+```
+
+**Notas**
+
+* Igual que en el caso 1: `init` y el **primer** `add` son “una sola vez”.
+* Después, cada vez que regreses al proyecto, basta con `uv run jupyter notebook`.
+
+---
+
+## Caso 3 · Proyecto iniciado por otra persona (hay `pyproject.toml`, **no** hay `.venv`)
+
+Usa esto cuando clonaste o descargaste un proyecto que **ya tiene** `pyproject.toml` (y quizá `uv.lock`), pero **falta** el entorno `.venv`.
+
+```bash
+cd espacio-trabajo
+uv sync                     # crea/actualiza .venv según pyproject/uv.lock
+uv run jupyter notebook     # si el proyecto trae 'notebook' como dependencia
+```
+
+**Si *no* trae Jupyter Notebook como dependencia**
+
+```bash
+uv add notebook             # añade 'notebook' al proyecto
+uv run jupyter notebook
+```
+
+---
+
+## ¿Cuándo usar cada caso?
+
+* **Caso 1 (desde cero)**: vas a iniciar un proyecto nuevo y quieres que `uv` gestione **todo** desde el principio.
+* **Caso 2 (carpeta existente sin .venv ni pyproject)**: ya tienes una carpeta con archivos iniciales, pero aún no es un proyecto “uv”.
+* **Caso 3 (proyecto ajeno sin .venv)**: clonaste/recibiste un proyecto que ya define dependencias en `pyproject.toml`; solo necesitas **instalarlas** con `uv sync`.
+
+---
+
+## Comandos útiles (rápidos)
+
+```bash
+uv add paquete1 paquete2    # agrega dependencias al proyecto
+uv remove paquete           # quita una dependencia
+uv run comando           # ejecuta dentro del entorno (.venv) sin activarlo
+uv sync                     # instala/actualiza dependencias desde pyproject/uv.lock
+```
+
+::: callout-tip
+
+* **No necesitas** `source .venv/bin/activate` ni comandos de activación: usa `uv run <comando>`.
+* Para usar JupyterLab en lugar de Notebook: `uv add jupyterlab` y luego `uv run jupyter-lab`.
+:::

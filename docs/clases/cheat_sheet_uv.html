@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>16&nbsp; PyPi – Proyectos de ciencia de datos con Python</title>
+<title>18&nbsp; uv cheat sheet – Proyectos de ciencia de datos con Python</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -65,8 +65,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../clases/016a_ejercicio_clase.html" rel="next">
-<link href="../clases/015_modificar_funciones.html" rel="prev">
+<link href="../clases/016a_ejercicio_clase.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -297,7 +296,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../clases/016_Instalar_paquetes.html"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">PyPi</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../clases/cheat_sheet_uv.html"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">uv cheat sheet</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -407,7 +406,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../clases/016_Instalar_paquetes.html" class="sidebar-item-text sidebar-link active">
+  <a href="../clases/016_Instalar_paquetes.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">PyPi</span></span></a>
   </div>
 </li>
@@ -419,7 +418,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../clases/cheat_sheet_uv.html" class="sidebar-item-text sidebar-link">
+  <a href="../clases/cheat_sheet_uv.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">uv cheat sheet</span></span></a>
   </div>
 </li>
@@ -433,9 +432,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Tabla de contenidos</h2>
    
   <ul>
-  <li><a href="#requirements.txt" id="toc-requirements.txt" class="nav-link active" data-scroll-target="#requirements.txt">requirements.txt</a></li>
-  <li><a href="#si-no-usaramos-uv" id="toc-si-no-usaramos-uv" class="nav-link" data-scroll-target="#si-no-usaramos-uv">Si no usaramos uv</a></li>
-  <li><a href="#ejercicio-de-la-clase-del-miercoles" id="toc-ejercicio-de-la-clase-del-miercoles" class="nav-link" data-scroll-target="#ejercicio-de-la-clase-del-miercoles">Ejercicio de la clase del miercoles</a></li>
+  <li><a href="#resumen-rápido" id="toc-resumen-rápido" class="nav-link active" data-scroll-target="#resumen-rápido">Resumen rápido</a></li>
+  <li><a href="#caso-1-crear-un-espacio-de-trabajo-desde-cero" id="toc-caso-1-crear-un-espacio-de-trabajo-desde-cero" class="nav-link" data-scroll-target="#caso-1-crear-un-espacio-de-trabajo-desde-cero">Caso 1 · Crear un espacio de trabajo desde cero</a></li>
+  <li><a href="#caso-2-carpeta-existente-sin-ambiente-virtual" id="toc-caso-2-carpeta-existente-sin-ambiente-virtual" class="nav-link" data-scroll-target="#caso-2-carpeta-existente-sin-ambiente-virtual">Caso 2 · Carpeta existente <strong>sin</strong> ambiente virtual</a></li>
+  <li><a href="#caso-3-proyecto-iniciado-por-otra-persona-hay-pyproject.toml-no-hay-.venv" id="toc-caso-3-proyecto-iniciado-por-otra-persona-hay-pyproject.toml-no-hay-.venv" class="nav-link" data-scroll-target="#caso-3-proyecto-iniciado-por-otra-persona-hay-pyproject.toml-no-hay-.venv">Caso 3 · Proyecto iniciado por otra persona (hay <code>pyproject.toml</code>, <strong>no</strong> hay <code>.venv</code>)</a></li>
+  <li><a href="#cuándo-usar-cada-caso" id="toc-cuándo-usar-cada-caso" class="nav-link" data-scroll-target="#cuándo-usar-cada-caso">¿Cuándo usar cada caso?</a></li>
+  <li><a href="#comandos-útiles-rápidos" id="toc-comandos-útiles-rápidos" class="nav-link" data-scroll-target="#comandos-útiles-rápidos">Comandos útiles (rápidos)</a></li>
   </ul>
 </nav>
     </div>
@@ -445,7 +447,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">PyPi</span></h1>
+<h1 class="title"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">uv cheat sheet</span></h1>
 </div>
 
 
@@ -462,63 +464,107 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<ol type="1">
-<li>Pandas</li>
-<li>Numpy</li>
-<li>Matplotlib</li>
-<li>Plotly</li>
-<li>SciPy</li>
-<li>WindRose</li>
-<li>Calplot</li>
-<li>PtitePrince</li>
-</ol>
-<div id="701dd2af-b472-4b7e-924a-928250b079d0" class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>pip install pandas <span class="co">## vamos a usar uv add desde la terminal</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Note: you may need to restart the kernel to use updated packages.</code></pre>
+<blockquote class="blockquote">
+<p><code>uv</code> es un gestor súper rápido para proyectos Python. Crea/gestiona el entorno <code>.venv</code>, resuelve dependencias y ejecuta comandos sin “activar” el entorno.</p>
+</blockquote>
+<section id="resumen-rápido" class="level2">
+<h2 class="anchored" data-anchor-id="resumen-rápido">Resumen rápido</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Nuevo proyecto</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> init mi-proyecto</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> mi-proyecto</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> add notebook</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> run jupyter notebook</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<div class="cell-output cell-output-stderr">
-<pre><code>C:\Users\gbv\curso-2026-1-main\.venv\Scripts\python.exe: No module named pip</code></pre>
-</div>
-</div>
-<div id="8171a479-b561-4ff7-997c-9b11e325a9d9" class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>lsmagic</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="3">
-<pre><code>Available line magics:
-%alias  %alias_magic  %autoawait  %autocall  %automagic  %autosave  %bookmark  %cd  %clear  %cls  %code_wrap  %colors  %conda  %config  %connect_info  %copy  %ddir  %debug  %dhist  %dirs  %doctest_mode  %echo  %ed  %edit  %env  %gui  %hist  %history  %killbgscripts  %ldir  %less  %load  %load_ext  %loadpy  %logoff  %logon  %logstart  %logstate  %logstop  %ls  %lsmagic  %macro  %magic  %mamba  %matplotlib  %micromamba  %mkdir  %more  %notebook  %page  %pastebin  %pdb  %pdef  %pdoc  %pfile  %pinfo  %pinfo2  %pip  %popd  %pprint  %precision  %prun  %psearch  %psource  %pushd  %pwd  %pycat  %pylab  %qtconsole  %quickref  %recall  %rehashx  %reload_ext  %ren  %rep  %rerun  %reset  %reset_selective  %rmdir  %run  %save  %sc  %set_env  %store  %sx  %system  %tb  %time  %timeit  %unalias  %unload_ext  %uv  %who  %who_ls  %whos  %xdel  %xmode
-
-Available cell magics:
-%%!  %%HTML  %%SVG  %%bash  %%capture  %%cmd  %%code_wrap  %%debug  %%file  %%html  %%javascript  %%js  %%latex  %%markdown  %%perl  %%prun  %%pypy  %%python  %%python2  %%python3  %%ruby  %%script  %%sh  %%svg  %%sx  %%system  %%time  %%timeit  %%writefile
-
-Automagic is ON, % prefix IS NOT needed for line magics.</code></pre>
+<div class="callout-title-container flex-fill">
+Nota
 </div>
 </div>
-<section id="requirements.txt" class="level2">
-<h2 class="anchored" data-anchor-id="requirements.txt">requirements.txt</h2>
-<p>Es un archivo plano que contiene toda la lista de paquetes (y su version) instalados en un ambiente virtual o una computadora</p>
-<section id="desde-donde-puedo-instalar" class="level4">
-<h4 class="anchored" data-anchor-id="desde-donde-puedo-instalar">Desde donde puedo instalar</h4>
-<ol type="1">
-<li>uv add paquete # si existe en el pypi</li>
-<li>uv add https://github.com/AltamarMx/iertools.git # desde un repo</li>
-<li>uv add -r requirements.txt</li>
-<li>uv add algo # compilar un paquete e instalarlo</li>
-</ol>
+<div class="callout-body-container callout-body">
+<p><strong>“Solo una vez”</strong> por proyecto: <code>uv init</code> y el primer <code>uv add</code>. Puedes repetir <code>uv add</code> más adelante solo cuando quieras <strong>agregar</strong> paquetes nuevos.</p>
+</div>
+</div>
+<hr>
 </section>
+<section id="caso-1-crear-un-espacio-de-trabajo-desde-cero" class="level2">
+<h2 class="anchored" data-anchor-id="caso-1-crear-un-espacio-de-trabajo-desde-cero">Caso 1 · Crear un espacio de trabajo desde cero</h2>
+<p>Usa esto cuando <strong>aún no existe</strong> la carpeta del proyecto.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1) Crear el proyecto y entrar</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> init espacio-trabajo</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> espacio-trabajo</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 2) Agregar paquetes (solo una vez; incluye el servidor de notebooks)</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> add notebook</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co"># 3) Abrir Jupyter Notebook (cada vez que trabajes)</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> run jupyter notebook</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Qué pasa aquí</strong></p>
+<ul>
+<li><code>uv init</code> crea <code>pyproject.toml</code> (metadatos del proyecto).</li>
+<li><code>uv add notebook</code> escribe la dependencia en <code>pyproject.toml</code> e instala en <code>.venv</code> (lo crea si no existe).</li>
+<li><code>uv run ...</code> ejecuta el comando <strong>dentro del entorno</strong> sin tener que activar nada.</li>
+</ul>
+<hr>
 </section>
-<section id="si-no-usaramos-uv" class="level2">
-<h2 class="anchored" data-anchor-id="si-no-usaramos-uv">Si no usaramos uv</h2>
-<p>pip freeze &gt; requirements.txt</p>
+<section id="caso-2-carpeta-existente-sin-ambiente-virtual" class="level2">
+<h2 class="anchored" data-anchor-id="caso-2-carpeta-existente-sin-ambiente-virtual">Caso 2 · Carpeta existente <strong>sin</strong> ambiente virtual</h2>
+<p>Usa esto cuando <strong>ya tienes la carpeta</strong> (quizá con algunos archivos), pero <strong>no</strong> hay <code>.venv</code> ni <code>pyproject.toml</code>.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> espacio-trabajo</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> init                     <span class="co"># crea pyproject.toml</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> add notebook             <span class="co"># instala dependencias y crea .venv si no existe</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> run jupyter notebook     <span class="co"># lo que necesitas para correr la libreta</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Notas</strong></p>
+<ul>
+<li>Igual que en el caso 1: <code>init</code> y el <strong>primer</strong> <code>add</code> son “una sola vez”.</li>
+<li>Después, cada vez que regreses al proyecto, basta con <code>uv run jupyter notebook</code>.</li>
+</ul>
+<hr>
 </section>
-<section id="ejercicio-de-la-clase-del-miercoles" class="level2">
-<h2 class="anchored" data-anchor-id="ejercicio-de-la-clase-del-miercoles">Ejercicio de la clase del miercoles</h2>
-<ol type="1">
-<li>Un zip de un repo para recrear un ambiente virtual</li>
-<li>Requirements con algunos paquetes</li>
-<li>Una lista de paquetes a instalar</li>
-<li>Ejercicios</li>
-<li>Zip de su espacio trabajo sin .venv</li>
-</ol>
+<section id="caso-3-proyecto-iniciado-por-otra-persona-hay-pyproject.toml-no-hay-.venv" class="level2">
+<h2 class="anchored" data-anchor-id="caso-3-proyecto-iniciado-por-otra-persona-hay-pyproject.toml-no-hay-.venv">Caso 3 · Proyecto iniciado por otra persona (hay <code>pyproject.toml</code>, <strong>no</strong> hay <code>.venv</code>)</h2>
+<p>Usa esto cuando clonaste o descargaste un proyecto que <strong>ya tiene</strong> <code>pyproject.toml</code> (y quizá <code>uv.lock</code>), pero <strong>falta</strong> el entorno <code>.venv</code>.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> espacio-trabajo</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> sync                     <span class="co"># crea/actualiza .venv según pyproject/uv.lock</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> run jupyter notebook     <span class="co"># si el proyecto trae 'notebook' como dependencia</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Si <em>no</em> trae Jupyter Notebook como dependencia</strong></p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> add notebook             <span class="co"># añade 'notebook' al proyecto</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> run jupyter notebook</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<hr>
+</section>
+<section id="cuándo-usar-cada-caso" class="level2">
+<h2 class="anchored" data-anchor-id="cuándo-usar-cada-caso">¿Cuándo usar cada caso?</h2>
+<ul>
+<li><strong>Caso 1 (desde cero)</strong>: vas a iniciar un proyecto nuevo y quieres que <code>uv</code> gestione <strong>todo</strong> desde el principio.</li>
+<li><strong>Caso 2 (carpeta existente sin .venv ni pyproject)</strong>: ya tienes una carpeta con archivos iniciales, pero aún no es un proyecto “uv”.</li>
+<li><strong>Caso 3 (proyecto ajeno sin .venv)</strong>: clonaste/recibiste un proyecto que ya define dependencias en <code>pyproject.toml</code>; solo necesitas <strong>instalarlas</strong> con <code>uv sync</code>.</li>
+</ul>
+<hr>
+</section>
+<section id="comandos-útiles-rápidos" class="level2">
+<h2 class="anchored" data-anchor-id="comandos-útiles-rápidos">Comandos útiles (rápidos)</h2>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> add paquete1 paquete2    <span class="co"># agrega dependencias al proyecto</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> remove paquete           <span class="co"># quita una dependencia</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> run comando           <span class="co"># ejecuta dentro del entorno (.venv) sin activarlo</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> sync                     <span class="co"># instala/actualiza dependencias desde pyproject/uv.lock</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>No necesitas</strong> <code>source .venv/bin/activate</code> ni comandos de activación: usa <code>uv run &lt;comando&gt;</code>.</li>
+<li>Para usar JupyterLab en lugar de Notebook: <code>uv add jupyterlab</code> y luego <code>uv run jupyter-lab</code>.</li>
+</ul>
+</div>
+</div>
 
 
 </section>
@@ -938,14 +984,11 @@ Automagic is ON, % prefix IS NOT needed for line magics.</code></pre>
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../clases/015_modificar_funciones.html" class="pagination-link" aria-label="Uso de magic command para cargar un archico/funcion/paquetito">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Uso de magic command para cargar un archico/funcion/paquetito</span></span>
+      <a href="../clases/016a_ejercicio_clase.html" class="pagination-link" aria-label="Proyecto: ejercicio-funciones">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Proyecto: ejercicio-funciones</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../clases/016a_ejercicio_clase.html" class="pagination-link" aria-label="Proyecto: ejercicio-funciones">
-        <span class="nav-page-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Proyecto: ejercicio-funciones</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

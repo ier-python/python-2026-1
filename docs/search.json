@@ -398,5 +398,75 @@
     "crumbs": [
       "<span class='chapter-number'>17</span>  <span class='chapter-title'>Proyecto: ejercicio-funciones</span>"
     ]
+  },
+  {
+    "objectID": "clases/cheat_sheet_uv.html",
+    "href": "clases/cheat_sheet_uv.html",
+    "title": "18  uv cheat sheet",
+    "section": "",
+    "text": "Resumen rápido",
+    "crumbs": [
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>uv cheat sheet</span>"
+    ]
+  },
+  {
+    "objectID": "clases/cheat_sheet_uv.html#resumen-rápido",
+    "href": "clases/cheat_sheet_uv.html#resumen-rápido",
+    "title": "18  uv cheat sheet",
+    "section": "",
+    "text": "# Nuevo proyecto\nuv init mi-proyecto\ncd mi-proyecto\nuv add notebook\nuv run jupyter notebook\n\n\n\n\n\n\nNota\n\n\n\n“Solo una vez” por proyecto: uv init y el primer uv add. Puedes repetir uv add más adelante solo cuando quieras agregar paquetes nuevos.",
+    "crumbs": [
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>uv cheat sheet</span>"
+    ]
+  },
+  {
+    "objectID": "clases/cheat_sheet_uv.html#caso-1-crear-un-espacio-de-trabajo-desde-cero",
+    "href": "clases/cheat_sheet_uv.html#caso-1-crear-un-espacio-de-trabajo-desde-cero",
+    "title": "18  uv cheat sheet",
+    "section": "Caso 1 · Crear un espacio de trabajo desde cero",
+    "text": "Caso 1 · Crear un espacio de trabajo desde cero\nUsa esto cuando aún no existe la carpeta del proyecto.\n# 1) Crear el proyecto y entrar\nuv init espacio-trabajo\ncd espacio-trabajo\n\n# 2) Agregar paquetes (solo una vez; incluye el servidor de notebooks)\nuv add notebook\n\n# 3) Abrir Jupyter Notebook (cada vez que trabajes)\nuv run jupyter notebook\nQué pasa aquí\n\nuv init crea pyproject.toml (metadatos del proyecto).\nuv add notebook escribe la dependencia en pyproject.toml e instala en .venv (lo crea si no existe).\nuv run ... ejecuta el comando dentro del entorno sin tener que activar nada.",
+    "crumbs": [
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>uv cheat sheet</span>"
+    ]
+  },
+  {
+    "objectID": "clases/cheat_sheet_uv.html#caso-2-carpeta-existente-sin-ambiente-virtual",
+    "href": "clases/cheat_sheet_uv.html#caso-2-carpeta-existente-sin-ambiente-virtual",
+    "title": "18  uv cheat sheet",
+    "section": "Caso 2 · Carpeta existente sin ambiente virtual",
+    "text": "Caso 2 · Carpeta existente sin ambiente virtual\nUsa esto cuando ya tienes la carpeta (quizá con algunos archivos), pero no hay .venv ni pyproject.toml.\ncd espacio-trabajo\nuv init                     # crea pyproject.toml\nuv add notebook             # instala dependencias y crea .venv si no existe\nuv run jupyter notebook     # lo que necesitas para correr la libreta\nNotas\n\nIgual que en el caso 1: init y el primer add son “una sola vez”.\nDespués, cada vez que regreses al proyecto, basta con uv run jupyter notebook.",
+    "crumbs": [
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>uv cheat sheet</span>"
+    ]
+  },
+  {
+    "objectID": "clases/cheat_sheet_uv.html#caso-3-proyecto-iniciado-por-otra-persona-hay-pyproject.toml-no-hay-.venv",
+    "href": "clases/cheat_sheet_uv.html#caso-3-proyecto-iniciado-por-otra-persona-hay-pyproject.toml-no-hay-.venv",
+    "title": "18  uv cheat sheet",
+    "section": "Caso 3 · Proyecto iniciado por otra persona (hay pyproject.toml, no hay .venv)",
+    "text": "Caso 3 · Proyecto iniciado por otra persona (hay pyproject.toml, no hay .venv)\nUsa esto cuando clonaste o descargaste un proyecto que ya tiene pyproject.toml (y quizá uv.lock), pero falta el entorno .venv.\ncd espacio-trabajo\nuv sync                     # crea/actualiza .venv según pyproject/uv.lock\nuv run jupyter notebook     # si el proyecto trae 'notebook' como dependencia\nSi no trae Jupyter Notebook como dependencia\nuv add notebook             # añade 'notebook' al proyecto\nuv run jupyter notebook",
+    "crumbs": [
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>uv cheat sheet</span>"
+    ]
+  },
+  {
+    "objectID": "clases/cheat_sheet_uv.html#cuándo-usar-cada-caso",
+    "href": "clases/cheat_sheet_uv.html#cuándo-usar-cada-caso",
+    "title": "18  uv cheat sheet",
+    "section": "¿Cuándo usar cada caso?",
+    "text": "¿Cuándo usar cada caso?\n\nCaso 1 (desde cero): vas a iniciar un proyecto nuevo y quieres que uv gestione todo desde el principio.\nCaso 2 (carpeta existente sin .venv ni pyproject): ya tienes una carpeta con archivos iniciales, pero aún no es un proyecto “uv”.\nCaso 3 (proyecto ajeno sin .venv): clonaste/recibiste un proyecto que ya define dependencias en pyproject.toml; solo necesitas instalarlas con uv sync.",
+    "crumbs": [
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>uv cheat sheet</span>"
+    ]
+  },
+  {
+    "objectID": "clases/cheat_sheet_uv.html#comandos-útiles-rápidos",
+    "href": "clases/cheat_sheet_uv.html#comandos-útiles-rápidos",
+    "title": "18  uv cheat sheet",
+    "section": "Comandos útiles (rápidos)",
+    "text": "Comandos útiles (rápidos)\nuv add paquete1 paquete2    # agrega dependencias al proyecto\nuv remove paquete           # quita una dependencia\nuv run comando           # ejecuta dentro del entorno (.venv) sin activarlo\nuv sync                     # instala/actualiza dependencias desde pyproject/uv.lock\n\n\n\n\n\n\nTip\n\n\n\n\nNo necesitas source .venv/bin/activate ni comandos de activación: usa uv run &lt;comando&gt;.\nPara usar JupyterLab en lugar de Notebook: uv add jupyterlab y luego uv run jupyter-lab.",
+    "crumbs": [
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>uv cheat sheet</span>"
+    ]
   }
 ]
