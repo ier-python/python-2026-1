@@ -48,6 +48,7 @@ book:
     - clases/016_Instalar_paquetes.ipynb
     - clases/016a_ejercicio_clase.qmd
     - clases/cheat_sheet_uv.qmd
+    - clases/017_importando_datos.ipynb
 
 format:
   html: 

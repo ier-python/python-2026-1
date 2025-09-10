@@ -468,5 +468,25 @@
     "crumbs": [
       "<span class='chapter-number'>18</span>  <span class='chapter-title'>uv cheat sheet</span>"
     ]
+  },
+  {
+    "objectID": "clases/017_importando_datos.html",
+    "href": "clases/017_importando_datos.html",
+    "title": "19  Pandas y archivos csv",
+    "section": "",
+    "text": "Rutas absolutas\nNo se recomiendan\n“C:-pandas-main\\001_Cuernavaca_To_1dia_comas.csv”\nf = \"../data/001_Cuernavaca_To_1dia_comas.csv\"\ntmx = pd.read_csv(f)\ntmx\n\n\n\n\n\n\n\n\ntiempo\nTo\n\n\n\n\n0\n2012-01-01 00:00:00\n19.3\n\n\n1\n2012-01-01 01:00:00\n18.6\n\n\n2\n2012-01-01 02:00:00\n17.9\n\n\n3\n2012-01-01 03:00:00\n17.3\n\n\n4\n2012-01-01 04:00:00\n16.6\n\n\n5\n2012-01-01 05:00:00\n15.9\n\n\n6\n2012-01-01 06:00:00\n17.0\n\n\n7\n2012-01-01 07:00:00\n18.0\n\n\n8\n2012-01-01 08:00:00\n19.0\n\n\n9\n2012-01-01 09:00:00\n20.0\n\n\n10\n2012-01-01 10:00:00\n20.0\n\n\n11\n2012-01-01 11:00:00\n20.0\n\n\n12\n2012-01-01 12:00:00\n21.0\n\n\n13\n2012-01-01 13:00:00\n22.0\n\n\n14\n2012-01-01 14:00:00\n21.7\n\n\n15\n2012-01-01 15:00:00\n21.3\n\n\n16\n2012-01-01 16:00:00\n21.0\n\n\n17\n2012-01-01 17:00:00\n19.0\n\n\n18\n2012-01-01 18:00:00\n17.1\n\n\n19\n2012-01-01 19:00:00\n17.0\n\n\n20\n2012-01-01 20:00:00\n17.3\n\n\n21\n2012-01-01 21:00:00\n17.0\n\n\n22\n2012-01-01 22:00:00\n16.6\n\n\n23\n2012-01-01 23:00:00\n15.9\ntype(tmx)\n\npandas.core.frame.DataFrame\ncolumnas = tmx.columns\ncolumnas\n\nIndex(['tiempo', 'To'], dtype='object')\ntmx.info()\n\n&lt;class 'pandas.core.frame.DataFrame'&gt;\nRangeIndex: 24 entries, 0 to 23\nData columns (total 2 columns):\n #   Column  Non-Null Count  Dtype  \n---  ------  --------------  -----  \n 0   tiempo  24 non-null     object \n 1   To      24 non-null     float64\ndtypes: float64(1), object(1)\nmemory usage: 516.0+ bytes\ntmx.describe()\n\n\n\n\n\n\n\n\nTo\n\n\n\n\ncount\n24.000000\n\n\nmean\n18.604167\n\n\nstd\n1.904338\n\n\nmin\n15.900000\n\n\n25%\n17.000000\n\n\n50%\n18.300000\n\n\n75%\n20.000000\n\n\nmax\n22.000000",
+    "crumbs": [
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Pandas y archivos csv</span>"
+    ]
+  },
+  {
+    "objectID": "clases/017_importando_datos.html#que-debe-tener-001_cuernavaca_to_1dia_comas.csv",
+    "href": "clases/017_importando_datos.html#que-debe-tener-001_cuernavaca_to_1dia_comas.csv",
+    "title": "19  Pandas y archivos csv",
+    "section": "QUe debe tener 001_Cuernavaca_To_1dia_comas.csv",
+    "text": "QUe debe tener 001_Cuernavaca_To_1dia_comas.csv\n\nUn indice temporal\nUna columna flotante llamada To\n\n\nf = \"../data/001_Cuernavaca_To_1dia_comas.csv\"\ntmx = pd.read_csv(f,index_col=0)\ntmx.index\n\nIndex(['2012-01-01 00:00:00', '2012-01-01 01:00:00', '2012-01-01 02:00:00',\n       '2012-01-01 03:00:00', '2012-01-01 04:00:00', '2012-01-01 05:00:00',\n       '2012-01-01 06:00:00', '2012-01-01 07:00:00', '2012-01-01 08:00:00',\n       '2012-01-01 09:00:00', '2012-01-01 10:00:00', '2012-01-01 11:00:00',\n       '2012-01-01 12:00:00', '2012-01-01 13:00:00', '2012-01-01 14:00:00',\n       '2012-01-01 15:00:00', '2012-01-01 16:00:00', '2012-01-01 17:00:00',\n       '2012-01-01 18:00:00', '2012-01-01 19:00:00', '2012-01-01 20:00:00',\n       '2012-01-01 21:00:00', '2012-01-01 22:00:00', '2012-01-01 23:00:00'],\n      dtype='object', name='tiempo')\n\n\n\nf = \"../data/001_Cuernavaca_To_1dia_comas.csv\"\ntmx = pd.read_csv(f,index_col=0,parse_dates=True)\n# tmx.index\n\n\ntmx\n\n\n\n\n\n\n\n\nTo\n\n\ntiempo\n\n\n\n\n\n2012-01-01 00:00:00\n19.3\n\n\n2012-01-01 01:00:00\n18.6\n\n\n2012-01-01 02:00:00\n17.9\n\n\n2012-01-01 03:00:00\n17.3\n\n\n2012-01-01 04:00:00\n16.6\n\n\n2012-01-01 05:00:00\n15.9\n\n\n2012-01-01 06:00:00\n17.0\n\n\n2012-01-01 07:00:00\n18.0\n\n\n2012-01-01 08:00:00\n19.0\n\n\n2012-01-01 09:00:00\n20.0\n\n\n2012-01-01 10:00:00\n20.0\n\n\n2012-01-01 11:00:00\n20.0\n\n\n2012-01-01 12:00:00\n21.0\n\n\n2012-01-01 13:00:00\n22.0\n\n\n2012-01-01 14:00:00\n21.7\n\n\n2012-01-01 15:00:00\n21.3\n\n\n2012-01-01 16:00:00\n21.0\n\n\n2012-01-01 17:00:00\n19.0\n\n\n2012-01-01 18:00:00\n17.1\n\n\n2012-01-01 19:00:00\n17.0\n\n\n2012-01-01 20:00:00\n17.3\n\n\n2012-01-01 21:00:00\n17.0\n\n\n2012-01-01 22:00:00\n16.6\n\n\n2012-01-01 23:00:00\n15.9\n\n\n\n\n\n\n\n\ntmx.plot(figsize=(12,3))\n\n\n\n\n\n\n\n\n\ntmx_nodatetime.plot(figsize=(12,3))\n\n\n\n\n\n\n\n\n\ntmx.index.day_of_week\n\nIndex([6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6], dtype='int32', name='tiempo')\n\n\n\ntmx.resample(\"D\").mean()\n\n\n\n\n\n\n\n\nTo\n\n\ntiempo\n\n\n\n\n\n2012-01-01\n18.604167",
+    "crumbs": [
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>Pandas y archivos csv</span>"
+    ]
   }
 ]
