@@ -49,6 +49,9 @@ book:
     - clases/016a_ejercicio_clase.qmd
     - clases/cheat_sheet_uv.qmd
     - clases/017_importando_datos.ipynb
+    - clases/018_importa_DOS.ipynb
+    - clases/019_importa_TRES.ipynb
+    - clases/020_importa_XLS.ipynb
 
 format:
   html: 
