@@ -52,6 +52,8 @@ book:
     - clases/018_importa_DOS.ipynb
     - clases/019_importa_TRES.ipynb
     - clases/020_importa_XLS.ipynb
+    - clases/021_ETL_EDA.ipynb
+    - clases/022_parquet.ipynb
 
 format:
   html: 

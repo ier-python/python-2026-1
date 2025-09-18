@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>18&nbsp; uv cheat sheet – Proyectos de ciencia de datos con Python</title>
+<title>parquet – Proyectos de ciencia de datos con Python</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -65,8 +65,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../clases/017_importando_datos.html" rel="next">
-<link href="../clases/016a_ejercicio_clase.html" rel="prev">
+<link href="../clases/021_ETL_EDA.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -112,7 +111,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </head>
 
-<body class="nav-sidebar floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-sidebar floating nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -297,7 +296,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../clases/cheat_sheet_uv.html"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">uv cheat sheet</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../clases/022_parquet.html"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">022_parquet.html</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -419,7 +418,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../clases/cheat_sheet_uv.html" class="sidebar-item-text sidebar-link active">
+  <a href="../clases/cheat_sheet_uv.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">uv cheat sheet</span></span></a>
   </div>
 </li>
@@ -455,7 +454,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../clases/022_parquet.html" class="sidebar-item-text sidebar-link">
+  <a href="../clases/022_parquet.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">022_parquet.html</span></span></a>
   </div>
 </li>
@@ -464,147 +463,33 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Tabla de contenidos</h2>
-   
-  <ul>
-  <li><a href="#resumen-rápido" id="toc-resumen-rápido" class="nav-link active" data-scroll-target="#resumen-rápido">Resumen rápido</a></li>
-  <li><a href="#caso-1-crear-un-espacio-de-trabajo-desde-cero" id="toc-caso-1-crear-un-espacio-de-trabajo-desde-cero" class="nav-link" data-scroll-target="#caso-1-crear-un-espacio-de-trabajo-desde-cero">Caso 1 · Crear un espacio de trabajo desde cero</a></li>
-  <li><a href="#caso-2-carpeta-existente-sin-ambiente-virtual" id="toc-caso-2-carpeta-existente-sin-ambiente-virtual" class="nav-link" data-scroll-target="#caso-2-carpeta-existente-sin-ambiente-virtual">Caso 2 · Carpeta existente <strong>sin</strong> ambiente virtual</a></li>
-  <li><a href="#caso-3-proyecto-iniciado-por-otra-persona-hay-pyproject.toml-no-hay-.venv" id="toc-caso-3-proyecto-iniciado-por-otra-persona-hay-pyproject.toml-no-hay-.venv" class="nav-link" data-scroll-target="#caso-3-proyecto-iniciado-por-otra-persona-hay-pyproject.toml-no-hay-.venv">Caso 3 · Proyecto iniciado por otra persona (hay <code>pyproject.toml</code>, <strong>no</strong> hay <code>.venv</code>)</a></li>
-  <li><a href="#cuándo-usar-cada-caso" id="toc-cuándo-usar-cada-caso" class="nav-link" data-scroll-target="#cuándo-usar-cada-caso">¿Cuándo usar cada caso?</a></li>
-  <li><a href="#comandos-útiles-rápidos" id="toc-comandos-útiles-rápidos" class="nav-link" data-scroll-target="#comandos-útiles-rápidos">Comandos útiles (rápidos)</a></li>
-  </ul>
-</nav>
-    </div>
+    
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">uv cheat sheet</span></h1>
+
+
+
+<div id="7c595467-60a7-40fd-8e65-8a7d5e920e73" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-
-
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<blockquote class="blockquote">
-<p><code>uv</code> es un gestor súper rápido para proyectos Python. Crea/gestiona el entorno <code>.venv</code>, resuelve dependencias y ejecuta comandos sin “activar” el entorno.</p>
-</blockquote>
-<section id="resumen-rápido" class="level2">
-<h2 class="anchored" data-anchor-id="resumen-rápido">Resumen rápido</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Nuevo proyecto</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> init mi-proyecto</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> mi-proyecto</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> add notebook</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> run jupyter notebook</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<div id="b82a1d76-4821-4bcc-9099-da60afb536ca" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="st">"../data/ClimaLab_2023-10-27_2025-04-30.parquet"</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>esolmet <span class="op">=</span> pd.read_parquet(f)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="callout-title-container flex-fill">
-Nota
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>“Solo una vez”</strong> por proyecto: <code>uv init</code> y el primer <code>uv add</code>. Puedes repetir <code>uv add</code> más adelante solo cuando quieras <strong>agregar</strong> paquetes nuevos.</p>
-</div>
-</div>
-<hr>
-</section>
-<section id="caso-1-crear-un-espacio-de-trabajo-desde-cero" class="level2">
-<h2 class="anchored" data-anchor-id="caso-1-crear-un-espacio-de-trabajo-desde-cero">Caso 1 · Crear un espacio de trabajo desde cero</h2>
-<p>Usa esto cuando <strong>aún no existe</strong> la carpeta del proyecto.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1) Crear el proyecto y entrar</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> init espacio-trabajo</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> espacio-trabajo</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 2) Agregar paquetes (solo una vez; incluye el servidor de notebooks)</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> add notebook</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co"># 3) Abrir Jupyter Notebook (cada vez que trabajes)</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> run jupyter notebook</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><strong>Qué pasa aquí</strong></p>
-<ul>
-<li><code>uv init</code> crea <code>pyproject.toml</code> (metadatos del proyecto).</li>
-<li><code>uv add notebook</code> escribe la dependencia en <code>pyproject.toml</code> e instala en <code>.venv</code> (lo crea si no existe).</li>
-<li><code>uv run ...</code> ejecuta el comando <strong>dentro del entorno</strong> sin tener que activar nada.</li>
-</ul>
-<hr>
-</section>
-<section id="caso-2-carpeta-existente-sin-ambiente-virtual" class="level2">
-<h2 class="anchored" data-anchor-id="caso-2-carpeta-existente-sin-ambiente-virtual">Caso 2 · Carpeta existente <strong>sin</strong> ambiente virtual</h2>
-<p>Usa esto cuando <strong>ya tienes la carpeta</strong> (quizá con algunos archivos), pero <strong>no</strong> hay <code>.venv</code> ni <code>pyproject.toml</code>.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> espacio-trabajo</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> init                     <span class="co"># crea pyproject.toml</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> add notebook             <span class="co"># instala dependencias y crea .venv si no existe</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> run jupyter notebook     <span class="co"># lo que necesitas para correr la libreta</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><strong>Notas</strong></p>
-<ul>
-<li>Igual que en el caso 1: <code>init</code> y el <strong>primer</strong> <code>add</code> son “una sola vez”.</li>
-<li>Después, cada vez que regreses al proyecto, basta con <code>uv run jupyter notebook</code>.</li>
-</ul>
-<hr>
-</section>
-<section id="caso-3-proyecto-iniciado-por-otra-persona-hay-pyproject.toml-no-hay-.venv" class="level2">
-<h2 class="anchored" data-anchor-id="caso-3-proyecto-iniciado-por-otra-persona-hay-pyproject.toml-no-hay-.venv">Caso 3 · Proyecto iniciado por otra persona (hay <code>pyproject.toml</code>, <strong>no</strong> hay <code>.venv</code>)</h2>
-<p>Usa esto cuando clonaste o descargaste un proyecto que <strong>ya tiene</strong> <code>pyproject.toml</code> (y quizá <code>uv.lock</code>), pero <strong>falta</strong> el entorno <code>.venv</code>.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> espacio-trabajo</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> sync                     <span class="co"># crea/actualiza .venv según pyproject/uv.lock</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> run jupyter notebook     <span class="co"># si el proyecto trae 'notebook' como dependencia</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><strong>Si <em>no</em> trae Jupyter Notebook como dependencia</strong></p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> add notebook             <span class="co"># añade 'notebook' al proyecto</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> run jupyter notebook</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<hr>
-</section>
-<section id="cuándo-usar-cada-caso" class="level2">
-<h2 class="anchored" data-anchor-id="cuándo-usar-cada-caso">¿Cuándo usar cada caso?</h2>
-<ul>
-<li><strong>Caso 1 (desde cero)</strong>: vas a iniciar un proyecto nuevo y quieres que <code>uv</code> gestione <strong>todo</strong> desde el principio.</li>
-<li><strong>Caso 2 (carpeta existente sin .venv ni pyproject)</strong>: ya tienes una carpeta con archivos iniciales, pero aún no es un proyecto “uv”.</li>
-<li><strong>Caso 3 (proyecto ajeno sin .venv)</strong>: clonaste/recibiste un proyecto que ya define dependencias en <code>pyproject.toml</code>; solo necesitas <strong>instalarlas</strong> con <code>uv sync</code>.</li>
-</ul>
-<hr>
-</section>
-<section id="comandos-útiles-rápidos" class="level2">
-<h2 class="anchored" data-anchor-id="comandos-útiles-rápidos">Comandos útiles (rápidos)</h2>
-<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> add paquete1 paquete2    <span class="co"># agrega dependencias al proyecto</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> remove paquete           <span class="co"># quita una dependencia</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> run comando           <span class="co"># ejecuta dentro del entorno (.venv) sin activarlo</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> sync                     <span class="co"># instala/actualiza dependencias desde pyproject/uv.lock</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li><strong>No necesitas</strong> <code>source .venv/bin/activate</code> ni comandos de activación: usa <code>uv run &lt;comando&gt;</code>.</li>
-<li>Para usar JupyterLab en lugar de Notebook: <code>uv add jupyterlab</code> y luego <code>uv run jupyter-lab</code>.</li>
-</ul>
+<div id="6393366a-0452-4fd3-b944-108f79cf9883" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>esolmet.tdb.resample(<span class="st">"YE"</span>).<span class="bu">max</span>()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="7">
+<pre><code>date
+2023-12-31    32.40
+2024-12-31    39.63
+2025-12-31    35.78
+Freq: YE-DEC, Name: tdb, dtype: float64</code></pre>
 </div>
 </div>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1021,14 +906,11 @@ Tip
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../clases/016a_ejercicio_clase.html" class="pagination-link" aria-label="Proyecto: ejercicio-funciones">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Proyecto: ejercicio-funciones</span></span>
+      <a href="../clases/021_ETL_EDA.html" class="pagination-link" aria-label="Métricas">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Métricas</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../clases/017_importando_datos.html" class="pagination-link" aria-label="Pandas y archivos csv">
-        <span class="nav-page-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Pandas y archivos csv</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
