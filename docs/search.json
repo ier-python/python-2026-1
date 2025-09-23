@@ -538,5 +538,25 @@
     "crumbs": [
       "<span class='chapter-number'>24</span>  <span class='chapter-title'>022_parquet.html</span>"
     ]
+  },
+  {
+    "objectID": "clases/023_importando_datos.html",
+    "href": "clases/023_importando_datos.html",
+    "title": "25  cva[“Ti”] = 13 + cva.Tacva.Ig/13. 0.01",
+    "section": "",
+    "text": "Factor de decremento diario\n\\[\nFD = \\frac{Ti_{max} - Ti_{min}}{Ta_{max} - Ta_{min}}\n\\]",
+    "crumbs": [
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Factor de decremento diario</span>"
+    ]
+  },
+  {
+    "objectID": "clases/023_importando_datos.html#factor-de-decremento-sol-aire-diario",
+    "href": "clases/023_importando_datos.html#factor-de-decremento-sol-aire-diario",
+    "title": "25  cva[“Ti”] = 13 + cva.Tacva.Ig/13. 0.01",
+    "section": "Factor de decremento sol-aire diario",
+    "text": "Factor de decremento sol-aire diario\n\\[\nFD = \\frac{Ti_{max} - Ti_{min}}{Tsa_{max} - Tsa_{min}}\n\\]\n\nFD = (cva.Ti_1.resample(\"D\").max() - cva.Ti_1.resample(\"D\").min())/(cva.Ta.resample(\"D\").max() - cva.Ta.resample(\"D\").min())\n\n\nFDsa =(cva.Ti_1.resample(\"D\").max() - cva.Ti_1.resample(\"D\").min())/(cva.Tsa_1.resample(\"D\").max() - cva.Tsa_1.resample(\"D\").min()) \nFDsa\n\nTime\n2025-01-15 00:00:00-06:00    0.403974\nFreq: D, dtype: float64\n\n\n\n# def calculate_FD_FDsa(cva:pd.DataFrame) -&gt; tuple[float,float]:\n    \n#         FD = (cva.Ti_1.resample(\"D\").max() - cva.Ti_1.resample(\"D\").min())/(cva.Ta.resample(\"D\").max() - cva.Ta.resample(\"D\").min())\n#         FDsa =(cva.Ti_1.resample(\"D\").max() - cva.Ti_1.resample(\"D\").min())/(cva.Tsa_1.resample(\"D\").max() - cva.Tsa_1.resample(\"D\").min()) \n#         return FD, FDsa\n\n\nFD, FDsa = calculate_FD_FDsa(cva)\n\n\nFD\n\nTime\n2025-01-15 00:00:00-06:00    1.173077\nFreq: D, dtype: float64\n\n\n\nFDsa\n\nTime\n2025-01-15 00:00:00-06:00    0.403974\nFreq: D, dtype: float64",
+    "crumbs": [
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>Factor de decremento diario</span>"
+    ]
   }
 ]
