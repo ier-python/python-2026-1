@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>18&nbsp; uv cheat sheet – Proyectos de ciencia de datos con Python</title>
+<title>27&nbsp; Exploratory Data Analysis – Proyectos de ciencia de datos con Python</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -58,15 +58,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../clases/017_importando_datos.html" rel="next">
-<link href="../clases/016a_ejercicio_clase.html" rel="prev">
+<link href="../clases/024_ETL.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -108,6 +107,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Buscar"
   }
 }</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
 </head>
@@ -297,7 +299,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../clases/cheat_sheet_uv.html"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">uv cheat sheet</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../clases/025_EDA.html"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Exploratory Data Analysis</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -419,7 +421,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../clases/cheat_sheet_uv.html" class="sidebar-item-text sidebar-link active">
+  <a href="../clases/cheat_sheet_uv.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">uv cheat sheet</span></span></a>
   </div>
 </li>
@@ -473,7 +475,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../clases/025_EDA.html" class="sidebar-item-text sidebar-link">
+  <a href="../clases/025_EDA.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Exploratory Data Analysis</span></span></a>
   </div>
 </li>
@@ -487,12 +489,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Tabla de contenidos</h2>
    
   <ul>
-  <li><a href="#resumen-rápido" id="toc-resumen-rápido" class="nav-link active" data-scroll-target="#resumen-rápido">Resumen rápido</a></li>
-  <li><a href="#caso-1-crear-un-espacio-de-trabajo-desde-cero" id="toc-caso-1-crear-un-espacio-de-trabajo-desde-cero" class="nav-link" data-scroll-target="#caso-1-crear-un-espacio-de-trabajo-desde-cero">Caso 1 · Crear un espacio de trabajo desde cero</a></li>
-  <li><a href="#caso-2-carpeta-existente-sin-ambiente-virtual" id="toc-caso-2-carpeta-existente-sin-ambiente-virtual" class="nav-link" data-scroll-target="#caso-2-carpeta-existente-sin-ambiente-virtual">Caso 2 · Carpeta existente <strong>sin</strong> ambiente virtual</a></li>
-  <li><a href="#caso-3-proyecto-iniciado-por-otra-persona-hay-pyproject.toml-no-hay-.venv" id="toc-caso-3-proyecto-iniciado-por-otra-persona-hay-pyproject.toml-no-hay-.venv" class="nav-link" data-scroll-target="#caso-3-proyecto-iniciado-por-otra-persona-hay-pyproject.toml-no-hay-.venv">Caso 3 · Proyecto iniciado por otra persona (hay <code>pyproject.toml</code>, <strong>no</strong> hay <code>.venv</code>)</a></li>
-  <li><a href="#cuándo-usar-cada-caso" id="toc-cuándo-usar-cada-caso" class="nav-link" data-scroll-target="#cuándo-usar-cada-caso">¿Cuándo usar cada caso?</a></li>
-  <li><a href="#comandos-útiles-rápidos" id="toc-comandos-útiles-rápidos" class="nav-link" data-scroll-target="#comandos-útiles-rápidos">Comandos útiles (rápidos)</a></li>
+  <li><a href="#contabilizar-nans-por-mes-y-columna" id="toc-contabilizar-nans-por-mes-y-columna" class="nav-link active" data-scroll-target="#contabilizar-nans-por-mes-y-columna">Contabilizar NaNs por mes y columna</a></li>
   </ul>
 </nav>
     </div>
@@ -502,7 +499,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">uv cheat sheet</span></h1>
+<h1 class="title"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">Exploratory Data Analysis</span></h1>
 </div>
 
 
@@ -519,105 +516,505 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<blockquote class="blockquote">
-<p><code>uv</code> es un gestor súper rápido para proyectos Python. Crea/gestiona el entorno <code>.venv</code>, resuelve dependencias y ejecuta comandos sin “activar” el entorno.</p>
-</blockquote>
-<section id="resumen-rápido" class="level2">
-<h2 class="anchored" data-anchor-id="resumen-rápido">Resumen rápido</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Nuevo proyecto</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> init mi-proyecto</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> mi-proyecto</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> add notebook</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> run jupyter notebook</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<div id="38b4e663-51fa-4bdc-b6db-21d7962d570e" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="callout-title-container flex-fill">
-Nota
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>“Solo una vez”</strong> por proyecto: <code>uv init</code> y el primer <code>uv add</code>. Puedes repetir <code>uv add</code> más adelante solo cuando quieras <strong>agregar</strong> paquetes nuevos.</p>
-</div>
-</div>
-<hr>
-</section>
-<section id="caso-1-crear-un-espacio-de-trabajo-desde-cero" class="level2">
-<h2 class="anchored" data-anchor-id="caso-1-crear-un-espacio-de-trabajo-desde-cero">Caso 1 · Crear un espacio de trabajo desde cero</h2>
-<p>Usa esto cuando <strong>aún no existe</strong> la carpeta del proyecto.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1) Crear el proyecto y entrar</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> init espacio-trabajo</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> espacio-trabajo</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 2) Agregar paquetes (solo una vez; incluye el servidor de notebooks)</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> add notebook</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co"># 3) Abrir Jupyter Notebook (cada vez que trabajes)</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> run jupyter notebook</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><strong>Qué pasa aquí</strong></p>
-<ul>
-<li><code>uv init</code> crea <code>pyproject.toml</code> (metadatos del proyecto).</li>
-<li><code>uv add notebook</code> escribe la dependencia en <code>pyproject.toml</code> e instala en <code>.venv</code> (lo crea si no existe).</li>
-<li><code>uv run ...</code> ejecuta el comando <strong>dentro del entorno</strong> sin tener que activar nada.</li>
-</ul>
-<hr>
-</section>
-<section id="caso-2-carpeta-existente-sin-ambiente-virtual" class="level2">
-<h2 class="anchored" data-anchor-id="caso-2-carpeta-existente-sin-ambiente-virtual">Caso 2 · Carpeta existente <strong>sin</strong> ambiente virtual</h2>
-<p>Usa esto cuando <strong>ya tienes la carpeta</strong> (quizá con algunos archivos), pero <strong>no</strong> hay <code>.venv</code> ni <code>pyproject.toml</code>.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> espacio-trabajo</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> init                     <span class="co"># crea pyproject.toml</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> add notebook             <span class="co"># instala dependencias y crea .venv si no existe</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> run jupyter notebook     <span class="co"># lo que necesitas para correr la libreta</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><strong>Notas</strong></p>
-<ul>
-<li>Igual que en el caso 1: <code>init</code> y el <strong>primer</strong> <code>add</code> son “una sola vez”.</li>
-<li>Después, cada vez que regreses al proyecto, basta con <code>uv run jupyter notebook</code>.</li>
-</ul>
-<hr>
-</section>
-<section id="caso-3-proyecto-iniciado-por-otra-persona-hay-pyproject.toml-no-hay-.venv" class="level2">
-<h2 class="anchored" data-anchor-id="caso-3-proyecto-iniciado-por-otra-persona-hay-pyproject.toml-no-hay-.venv">Caso 3 · Proyecto iniciado por otra persona (hay <code>pyproject.toml</code>, <strong>no</strong> hay <code>.venv</code>)</h2>
-<p>Usa esto cuando clonaste o descargaste un proyecto que <strong>ya tiene</strong> <code>pyproject.toml</code> (y quizá <code>uv.lock</code>), pero <strong>falta</strong> el entorno <code>.venv</code>.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> espacio-trabajo</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> sync                     <span class="co"># crea/actualiza .venv según pyproject/uv.lock</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> run jupyter notebook     <span class="co"># si el proyecto trae 'notebook' como dependencia</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><strong>Si <em>no</em> trae Jupyter Notebook como dependencia</strong></p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> add notebook             <span class="co"># añade 'notebook' al proyecto</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> run jupyter notebook</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<hr>
-</section>
-<section id="cuándo-usar-cada-caso" class="level2">
-<h2 class="anchored" data-anchor-id="cuándo-usar-cada-caso">¿Cuándo usar cada caso?</h2>
-<ul>
-<li><strong>Caso 1 (desde cero)</strong>: vas a iniciar un proyecto nuevo y quieres que <code>uv</code> gestione <strong>todo</strong> desde el principio.</li>
-<li><strong>Caso 2 (carpeta existente sin .venv ni pyproject)</strong>: ya tienes una carpeta con archivos iniciales, pero aún no es un proyecto “uv”.</li>
-<li><strong>Caso 3 (proyecto ajeno sin .venv)</strong>: clonaste/recibiste un proyecto que ya define dependencias en <code>pyproject.toml</code>; solo necesitas <strong>instalarlas</strong> con <code>uv sync</code>.</li>
-</ul>
-<hr>
-</section>
-<section id="comandos-útiles-rápidos" class="level2">
-<h2 class="anchored" data-anchor-id="comandos-útiles-rápidos">Comandos útiles (rápidos)</h2>
-<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> add paquete1 paquete2    <span class="co"># agrega dependencias al proyecto</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> remove paquete           <span class="co"># quita una dependencia</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> run comando           <span class="co"># ejecuta dentro del entorno (.venv) sin activarlo</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="ex">uv</span> sync                     <span class="co"># instala/actualiza dependencias desde pyproject/uv.lock</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip
+<div id="ca106366-dddf-4167-9ab3-bf322259c25a" class="cell" data-scrolled="true" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span><span class="st">"../data/002_processed/ikiam_Igs.csv"</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>pd.read_csv(f,index_col<span class="op">=</span><span class="dv">0</span>,parse_dates<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="2">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Ig_ghprm</th>
+<th data-quarto-table-cell-role="th">Ig_ghrprm</th>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">tiempo</th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">NaT</td>
+<td>0.0</td>
+<td>0.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2024-05-11 00:01:00</td>
+<td>0.0</td>
+<td>0.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2024-05-11 00:02:00</td>
+<td>0.0</td>
+<td>0.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2024-05-11 00:03:00</td>
+<td>0.0</td>
+<td>0.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2024-05-11 00:04:00</td>
+<td>0.0</td>
+<td>0.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2024-12-30 23:56:00</td>
+<td>0.0</td>
+<td>0.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2024-12-30 23:57:00</td>
+<td>0.0</td>
+<td>0.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2024-12-30 23:58:00</td>
+<td>0.0</td>
+<td>0.0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2024-12-30 23:59:00</td>
+<td>0.0</td>
+<td>0.0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">NaT</td>
+<td>0.0</td>
+<td>0.0</td>
+</tr>
+</tbody>
+</table>
+
+<p>336961 rows × 2 columns</p>
 </div>
 </div>
-<div class="callout-body-container callout-body">
-<ul>
-<li><strong>No necesitas</strong> <code>source .venv/bin/activate</code> ni comandos de activación: usa <code>uv run &lt;comando&gt;</code>.</li>
-<li>Para usar JupyterLab en lugar de Notebook: <code>uv add jupyterlab</code> y luego <code>uv run jupyter-lab</code>.</li>
-</ul>
+</div>
+<div id="0083c0f6-0ec4-4be5-b44c-20683ec0efcf" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="st">"../data/002_processed/ikiam_Igs.parquet"</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>Igs <span class="op">=</span> pd.read_parquet(f)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="st">"../data/002_processed/ikiam_tgs.parquet"</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>tgs <span class="op">=</span> pd.read_parquet(f)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="ff204bf0-89f6-4b62-b541-236bccba43c1" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>Igs.info()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
+DatetimeIndex: 336961 entries, NaT to NaT
+Data columns (total 2 columns):
+ #   Column     Non-Null Count   Dtype  
+---  ------     --------------   -----  
+ 0   Ig_ghprm   336961 non-null  float64
+ 1   Ig_ghrprm  276016 non-null  float64
+dtypes: float64(2)
+memory usage: 7.7 MB</code></pre>
+</div>
+</div>
+<div id="1c07fd01-ad42-44b7-8ec3-42493848817a" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>Igs.describe()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="6">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Ig_ghprm</th>
+<th data-quarto-table-cell-role="th">Ig_ghrprm</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">count</td>
+<td>336961.000000</td>
+<td>276016.000000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">mean</td>
+<td>0.007940</td>
+<td>124.647292</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">std</td>
+<td>0.015134</td>
+<td>229.345926</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">min</td>
+<td>0.000000</td>
+<td>0.000000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">25%</td>
+<td>0.000000</td>
+<td>0.000000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">50%</td>
+<td>0.000000</td>
+<td>0.760000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">75%</td>
+<td>0.010000</td>
+<td>145.130000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">max</td>
+<td>0.080000</td>
+<td>1337.520000</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div id="d55cc491-73d0-4b5c-9c4d-4a041a48f060" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>tgs.info()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
+DatetimeIndex: 336961 entries, NaT to NaT
+Data columns (total 7 columns):
+ #   Column        Non-Null Count   Dtype  
+---  ------        --------------   -----  
+ 0   tg1prm 0cm    276016 non-null  float64
+ 1   tg2prm 5cm    276016 non-null  float64
+ 2   tg3prm 10cm   276016 non-null  float64
+ 3   tg4prm 30cm   276016 non-null  float64
+ 4   tg5prm 50cm   276016 non-null  float64
+ 5   tg6prm 60cm   276016 non-null  float64
+ 6   tg7prm 80cm   276016 non-null  float64
+dtypes: float64(7)
+memory usage: 20.6 MB</code></pre>
+</div>
+</div>
+<div id="8f735ef8-1d92-40fe-bcb3-adabcc128029" class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>tgs.describe()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="9">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">tg1prm 0cm</th>
+<th data-quarto-table-cell-role="th">tg2prm 5cm</th>
+<th data-quarto-table-cell-role="th">tg3prm 10cm</th>
+<th data-quarto-table-cell-role="th">tg4prm 30cm</th>
+<th data-quarto-table-cell-role="th">tg5prm 50cm</th>
+<th data-quarto-table-cell-role="th">tg6prm 60cm</th>
+<th data-quarto-table-cell-role="th">tg7prm 80cm</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">count</td>
+<td>276016.000000</td>
+<td>276016.000000</td>
+<td>276016.000000</td>
+<td>276016.000000</td>
+<td>276016.000000</td>
+<td>276016.000000</td>
+<td>276016.000000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">mean</td>
+<td>24.548940</td>
+<td>24.533382</td>
+<td>24.504500</td>
+<td>24.517023</td>
+<td>24.513674</td>
+<td>24.535478</td>
+<td>24.522438</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">std</td>
+<td>4.649202</td>
+<td>3.813553</td>
+<td>1.985408</td>
+<td>1.433576</td>
+<td>1.097241</td>
+<td>0.784723</td>
+<td>0.463283</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">min</td>
+<td>17.230000</td>
+<td>18.500000</td>
+<td>20.820000</td>
+<td>21.300000</td>
+<td>21.600000</td>
+<td>22.520000</td>
+<td>23.210000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">25%</td>
+<td>21.600000</td>
+<td>22.110000</td>
+<td>23.190000</td>
+<td>23.520000</td>
+<td>23.630000</td>
+<td>23.860000</td>
+<td>24.150000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">50%</td>
+<td>22.930000</td>
+<td>23.310000</td>
+<td>24.090000</td>
+<td>24.320000</td>
+<td>24.460000</td>
+<td>24.400000</td>
+<td>24.430000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">75%</td>
+<td>25.900000</td>
+<td>25.700000</td>
+<td>25.370000</td>
+<td>25.300000</td>
+<td>25.110000</td>
+<td>25.160000</td>
+<td>25.070000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">max</td>
+<td>48.000000</td>
+<td>45.360000</td>
+<td>35.520000</td>
+<td>30.650000</td>
+<td>27.980000</td>
+<td>26.700000</td>
+<td>25.340000</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div id="912c5788-b8a4-4ddd-b81d-443a3bb5d910" class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>Igs.plot(subplots<span class="op">=</span><span class="va">True</span>, figsize<span class="op">=</span>(<span class="dv">12</span>,<span class="dv">8</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="10">
+<pre><code>array([&lt;Axes: xlabel='tiempo'&gt;, &lt;Axes: xlabel='tiempo'&gt;], dtype=object)</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="025_EDA_files/figure-html/cell-9-output-2.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<div id="4a4dcc3b-0d19-4da0-99c4-ca87a7d8fa96" class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>tgs.plot(subplots<span class="op">=</span><span class="va">True</span>,figsize<span class="op">=</span>(<span class="dv">12</span>,<span class="dv">10</span>))<span class="op">;</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="025_EDA_files/figure-html/cell-10-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<section id="contabilizar-nans-por-mes-y-columna" class="level2">
+<h2 class="anchored" data-anchor-id="contabilizar-nans-por-mes-y-columna">Contabilizar NaNs por mes y columna</h2>
+<div id="2fd8d442-4034-4125-a752-ab529fc3e5be" class="cell" data-execution_count="15">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>Igs.isna().resample(<span class="st">"ME"</span>).<span class="bu">sum</span>()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="15">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Ig_ghprm</th>
+<th data-quarto-table-cell-role="th">Ig_ghrprm</th>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">tiempo</th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2024-05-31</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2024-06-30</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2024-07-31</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2024-08-31</td>
+<td>0</td>
+<td>23214</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2024-09-30</td>
+<td>0</td>
+<td>37690</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2024-10-31</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2024-11-30</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2024-12-31</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div id="c00ea089-08c3-4cd7-81a3-52725d57e2ba" class="cell" data-execution_count="16">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>tgs.isna().resample(<span class="st">"ME"</span>).<span class="bu">sum</span>()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="16">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">tg1prm 0cm</th>
+<th data-quarto-table-cell-role="th">tg2prm 5cm</th>
+<th data-quarto-table-cell-role="th">tg3prm 10cm</th>
+<th data-quarto-table-cell-role="th">tg4prm 30cm</th>
+<th data-quarto-table-cell-role="th">tg5prm 50cm</th>
+<th data-quarto-table-cell-role="th">tg6prm 60cm</th>
+<th data-quarto-table-cell-role="th">tg7prm 80cm</th>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">tiempo</th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2024-05-31</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2024-06-30</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2024-07-31</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2024-08-31</td>
+<td>23214</td>
+<td>23214</td>
+<td>23214</td>
+<td>23214</td>
+<td>23214</td>
+<td>23214</td>
+<td>23214</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2024-09-30</td>
+<td>37690</td>
+<td>37690</td>
+<td>37690</td>
+<td>37690</td>
+<td>37690</td>
+<td>37690</td>
+<td>37690</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2024-10-31</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2024-11-30</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2024-12-31</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+
+</div>
 </div>
 </div>
 
@@ -1039,14 +1436,11 @@ Tip
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../clases/016a_ejercicio_clase.html" class="pagination-link" aria-label="Proyecto: ejercicio-funciones">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Proyecto: ejercicio-funciones</span></span>
+      <a href="../clases/024_ETL.html" class="pagination-link" aria-label="024_ETL.html">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">024_ETL.html</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../clases/017_importando_datos.html" class="pagination-link" aria-label="Pandas y archivos csv">
-        <span class="nav-page-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Pandas y archivos csv</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

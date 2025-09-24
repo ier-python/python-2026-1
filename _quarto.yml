@@ -55,6 +55,8 @@ book:
     - clases/021_ETL_EDA.ipynb
     - clases/022_parquet.ipynb
     - clases/023_importando_datos.ipynb
+    - clases/024_ETL.ipynb
+    - clases/025_EDA.ipynb
 
 format:
   html: 
