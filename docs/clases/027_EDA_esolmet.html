@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>16&nbsp; PyPi – Proyectos de ciencia de datos con Python</title>
+<title>29&nbsp; Cosas a calcular – Proyectos de ciencia de datos con Python</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -58,15 +58,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../clases/016a_ejercicio_clase.html" rel="next">
-<link href="../clases/015_modificar_funciones.html" rel="prev">
+<link href="../clases/026_importa_exceles.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -108,6 +107,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Buscar"
   }
 }</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
 </head>
@@ -297,7 +299,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../clases/016_Instalar_paquetes.html"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">PyPi</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../clases/027_EDA_esolmet.html"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Cosas a calcular</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -407,7 +409,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../clases/016_Instalar_paquetes.html" class="sidebar-item-text sidebar-link active">
+  <a href="../clases/016_Instalar_paquetes.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">PyPi</span></span></a>
   </div>
 </li>
@@ -485,7 +487,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../clases/027_EDA_esolmet.html" class="sidebar-item-text sidebar-link">
+  <a href="../clases/027_EDA_esolmet.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Cosas a calcular</span></span></a>
   </div>
 </li>
@@ -494,16 +496,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Tabla de contenidos</h2>
-   
-  <ul>
-  <li><a href="#requirements.txt" id="toc-requirements.txt" class="nav-link active" data-scroll-target="#requirements.txt">requirements.txt</a></li>
-  <li><a href="#si-no-usaramos-uv" id="toc-si-no-usaramos-uv" class="nav-link" data-scroll-target="#si-no-usaramos-uv">Si no usaramos uv</a></li>
-  <li><a href="#ejercicio-de-la-clase-del-miercoles" id="toc-ejercicio-de-la-clase-del-miercoles" class="nav-link" data-scroll-target="#ejercicio-de-la-clase-del-miercoles">Ejercicio de la clase del miercoles</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -511,7 +505,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">PyPi</span></h1>
+<h1 class="title"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">Cosas a calcular</span></h1>
 </div>
 
 
@@ -528,66 +522,191 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<ol type="1">
-<li>Pandas</li>
-<li>Numpy</li>
-<li>Matplotlib</li>
-<li>Plotly</li>
-<li>SciPy</li>
-<li>WindRose</li>
-<li>Calplot</li>
-<li>PtitePrince</li>
-</ol>
-<div id="701dd2af-b472-4b7e-924a-928250b079d0" class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>pip install pandas <span class="co">## vamos a usar uv add desde la terminal</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="fab2e7ee-58d5-4423-bfb4-764557fc3357" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> missingno <span class="im">as</span> msno</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="8777bfee-687d-4f83-8f88-728e69d228bb" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="st">"../data/002_processed/esolmet_2018.parquet"</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>esolmet <span class="op">=</span> pd.read_parquet(f)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>esolmet.info()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Note: you may need to restart the kernel to use updated packages.</code></pre>
+<pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
+DatetimeIndex: 51174 entries, 2018-01-01 00:00:00 to 2019-01-01 00:00:00
+Data columns (total 8 columns):
+ #   Column        Non-Null Count  Dtype  
+---  ------        --------------  -----  
+ 0   Directa       51174 non-null  float64
+ 1   Global        51174 non-null  float64
+ 2   Difusa        51174 non-null  float64
+ 3   UV            51174 non-null  float64
+ 4   Temperatura   51174 non-null  float64
+ 5   Humedad       51174 non-null  float64
+ 6   Viento Vel.   51174 non-null  float64
+ 7   Presiòn Bar.  51174 non-null  float64
+dtypes: float64(8)
+memory usage: 3.5 MB</code></pre>
 </div>
-<div class="cell-output cell-output-stderr">
-<pre><code>C:\Users\gbv\curso-2026-1-main\.venv\Scripts\python.exe: No module named pip</code></pre>
+</div>
+<div id="80f836c5-6152-4679-b1ce-6b2d03d2a46f" class="cell" data-scrolled="true" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>msno.matrix(esolmet)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="027_EDA_esolmet_files/figure-html/cell-4-output-1.png" class="img-fluid figure-img"></p>
+</figure>
 </div>
 </div>
-<div id="8171a479-b561-4ff7-997c-9b11e325a9d9" class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>lsmagic</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="3">
-<pre><code>Available line magics:
-%alias  %alias_magic  %autoawait  %autocall  %automagic  %autosave  %bookmark  %cd  %clear  %cls  %code_wrap  %colors  %conda  %config  %connect_info  %copy  %ddir  %debug  %dhist  %dirs  %doctest_mode  %echo  %ed  %edit  %env  %gui  %hist  %history  %killbgscripts  %ldir  %less  %load  %load_ext  %loadpy  %logoff  %logon  %logstart  %logstate  %logstop  %ls  %lsmagic  %macro  %magic  %mamba  %matplotlib  %micromamba  %mkdir  %more  %notebook  %page  %pastebin  %pdb  %pdef  %pdoc  %pfile  %pinfo  %pinfo2  %pip  %popd  %pprint  %precision  %prun  %psearch  %psource  %pushd  %pwd  %pycat  %pylab  %qtconsole  %quickref  %recall  %rehashx  %reload_ext  %ren  %rep  %rerun  %reset  %reset_selective  %rmdir  %run  %save  %sc  %set_env  %store  %sx  %system  %tb  %time  %timeit  %unalias  %unload_ext  %uv  %who  %who_ls  %whos  %xdel  %xmode
+</div>
+<div id="d72de3d7-f2ab-4304-a5d5-eca0147b6311" class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>esolmet.describe()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="10">
+<div>
 
-Available cell magics:
-%%!  %%HTML  %%SVG  %%bash  %%capture  %%cmd  %%code_wrap  %%debug  %%file  %%html  %%javascript  %%js  %%latex  %%markdown  %%perl  %%prun  %%pypy  %%python  %%python2  %%python3  %%ruby  %%script  %%sh  %%svg  %%sx  %%system  %%time  %%timeit  %%writefile
 
-Automagic is ON, % prefix IS NOT needed for line magics.</code></pre>
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Directa</th>
+<th data-quarto-table-cell-role="th">Global</th>
+<th data-quarto-table-cell-role="th">Difusa</th>
+<th data-quarto-table-cell-role="th">UV</th>
+<th data-quarto-table-cell-role="th">Temperatura</th>
+<th data-quarto-table-cell-role="th">Humedad</th>
+<th data-quarto-table-cell-role="th">Viento Vel.</th>
+<th data-quarto-table-cell-role="th">Presiòn Bar.</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">count</td>
+<td>51174.000000</td>
+<td>51174.000000</td>
+<td>51174.000000</td>
+<td>51174.000000</td>
+<td>51174.000000</td>
+<td>51174.000000</td>
+<td>51174.000000</td>
+<td>51174.000000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">mean</td>
+<td>235.058684</td>
+<td>259.928279</td>
+<td>79.101614</td>
+<td>1.983488</td>
+<td>22.835535</td>
+<td>53.026295</td>
+<td>1.679929</td>
+<td>876.146359</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">std</td>
+<td>330.869827</td>
+<td>348.732321</td>
+<td>130.580139</td>
+<td>5.250231</td>
+<td>5.379649</td>
+<td>23.933685</td>
+<td>0.946935</td>
+<td>15.901608</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">min</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>15.409480</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">25%</td>
+<td>0.001000</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>19.200000</td>
+<td>33.600000</td>
+<td>1.071000</td>
+<td>875.100500</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">50%</td>
+<td>0.247000</td>
+<td>3.537500</td>
+<td>0.071000</td>
+<td>0.000000</td>
+<td>22.800000</td>
+<td>50.570000</td>
+<td>1.675000</td>
+<td>876.710300</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">75%</td>
+<td>549.800000</td>
+<td>539.500000</td>
+<td>123.500000</td>
+<td>0.001000</td>
+<td>26.680000</td>
+<td>71.190000</td>
+<td>2.238000</td>
+<td>878.323500</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">max</td>
+<td>1021.000000</td>
+<td>1348.000000</td>
+<td>1125.000000</td>
+<td>29.900000</td>
+<td>37.470000</td>
+<td>135.300000</td>
+<td>16.170000</td>
+<td>885.713000</td>
+</tr>
+</tbody>
+</table>
+
 </div>
 </div>
-<section id="requirements.txt" class="level2">
-<h2 class="anchored" data-anchor-id="requirements.txt">requirements.txt</h2>
-<p>Es un archivo plano que contiene toda la lista de paquetes (y su version) instalados en un ambiente virtual o una computadora</p>
-<section id="desde-donde-puedo-instalar" class="level4">
-<h4 class="anchored" data-anchor-id="desde-donde-puedo-instalar">Desde donde puedo instalar</h4>
+</div>
+<div id="81f7fe6a-cd8b-4475-8ea1-08c6d16ad29b" class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>esolmet.plot(subplots<span class="op">=</span><span class="va">True</span>, figsize<span class="op">=</span>(<span class="dv">12</span>,<span class="dv">20</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="11">
+<pre><code>array([&lt;Axes: xlabel='Fecha'&gt;, &lt;Axes: xlabel='Fecha'&gt;,
+       &lt;Axes: xlabel='Fecha'&gt;, &lt;Axes: xlabel='Fecha'&gt;,
+       &lt;Axes: xlabel='Fecha'&gt;, &lt;Axes: xlabel='Fecha'&gt;,
+       &lt;Axes: xlabel='Fecha'&gt;, &lt;Axes: xlabel='Fecha'&gt;], dtype=object)</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="027_EDA_esolmet_files/figure-html/cell-6-output-2.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
 <ol type="1">
-<li>uv add paquete # si existe en el pypi</li>
-<li>uv add https://github.com/AltamarMx/iertools.git # desde un repo</li>
-<li>uv add -r requirements.txt</li>
-<li>uv add algo # compilar un paquete e instalarlo</li>
-</ol>
-</section>
-</section>
-<section id="si-no-usaramos-uv" class="level2">
-<h2 class="anchored" data-anchor-id="si-no-usaramos-uv">Si no usaramos uv</h2>
-<p>pip freeze &gt; requirements.txt</p>
-</section>
-<section id="ejercicio-de-la-clase-del-miercoles" class="level2">
-<h2 class="anchored" data-anchor-id="ejercicio-de-la-clase-del-miercoles">Ejercicio de la clase del miercoles</h2>
-<ol type="1">
-<li>Un zip de un repo para recrear un ambiente virtual</li>
-<li>Requirements con algunos paquetes</li>
-<li>Una lista de paquetes a instalar</li>
-<li>Ejercicios</li>
-<li>Zip de su espacio trabajo sin .venv</li>
+<li>Promedio mensual de To del máximo diario (memo)</li>
+<li>Mes más cálido con la To promedio mensual (Lili)</li>
+<li>Amplitud diaria de la To (Fer ipn)</li>
+<li>Quartiles mensuales de la Ig (Nairo)</li>
+<li>Calcular la Ib a partir de la Ig, Id (rodolfo)</li>
+<li>Humedad promedio semanal (Luisa)</li>
+<li>Promedio mensual de la To mínima (Mitsue)</li>
+<li>Promedio diario mensual de la velocidad máxima del viento (Andre)</li>
+<li>Promedios mensual de la Ig y su visualización (Laura)</li>
+<li>Calcular la curva de la radiación solar del día más cálido (Fer ier)</li>
+<li>Dia promedio de todas las variables con máximos, minimos y desviacion estándard (yadira)</li>
+<li>Calculo diario/mensual/anual de la energia solar</li>
+<li></li>
 </ol>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1004,14 +1123,11 @@ Automagic is ON, % prefix IS NOT needed for line magics.</code></pre>
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../clases/015_modificar_funciones.html" class="pagination-link" aria-label="Uso de magic command para cargar un archico/funcion/paquetito">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Uso de magic command para cargar un archico/funcion/paquetito</span></span>
+      <a href="../clases/026_importa_exceles.html" class="pagination-link" aria-label="026_importa_exceles.html">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">026_importa_exceles.html</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../clases/016a_ejercicio_clase.html" class="pagination-link" aria-label="Proyecto: ejercicio-funciones">
-        <span class="nav-page-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Proyecto: ejercicio-funciones</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
