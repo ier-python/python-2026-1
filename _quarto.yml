@@ -57,6 +57,8 @@ book:
     - clases/023_importando_datos.ipynb
     - clases/024_ETL.ipynb
     - clases/025_EDA.ipynb
+    - clases/026_importa_exceles.ipynb
+    - clases/027_EDA_esolmet.ipynb
 
 format:
   html: 
