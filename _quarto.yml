@@ -59,6 +59,9 @@ book:
     - clases/025_EDA.ipynb
     - clases/026_importa_exceles.ipynb
     - clases/027_EDA_esolmet.ipynb
+    - clases/028_importa_exceles.ipynb
+    - clases/029_EDA.ipynb
+    - clases/030_amplitud_promedio.ipynb
 
 format:
   html: 
