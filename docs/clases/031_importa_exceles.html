@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>4&nbsp; diccionario = – Proyectos de ciencia de datos con Python</title>
+<title>33&nbsp; Une dos archivos en un dataframe, esolmet y ruoa – Proyectos de ciencia de datos con Python</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -58,15 +58,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../clases/005_nombres_variables.html" rel="next">
-<link href="../clases/003_indentado.html" rel="prev">
+<link href="../clases/030_amplitud_promedio.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -108,6 +107,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Buscar"
   }
 }</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
 </head>
@@ -297,7 +299,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../clases/004_variables.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Títulos</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../clases/031_importa_exceles.html"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">Une dos archivos en un dataframe, esolmet y ruoa</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -335,7 +337,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../clases/004_variables.html" class="sidebar-item-text sidebar-link active">
+  <a href="../clases/004_variables.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Títulos</span></span></a>
   </div>
 </li>
@@ -509,7 +511,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../clases/031_importa_exceles.html" class="sidebar-item-text sidebar-link">
+  <a href="../clases/031_importa_exceles.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">Une dos archivos en un dataframe, esolmet y ruoa</span></span></a>
   </div>
 </li>
@@ -518,14 +520,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Tabla de contenidos</h2>
-   
-  <ul>
-  <li><a href="#títulos" id="toc-títulos" class="nav-link active" data-scroll-target="#títulos"><span class="header-section-number">5</span> Títulos</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -533,7 +529,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">diccionario =</span></h1>
+<h1 class="title"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">Une dos archivos en un dataframe, esolmet y ruoa</span></h1>
 </div>
 
 
@@ -550,281 +546,397 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<div id="9b67010d-d23e-42ad-a699-d38c8e9fb449" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>entero  <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>flotantes <span class="op">=</span> <span class="fl">1.</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>complejos <span class="op">=</span> <span class="dv">1</span> <span class="op">+</span> <span class="ot">0j</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>cadenas <span class="op">=</span> <span class="st">"cadenas"</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>boleanos <span class="op">=</span> <span class="va">True</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>diccionarios <span class="op">=</span> {<span class="st">"llave"</span>:<span class="st">"valor"</span>, <span class="st">"llave2"</span>:<span class="dv">1</span>}</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>tuplas <span class="op">=</span> (<span class="dv">1</span>,<span class="fl">.1</span>,<span class="st">"cadenas"</span>)</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>listas <span class="op">=</span> [<span class="dv">1</span>,<span class="fl">1.</span>,<span class="st">"hola"</span>]</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="75b4ac45-be6b-40ee-8136-662c2bc1f24f" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tools.importaciones <span class="im">import</span> importa_excel</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> glob <span class="im">as</span> glob</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> missingno <span class="im">as</span> msno</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="26192eaa-43fc-49b5-bb0c-5a7c88bc9b4d" class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>cadenas <span class="op">=</span> <span class="st">"a"</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>numero_cadena <span class="op">=</span> <span class="st">"1"</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>otra_cadena <span class="op">=</span> <span class="st">'b'</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>doblecadena <span class="op">=</span> <span class="st">"'cadena doble'"</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="636fdcdf-4015-4335-902a-8abdb08288d8" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="st">"../data/001_raw/2018-2019-VIENTO-TMIX-RUOA.txt"</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>ruoa <span class="op">=</span> pd.read_csv(f,</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>                   usecols<span class="op">=</span>[<span class="st">"TIMESTAMP"</span>,<span class="st">"WSpeed_Avg"</span>,<span class="st">"WDir_Avg"</span>],</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>                   <span class="co"># usecols=["WDir_Avg","WSpeed_Avg"],</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>                   <span class="co"># usecols=[0,4,5],</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>                   skiprows<span class="op">=</span>[<span class="dv">0</span>,<span class="dv">2</span>,<span class="dv">3</span>],</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>                   encoding<span class="op">=</span><span class="st">"ANSI"</span>,</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>                   delimiter<span class="op">=</span><span class="st">"</span><span class="ch">\t</span><span class="st">"</span>,</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>                   index_col<span class="op">=</span><span class="dv">0</span>,</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>                   parse_dates<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>                   dayfirst<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>                  )</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>ruoa <span class="op">=</span> ruoa.resample(<span class="st">"10Min"</span>).mean()</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>ruoa <span class="op">=</span> ruoa[ruoa.index.year <span class="op">==</span> <span class="dv">2018</span>]</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>ruoa.index.duplicated()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="2">
+<pre><code>array([False, False, False, ..., False, False, False], shape=(52560,))</code></pre>
 </div>
-<div id="d8ecd1c7-20fa-4361-b92c-81729f8dc7ea" class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>doblecadena</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="bf341e22-82e6-4bab-b327-459b9f4a7829" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>ruoa[ruoa.index.duplicated()]</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
-<pre><code>"'cadena doble'"</code></pre>
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">WSpeed_Avg</th>
+<th data-quarto-table-cell-role="th">WDir_Avg</th>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">TIMESTAMP</th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+
 </div>
 </div>
-<div id="a38fc8c2-91bc-46ab-8f7c-3113d82eabc0" class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>materiales <span class="op">=</span> {</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">"cobre"</span>:{<span class="st">"densidad"</span>:<span class="dv">250_000</span>,<span class="st">"cp"</span>:<span class="fl">1000.</span>,<span class="st">"k"</span>:<span class="fl">65.</span>},</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"adamantium"</span>:{<span class="st">"densidad"</span>:<span class="dv">2500_000</span>,<span class="st">"cp"</span>:<span class="fl">1000.</span>,<span class="st">"k"</span>:<span class="fl">65.</span>},</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"oro"</span>:{<span class="st">"densidad"</span>:<span class="dv">2500_000</span>,<span class="st">"cp"</span>:<span class="fl">1000.</span>,<span class="st">"k"</span>:<span class="fl">65.</span>},</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"kriptonita"</span>:{<span class="st">"densidad"</span>:<span class="dv">2500_000</span>,<span class="st">"cp"</span>:<span class="fl">1000.</span>,<span class="st">"k"</span>:<span class="fl">65.</span>},</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="ce63764b-7e65-4772-9f85-8745fbb3ab29" class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="0aa6fa32-3550-45a6-bdca-a00d0babadce" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>files <span class="op">=</span> glob.glob(<span class="st">"../data/001_raw/*.xls"</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>esolmet <span class="op">=</span> pd.concat([importa_excel(<span class="bu">file</span>) <span class="cf">for</span> <span class="bu">file</span> <span class="kw">in</span> files])</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>esolmet <span class="op">=</span> esolmet[esolmet.index.year <span class="op">==</span> <span class="dv">2018</span>]</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="kw">del</span>  esolmet[<span class="st">"Viento Vel."</span>]</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>esolmet <span class="op">=</span> esolmet.resample(<span class="st">"10Min"</span>).mean()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="c6376c9c-4eed-4cff-b165-de3e1ef37c6a" class="cell" data-scrolled="true" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>materiales[<span class="st">"cobre"</span>][<span class="st">"cp"</span>]</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="9a365bc6-54fe-465e-8186-fcbf6e6fc435" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>esolmet.loc[<span class="st">"2018-02-01"</span>]</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="5">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Directa</th>
+<th data-quarto-table-cell-role="th">Global</th>
+<th data-quarto-table-cell-role="th">Difusa</th>
+<th data-quarto-table-cell-role="th">UV</th>
+<th data-quarto-table-cell-role="th">Temperatura</th>
+<th data-quarto-table-cell-role="th">Humedad</th>
+<th data-quarto-table-cell-role="th">Presiòn Bar.</th>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">Fecha</th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2018-02-01 00:00:00</td>
+<td>0.003</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.001</td>
+<td>15.38</td>
+<td>53.71</td>
+<td>878.2341</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2018-02-01 00:10:00</td>
+<td>0.313</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.001</td>
+<td>15.71</td>
+<td>50.03</td>
+<td>878.1605</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2018-02-01 00:20:00</td>
+<td>0.029</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.001</td>
+<td>15.57</td>
+<td>51.52</td>
+<td>877.9796</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2018-02-01 00:30:00</td>
+<td>0.013</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.001</td>
+<td>15.23</td>
+<td>52.00</td>
+<td>877.9725</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2018-02-01 00:40:00</td>
+<td>0.001</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.001</td>
+<td>15.28</td>
+<td>51.80</td>
+<td>878.0463</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2018-02-01 23:10:00</td>
+<td>0.113</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.001</td>
+<td>19.11</td>
+<td>41.47</td>
+<td>878.6667</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2018-02-01 23:20:00</td>
+<td>0.248</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.001</td>
+<td>19.57</td>
+<td>41.13</td>
+<td>878.7175</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2018-02-01 23:30:00</td>
+<td>0.034</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.001</td>
+<td>19.59</td>
+<td>41.47</td>
+<td>878.7158</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2018-02-01 23:40:00</td>
+<td>0.033</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.001</td>
+<td>19.38</td>
+<td>41.95</td>
+<td>878.7092</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2018-02-01 23:50:00</td>
+<td>0.100</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.001</td>
+<td>19.42</td>
+<td>41.27</td>
+<td>878.9540</td>
+</tr>
+</tbody>
+</table>
+
+<p>144 rows × 7 columns</p>
+</div>
+</div>
+</div>
+<div id="330cd485-1338-4547-8cf9-12a618261fa5" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>esolmet[esolmet.index.duplicated()].index</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="6">
-<pre><code>1000.0</code></pre>
+<pre><code>DatetimeIndex([], dtype='datetime64[ns]', name='Fecha', freq='10min')</code></pre>
 </div>
 </div>
-<div id="77444f64-a896-4d75-af7b-ad344a5352d5" class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>materiales[<span class="st">"cobre"</span>].keys()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="b0a6fa18-c3bb-4c3c-ab36-8d71cda7b8a8" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> pd.concat([ruoa,esolmet],axis<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>data</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="7">
-<pre><code>dict_keys(['densidad', 'cp', 'k'])</code></pre>
-</div>
-</div>
-<div id="21ff5813-5fa3-4d09-a95a-384d1cf7a643" class="cell" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>materiales.items()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="8">
-<pre><code>dict_items([('cobre', {'densidad': 250000, 'cp': 1000.0, 'k': 65.0}), ('adamantium', {'densidad': 2500000, 'cp': 1000.0, 'k': 65.0}), ('oro', {'densidad': 2500000, 'cp': 1000.0, 'k': 65.0}), ('kriptonita', {'densidad': 2500000, 'cp': 1000.0, 'k': 65.0})])</code></pre>
-</div>
-</div>
-<div id="dcb0add6-3116-429d-ad34-6da96cfc64b1" class="cell" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>materiales.</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-error">
-<div class="ansi-escaped-output">
-<pre>  <span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[9]</span><span class="ansi-green-fg">, line 1</span>
-<span class="ansi-red-fg">    </span><span class="ansi-red-fg">materiales.</span>
-               ^
-<span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> invalid syntax
-</pre>
-</div>
-</div>
-</div>
-<div id="b2f00541-03b5-445c-8d24-b55af267a5b4" class="cell" data-execution_count="10">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(listas)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="10">
-<pre><code>list</code></pre>
-</div>
-</div>
-<div id="2c142f9f-a2ec-4e23-b169-757a6991d2c1" class="cell" data-execution_count="11">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>tupla_colores <span class="op">=</span> (<span class="st">"azul"</span>,<span class="st">"rojo"</span>,<span class="st">'verde'</span>)</span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>lista_colores <span class="op">=</span> [<span class="st">"amarillo"</span>,<span class="st">"morado"</span>,<span class="st">"azul"</span>]</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div id="ce3eed5d-100c-4973-907b-cf37eb38cb46" class="cell" data-execution_count="12">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>tupla_colores[<span class="dv">0</span>]</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="12">
-<pre><code>'azul'</code></pre>
-</div>
-</div>
-<div id="f00e5f8c-2785-4f31-86f2-13892e73fdf6" class="cell" data-execution_count="13">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>lista_colores[<span class="dv">0</span>]</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="13">
-<pre><code>'amarillo'</code></pre>
-</div>
-</div>
-<div id="2f189a8c-760a-40b3-a0d9-54bbb32acf8c" class="cell" data-execution_count="14">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>lista_colores[<span class="dv">0</span>] <span class="op">=</span> <span class="st">"amarillo_pollito"</span></span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>tupla_colores[<span class="dv">0</span>] <span class="op">=</span> <span class="st">"amarillo_pollito"</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-error">
-<div class="ansi-escaped-output">
-<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
-<span class="ansi-cyan-fg">Cell</span><span class="ansi-cyan-fg"> </span><span class="ansi-green-fg">In[14]</span><span class="ansi-green-fg">, line 2</span>
-<span class="ansi-green-fg">      1</span> lista_colores[<span class="ansi-green-fg">0</span>] = <span class="ansi-yellow-fg">"</span><span class="ansi-yellow-fg">amarillo_pollito</span><span class="ansi-yellow-fg">"</span>
-<span class="ansi-green-fg">----&gt; </span><span class="ansi-green-fg">2</span> <span class="ansi-yellow-bg">tupla_colores</span><span class="ansi-yellow-bg">[</span><span class="ansi-green-fg ansi-yellow-bg">0</span><span class="ansi-yellow-bg">]</span> = <span class="ansi-yellow-fg">"</span><span class="ansi-yellow-fg">amarillo_pollito</span><span class="ansi-yellow-fg">"</span>
+<div>
 
-<span class="ansi-red-fg">TypeError</span>: 'tuple' object does not support item assignment</pre>
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">WSpeed_Avg</th>
+<th data-quarto-table-cell-role="th">WDir_Avg</th>
+<th data-quarto-table-cell-role="th">Directa</th>
+<th data-quarto-table-cell-role="th">Global</th>
+<th data-quarto-table-cell-role="th">Difusa</th>
+<th data-quarto-table-cell-role="th">UV</th>
+<th data-quarto-table-cell-role="th">Temperatura</th>
+<th data-quarto-table-cell-role="th">Humedad</th>
+<th data-quarto-table-cell-role="th">Presiòn Bar.</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2018-01-01 00:00:00</td>
+<td>1.1817</td>
+<td>300.1500</td>
+<td>0.057</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.001</td>
+<td>18.93</td>
+<td>41.57</td>
+<td>879.0692</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2018-01-01 00:10:00</td>
+<td>1.2568</td>
+<td>306.2400</td>
+<td>0.002</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.001</td>
+<td>18.76</td>
+<td>41.00</td>
+<td>879.4363</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2018-01-01 00:20:00</td>
+<td>1.6964</td>
+<td>348.8100</td>
+<td>0.170</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.001</td>
+<td>18.92</td>
+<td>40.96</td>
+<td>879.5181</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2018-01-01 00:30:00</td>
+<td>2.2944</td>
+<td>348.3400</td>
+<td>0.371</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.001</td>
+<td>18.52</td>
+<td>42.46</td>
+<td>879.5826</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2018-01-01 00:40:00</td>
+<td>1.6643</td>
+<td>210.8732</td>
+<td>0.305</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.001</td>
+<td>18.49</td>
+<td>42.43</td>
+<td>879.6826</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2018-12-31 23:10:00</td>
+<td>1.5977</td>
+<td>331.0400</td>
+<td>0.125</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.000</td>
+<td>18.88</td>
+<td>59.60</td>
+<td>875.5595</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2018-12-31 23:20:00</td>
+<td>2.3029</td>
+<td>323.7000</td>
+<td>0.000</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.000</td>
+<td>18.71</td>
+<td>59.67</td>
+<td>875.5595</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2018-12-31 23:30:00</td>
+<td>2.0789</td>
+<td>186.7430</td>
+<td>0.044</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.000</td>
+<td>18.52</td>
+<td>58.75</td>
+<td>875.2889</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2018-12-31 23:40:00</td>
+<td>0.8253</td>
+<td>80.1400</td>
+<td>0.170</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.000</td>
+<td>18.36</td>
+<td>60.62</td>
+<td>875.0606</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2018-12-31 23:50:00</td>
+<td>1.0315</td>
+<td>276.9384</td>
+<td>0.003</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.000</td>
+<td>17.99</td>
+<td>60.76</td>
+<td>875.1424</td>
+</tr>
+</tbody>
+</table>
+
+<p>52560 rows × 9 columns</p>
 </div>
 </div>
 </div>
-<div id="0e61a85d-101a-4d5c-8813-87eb9f312464" class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>tupla_colores <span class="op">=</span> (<span class="st">"dos"</span>,<span class="st">"numeros"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="872852c6-28d9-4aa5-bd7b-a39bdbaa787c" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>data.to_csv(<span class="st">"../data/002_processed/esolmet_ruoaWSWD_2018.parquet"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="8d5baed7-b461-48f0-b4f3-249838e7ead0" class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="va">True</span>, <span class="va">False</span>, <span class="bu">type</span>, <span class="bu">dir</span>, <span class="cf">if</span>, <span class="cf">else</span>, <span class="kw">def</span>, <span class="bu">list</span>, <span class="bu">tuple</span>, <span class="bu">int</span>, <span class="bu">float</span>, <span class="bu">sum</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div id="851f76c0-5ae0-4e86-a3d0-759f95869ff8" class="cell">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="bu">dir</span> <span class="op">=</span> <span class="st">"Cierto"</span></span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="bu">sum</span> <span class="op">=</span> <span class="st">"algo"</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div id="cf44dc5b-46db-4b78-a101-90010d302750" class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="bu">sum</span>(<span class="dv">1</span>,<span class="dv">2</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<section id="títulos" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> Títulos</h1>
-<p>$ E = mc^2 $</p>
-<ol type="1">
-<li>Listas</li>
-<li>Peperoni</li>
-<li>Jamón</li>
-</ol>
-<div class="quarto-figure quarto-figure-center">
+<div id="66f777d4-167b-45db-8fcc-2fd4ee161825" class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>msno.matrix(data)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
 <figure class="figure">
-<p><img src="004_variables_files/figure-html/86767bfe-07ee-4f06-b987-9d7d1184844a-1-e480943b-21d8-4567-baed-189f67e374ed.png" class="img-fluid figure-img"></p>
-<figcaption>image.png</figcaption>
+<p><img src="031_importa_exceles_files/figure-html/cell-10-output-1.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="004_variables_files/figure-html/be2a8f9c-3510-483b-8248-d916b07f2e3f-1-9de7b8e1-8d22-49bb-b451-cd4a7598efa4.png" class="img-fluid figure-img"></p>
-<figcaption>image.png</figcaption>
-</figure>
-</div>
-<div id="b7358a28-b0bc-4d88-a17d-ba0ae5f93b35" class="cell" data-execution_count="15">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># %cd ../</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div id="56f86eca-7c91-4920-ae07-16d1a3f9ad3b" class="cell" data-execution_count="16">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>pwd</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="16">
-<pre><code>'C:\\Users\\gbv\\curso-2026-1-main\\notebooks'</code></pre>
-</div>
-</div>
-<div id="43e874d8-694d-4f82-8559-af15f076685a" class="cell" data-scrolled="true" data-execution_count="17">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>lsmagic</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="17">
-<pre><code>Available line magics:
-%alias  %alias_magic  %autoawait  %autocall  %automagic  %autosave  %bookmark  %cd  %clear  %cls  %code_wrap  %colors  %conda  %config  %connect_info  %copy  %ddir  %debug  %dhist  %dirs  %doctest_mode  %echo  %ed  %edit  %env  %gui  %hist  %history  %killbgscripts  %ldir  %less  %load  %load_ext  %loadpy  %logoff  %logon  %logstart  %logstate  %logstop  %ls  %lsmagic  %macro  %magic  %mamba  %matplotlib  %micromamba  %mkdir  %more  %notebook  %page  %pastebin  %pdb  %pdef  %pdoc  %pfile  %pinfo  %pinfo2  %pip  %popd  %pprint  %precision  %prun  %psearch  %psource  %pushd  %pwd  %pycat  %pylab  %qtconsole  %quickref  %recall  %rehashx  %reload_ext  %ren  %rep  %rerun  %reset  %reset_selective  %rmdir  %run  %save  %sc  %set_env  %store  %sx  %system  %tb  %time  %timeit  %unalias  %unload_ext  %uv  %who  %who_ls  %whos  %xdel  %xmode
-
-Available cell magics:
-%%!  %%HTML  %%SVG  %%bash  %%capture  %%cmd  %%code_wrap  %%debug  %%file  %%html  %%javascript  %%js  %%latex  %%markdown  %%perl  %%prun  %%pypy  %%python  %%python2  %%python3  %%ruby  %%script  %%sh  %%svg  %%sx  %%system  %%time  %%timeit  %%writefile
-
-Automagic is ON, % prefix IS NOT needed for line magics.</code></pre>
-</div>
-</div>
-<div id="13c9a59f-2130-43f5-a45c-1ab338013669" class="cell" data-execution_count="19">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>time</span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>lista <span class="op">=</span> [<span class="st">"1"</span>,<span class="st">"2"</span>,<span class="dv">3</span>,<span class="dv">56</span>]</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>CPU times: total: 0 ns
-Wall time: 0 ns</code></pre>
-</div>
-</div>
-<div id="fbc586a0-7fcb-40f4-bbbb-63a06c181928" class="cell" data-scrolled="true" data-execution_count="20">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>history</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>entero  = 1
-flotantes = 1.
-complejos = 1 + 0j
-cadenas = "cadenas"
-boleanos = True
-diccionarios = {"llave":"valor", "llave2":1}
-tuplas = (1,.1,"cadenas")
-listas = [1,1.,"hola"]
-cadenas = "a"
-numero_cadena = "1"
-otra_cadena = 'b'
-doblecadena = "'cadena doble'"
-doblecadena
-materiales = {
-    "cobre":{"densidad":250_000,"cp":1000.,"k":65.},
-    "adamantium":{"densidad":2500_000,"cp":1000.,"k":65.},
-    "oro":{"densidad":2500_000,"cp":1000.,"k":65.},
-    "kriptonita":{"densidad":2500_000,"cp":1000.,"k":65.},
-}
-# diccionario =
-materiales["cobre"]["cp"]
-materiales["cobre"].keys()
-materiales.items()
-materiales.
-type(listas)
-tupla_colores = ("azul","rojo",'verde')
-lista_colores = ["amarillo","morado","azul"]
-tupla_colores[0]
-lista_colores[0]
-lista_colores[0] = "amarillo_pollito"
-tupla_colores[0] = "amarillo_pollito"
-# %cd ../
-%pwd
-%lsmagic
-%time
-%time
-lista = ["1","2",3,56]
-%history</code></pre>
-</div>
-</div>
-<div id="8a3f833f-8293-4337-8459-c2f118649144" class="cell" data-scrolled="true" data-execution_count="22">
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>who</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>boleanos     cadenas     complejos   diccionarios    doblecadena     entero  flotantes   lista   lista_colores   
-listas   materiales  numero_cadena   otra_cadena     tupla_colores   tuplas  </code></pre>
-</div>
-</div>
-<div id="4010f409-9242-4c77-b426-545a4c05b9f9" class="cell" data-execution_count="24">
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>who <span class="bu">int</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>entero   </code></pre>
-</div>
-</div>
-<div id="f63bb39a-c73e-435a-adf7-7a538fb631cd" class="cell" data-execution_count="25">
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>who <span class="bu">list</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>lista    lista_colores   listas  </code></pre>
-</div>
-</div>
-<div id="54646ebc-4f4a-43ca-ae26-1a0ba38007a2" class="cell" data-scrolled="true" data-execution_count="26">
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>who_ls</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="26">
-<pre><code>['boleanos',
- 'cadenas',
- 'complejos',
- 'diccionarios',
- 'doblecadena',
- 'entero',
- 'flotantes',
- 'lista',
- 'lista_colores',
- 'listas',
- 'materiales',
- 'numero_cadena',
- 'otra_cadena',
- 'tupla_colores',
- 'tuplas']</code></pre>
-</div>
-</div>
-<div id="31eaade8-dbc2-442f-9cc4-fa20b4fe3cc2" class="cell" data-scrolled="true" data-execution_count="28">
-<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>whos</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Variable        Type       Data/Info
-------------------------------------
-boleanos        bool       True
-cadenas         str        a
-complejos       complex    (1+0j)
-diccionarios    dict       n=2
-doblecadena     str        'cadena doble'
-entero          int        1
-flotantes       float      1.0
-lista           list       n=4
-lista_colores   list       n=3
-listas          list       n=3
-materiales      dict       n=4
-numero_cadena   str        1
-otra_cadena     str        b
-tupla_colores   tuple      n=3
-tuplas          tuple      n=3</code></pre>
-</div>
-</div>
-<div id="7583e94e-57d8-407b-90ae-2f42e93cb399" class="cell" data-execution_count="31">
-<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="co"># %uv add pandas</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>UsageError: Cell magic `%%uv` not found (But line magic `%uv` exists, did you mean that instead?).</code></pre>
 </div>
 </div>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1241,14 +1353,11 @@ tuplas          tuple      n=3</code></pre>
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../clases/003_indentado.html" class="pagination-link" aria-label="003_indentado.html">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">003_indentado.html</span></span>
+      <a href="../clases/030_amplitud_promedio.html" class="pagination-link" aria-label="Cosas a calcular">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">Cosas a calcular</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../clases/005_nombres_variables.html" class="pagination-link" aria-label="PEP 8">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">PEP 8</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
