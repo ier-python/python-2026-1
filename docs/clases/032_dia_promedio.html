@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>importando_funciones – Proyectos de ciencia de datos con Python</title>
+<title>34&nbsp; Como hago : – Proyectos de ciencia de datos con Python</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -58,15 +58,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../clases/015_modificar_funciones.html" rel="next">
-<link href="../clases/013_jerarquia.html" rel="prev">
+<link href="../clases/031_importa_exceles.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -109,11 +108,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Buscar"
   }
 }</script>
+<script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
 </head>
 
-<body class="nav-sidebar floating nav-fixed fullcontent quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-sidebar floating nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -300,7 +302,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../clases/014_importando_funciones.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">014_importando_funciones.html</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../clases/032_dia_promedio.html"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Como hago :</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -402,7 +404,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../clases/014_importando_funciones.html" class="sidebar-item-text sidebar-link active">
+  <a href="../clases/014_importando_funciones.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">014_importando_funciones.html</span></span></a>
   </div>
 </li>
@@ -522,7 +524,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../clases/032_dia_promedio.html" class="sidebar-item-text sidebar-link">
+  <a href="../clases/032_dia_promedio.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Como hago :</span></span></a>
   </div>
 </li>
@@ -531,27 +533,400 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
+    </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
 
 
-
-
-
-<div id="c667e51a-afaa-49d5-a22c-a66674178bd2" class="cell" data-execution_count="1">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#from tools.saludos import *</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tools.saludos <span class="im">import</span> ( </span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>                            saluda_dos_personas, </span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>                            saluda_personas </span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>)<span class="co"># importar cada funcion usada</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tools.operaciones <span class="im">import</span> suma_dos_numeros</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Como hago :</span></h1>
 </div>
-<div id="f9f37b58-62fb-44e3-bb2f-19e0bdcd6bf2" class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>saluda_personas()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div id="36fafe21-1d5d-455e-a24e-38c7ebf9afd8" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="d986ea95-7962-4fd8-9525-564358e6945c" class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>saluda_dos_personas</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="e69f7f2d-03aa-4dfd-a3f5-c661a8ed1de4" class="cell" data-execution_count="2">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="st">"../data/002_processed/esolmet_2018.parquet"</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>tmx <span class="op">=</span> pd.read_parquet(f)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>tmx</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="2">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Ib</th>
+<th data-quarto-table-cell-role="th">Ig</th>
+<th data-quarto-table-cell-role="th">Id</th>
+<th data-quarto-table-cell-role="th">uv</th>
+<th data-quarto-table-cell-role="th">To</th>
+<th data-quarto-table-cell-role="th">hr</th>
+<th data-quarto-table-cell-role="th">ws</th>
+<th data-quarto-table-cell-role="th">p</th>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">Fecha</th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2018-01-01 00:00:00</th>
+<td>0.057</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.001</td>
+<td>18.93</td>
+<td>41.57</td>
+<td>1.253</td>
+<td>879.0692</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">2018-01-01 00:10:00</th>
+<td>0.002</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.001</td>
+<td>18.76</td>
+<td>41.00</td>
+<td>0.418</td>
+<td>879.4363</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2018-01-01 00:20:00</th>
+<td>0.170</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.001</td>
+<td>18.92</td>
+<td>40.96</td>
+<td>0.955</td>
+<td>879.5181</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">2018-01-01 00:30:00</th>
+<td>0.371</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.001</td>
+<td>18.52</td>
+<td>42.46</td>
+<td>1.823</td>
+<td>879.5826</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2018-01-01 00:40:00</th>
+<td>0.305</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.001</td>
+<td>18.49</td>
+<td>42.43</td>
+<td>2.149</td>
+<td>879.6826</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">...</th>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2018-12-31 23:10:00</th>
+<td>0.125</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.000</td>
+<td>18.88</td>
+<td>59.60</td>
+<td>2.145</td>
+<td>875.5595</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">2018-12-31 23:20:00</th>
+<td>0.000</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.000</td>
+<td>18.71</td>
+<td>59.67</td>
+<td>1.638</td>
+<td>875.5595</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2018-12-31 23:30:00</th>
+<td>0.044</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.000</td>
+<td>18.52</td>
+<td>58.75</td>
+<td>1.923</td>
+<td>875.2889</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">2018-12-31 23:40:00</th>
+<td>0.170</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.000</td>
+<td>18.36</td>
+<td>60.62</td>
+<td>2.089</td>
+<td>875.0606</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2018-12-31 23:50:00</th>
+<td>0.003</td>
+<td>0.0</td>
+<td>0.0</td>
+<td>0.000</td>
+<td>17.99</td>
+<td>60.76</td>
+<td>0.744</td>
+<td>875.1424</td>
+</tr>
+</tbody>
+</table>
+
+<p>51173 rows × 8 columns</p>
+</div>
+</div>
+</div>
+<div id="e9110b32-e64d-458b-a33a-5c3869c74bc4" class="cell" data-execution_count="3">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>tmx.groupby(by<span class="op">=</span>[tmx.index.month, tmx.index.hour])[[<span class="st">"To"</span>]].mean()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="3">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">To</th>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">Fecha</th>
+<th data-quarto-table-cell-role="th">Fecha</th>
+<th data-quarto-table-cell-role="th"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th rowspan="5" data-quarto-table-cell-role="th" data-valign="top">1</th>
+<th data-quarto-table-cell-role="th">0</th>
+<td>17.609032</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">1</th>
+<td>16.852581</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2</th>
+<td>16.151613</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">3</th>
+<td>15.510699</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">4</th>
+<td>15.109892</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">...</th>
+<th data-quarto-table-cell-role="th">...</th>
+<td>...</td>
+</tr>
+<tr class="odd">
+<th rowspan="5" data-quarto-table-cell-role="th" data-valign="top">12</th>
+<th data-quarto-table-cell-role="th">19</th>
+<td>20.902043</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">20</th>
+<td>19.904570</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">21</th>
+<td>19.291290</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">22</th>
+<td>18.719301</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">23</th>
+<td>18.224570</td>
+</tr>
+</tbody>
+</table>
+
+<p>288 rows × 1 columns</p>
+</div>
+</div>
+</div>
+<ol type="1">
+<li>Un dia promedio de cada mes incluyendo las horas y minutos desde el inicio</li>
+<li>Un dia promedio con tooodos los datos</li>
+</ol>
+<div id="678ca8cf-79fe-457d-a4d0-52c542dd529e" class="cell" data-execution_count="4">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># import numpy as np</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>resumen_mensual <span class="op">=</span> (</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    tmx.groupby(pd.Grouper(freq<span class="op">=</span><span class="st">"ME"</span>))</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>       .agg(</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>           Ig_sum  <span class="op">=</span> (<span class="st">"Ig"</span>, <span class="st">"sum"</span>),          <span class="co"># energía/irradiación acumulada (si aplica)</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>           To_mean <span class="op">=</span> (<span class="st">"To"</span>, <span class="st">"mean"</span>),         <span class="co"># temp. media mensual</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>           ws_max  <span class="op">=</span> (<span class="st">"ws"</span>, <span class="st">"max"</span>),          <span class="co"># racha máxima</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>           uv_p95  <span class="op">=</span> (<span class="st">"uv"</span>, <span class="kw">lambda</span> s: s.quantile(<span class="fl">0.95</span>))  <span class="co"># percentil 95 de UV</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>       )</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>       .rename_axis(<span class="st">"Mes"</span>)</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>resumen_mensual</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="4">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Ig_sum</th>
+<th data-quarto-table-cell-role="th">To_mean</th>
+<th data-quarto-table-cell-role="th">ws_max</th>
+<th data-quarto-table-cell-role="th">uv_p95</th>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">Mes</th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2018-01-31</th>
+<td>926337.180</td>
+<td>20.019848</td>
+<td>8.220</td>
+<td>13.2100</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">2018-02-28</th>
+<td>994650.038</td>
+<td>23.522289</td>
+<td>5.536</td>
+<td>19.3700</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2018-03-31</th>
+<td>1264863.590</td>
+<td>25.841069</td>
+<td>6.705</td>
+<td>22.1785</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">2018-04-30</th>
+<td>1249487.622</td>
+<td>26.052600</td>
+<td>16.170</td>
+<td>22.8505</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2018-05-31</th>
+<td>1024351.873</td>
+<td>25.793943</td>
+<td>8.850</td>
+<td>24.2900</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">2018-06-30</th>
+<td>1133183.176</td>
+<td>23.487846</td>
+<td>10.480</td>
+<td>0.0000</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2018-07-31</th>
+<td>1386001.756</td>
+<td>20.822079</td>
+<td>9.810</td>
+<td>9.0310</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">2018-08-31</th>
+<td>1263105.947</td>
+<td>22.601895</td>
+<td>5.969</td>
+<td>0.0000</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2018-09-30</th>
+<td>1188995.082</td>
+<td>22.765825</td>
+<td>10.910</td>
+<td>0.0000</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">2018-10-31</th>
+<td>1075005.059</td>
+<td>22.670980</td>
+<td>9.180</td>
+<td>0.0000</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2018-11-30</th>
+<td>865874.218</td>
+<td>21.068598</td>
+<td>4.401</td>
+<td>0.0000</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">2018-12-31</th>
+<td>929714.212</td>
+<td>20.362943</td>
+<td>5.847</td>
+<td>0.0000</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
 </div>
 
 
@@ -972,14 +1347,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../clases/013_jerarquia.html" class="pagination-link" aria-label="Jerarquia de variables">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Jerarquia de variables</span></span>
+      <a href="../clases/031_importa_exceles.html" class="pagination-link" aria-label="Une dos archivos en un dataframe, esolmet y ruoa">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">Une dos archivos en un dataframe, esolmet y ruoa</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../clases/015_modificar_funciones.html" class="pagination-link" aria-label="Uso de magic command para cargar un archico/funcion/paquetito">
-        <span class="nav-page-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Uso de magic command para cargar un archico/funcion/paquetito</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

@@ -63,6 +63,7 @@ book:
     - clases/029_EDA.ipynb
     - clases/030_amplitud_promedio.ipynb
     - clases/031_importa_exceles.ipynb
+    - clases/032_dia_promedio.ipynb
 
 format:
   html: 
