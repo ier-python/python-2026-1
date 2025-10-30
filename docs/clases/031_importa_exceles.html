@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.30">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -58,7 +58,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -69,18 +69,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../clases/030_amplitud_promedio.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-de070a7b0ab54f8780927367ac907214.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-2b3e328b71be8d25427581baeb23079b.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-de070a7b0ab54f8780927367ac907214.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-707d8167ce6003fca903bfe2be84ab7f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-3fdc0c57fcd691b300e3c41e3e4a687d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-863ab20449d2f3d5951a2e693f5499b5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-3fdc0c57fcd691b300e3c41e3e4a687d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-cf2152be41a2e4c556b86648c5ebb4cf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-86014854a496e61009a3305fce3a688e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-cf2152be41a2e4c556b86648c5ebb4cf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -95,7 +96,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "Sin resultados",
+    "search-no-results-text": "No se han encontrado resultados",
     "search-matching-documents-text": "documentos encontrados",
     "search-copy-link-title": "Copiar el enlace en la búsqueda",
     "search-hide-matches-text": "Ocultar resultados adicionales",
@@ -108,7 +109,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Buscar"
   }
 }</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
 
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
@@ -284,6 +285,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Proyectos de ciencia de datos con Python</span>
     </a>
@@ -310,6 +313,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../index.html" class="sidebar-logo-link">
+      </a>
+      </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
@@ -524,8 +531,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../clases/032_dia_promedio.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Como hago :</span></span></a>
+  <a href="../clases/032a_heatmap_mensual_diario.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">032a_heatmap_mensual_diario.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../clases/032b_dia_promedio.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">Como hago :</span></span></a>
   </div>
 </li>
     </ul>
@@ -560,14 +573,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <div id="75b4ac45-be6b-40ee-8136-662c2bc1f24f" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tools.importaciones <span class="im">import</span> importa_excel</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> glob <span class="im">as</span> glob</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> missingno <span class="im">as</span> msno</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> missingno <span class="im">as</span> msno</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div id="636fdcdf-4015-4335-902a-8abdb08288d8" class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="st">"../data/001_raw/2018-2019-VIENTO-TMIX-RUOA.txt"</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="st">"../data/001_raw/2018-2019-VIENTO-TMIX-RUOA.txt"</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>ruoa <span class="op">=</span> pd.read_csv(f,</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>                   usecols<span class="op">=</span>[<span class="st">"TIMESTAMP"</span>,<span class="st">"WSpeed_Avg"</span>,<span class="st">"WDir_Avg"</span>],</span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>                   <span class="co"># usecols=["WDir_Avg","WSpeed_Avg"],</span></span>
@@ -581,18 +594,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>                  )</span>
 <span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>ruoa <span class="op">=</span> ruoa.resample(<span class="st">"10Min"</span>).mean()</span>
 <span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>ruoa <span class="op">=</span> ruoa[ruoa.index.year <span class="op">==</span> <span class="dv">2018</span>]</span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>ruoa.index.duplicated()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>ruoa.index.duplicated()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
 <pre><code>array([False, False, False, ..., False, False, False], shape=(52560,))</code></pre>
 </div>
 </div>
 <div id="bf341e22-82e6-4bab-b327-459b9f4a7829" class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>ruoa[ruoa.index.duplicated()]</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>ruoa[ruoa.index.duplicated()]</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
 <div>
 
 
-<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -613,20 +626,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div id="0aa6fa32-3550-45a6-bdca-a00d0babadce" class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>files <span class="op">=</span> glob.glob(<span class="st">"../data/001_raw/*.xls"</span>)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>files <span class="op">=</span> glob.glob(<span class="st">"../data/001_raw/*.xls"</span>)</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>esolmet <span class="op">=</span> pd.concat([importa_excel(<span class="bu">file</span>) <span class="cf">for</span> <span class="bu">file</span> <span class="kw">in</span> files])</span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>esolmet <span class="op">=</span> esolmet[esolmet.index.year <span class="op">==</span> <span class="dv">2018</span>]</span>
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="kw">del</span>  esolmet[<span class="st">"Viento Vel."</span>]</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>esolmet <span class="op">=</span> esolmet.resample(<span class="st">"10Min"</span>).mean()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>esolmet <span class="op">=</span> esolmet.resample(<span class="st">"10Min"</span>).mean()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div id="9a365bc6-54fe-465e-8186-fcbf6e6fc435" class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>esolmet.loc[<span class="st">"2018-02-01"</span>]</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>esolmet.loc[<span class="st">"2018-02-01"</span>]</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="5">
 <div>
 
 
-<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -651,7 +664,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </thead>
 <tbody>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2018-02-01 00:00:00</td>
+<th data-quarto-table-cell-role="th">2018-02-01 00:00:00</th>
 <td>0.003</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -661,7 +674,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>878.2341</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2018-02-01 00:10:00</td>
+<th data-quarto-table-cell-role="th">2018-02-01 00:10:00</th>
 <td>0.313</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -671,7 +684,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>878.1605</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2018-02-01 00:20:00</td>
+<th data-quarto-table-cell-role="th">2018-02-01 00:20:00</th>
 <td>0.029</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -681,7 +694,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>877.9796</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2018-02-01 00:30:00</td>
+<th data-quarto-table-cell-role="th">2018-02-01 00:30:00</th>
 <td>0.013</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -691,7 +704,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>877.9725</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2018-02-01 00:40:00</td>
+<th data-quarto-table-cell-role="th">2018-02-01 00:40:00</th>
 <td>0.001</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -701,7 +714,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>878.0463</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">...</td>
+<th data-quarto-table-cell-role="th">...</th>
 <td>...</td>
 <td>...</td>
 <td>...</td>
@@ -711,7 +724,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>...</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2018-02-01 23:10:00</td>
+<th data-quarto-table-cell-role="th">2018-02-01 23:10:00</th>
 <td>0.113</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -721,7 +734,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>878.6667</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2018-02-01 23:20:00</td>
+<th data-quarto-table-cell-role="th">2018-02-01 23:20:00</th>
 <td>0.248</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -731,7 +744,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>878.7175</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2018-02-01 23:30:00</td>
+<th data-quarto-table-cell-role="th">2018-02-01 23:30:00</th>
 <td>0.034</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -741,7 +754,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>878.7158</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2018-02-01 23:40:00</td>
+<th data-quarto-table-cell-role="th">2018-02-01 23:40:00</th>
 <td>0.033</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -751,7 +764,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>878.7092</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2018-02-01 23:50:00</td>
+<th data-quarto-table-cell-role="th">2018-02-01 23:50:00</th>
 <td>0.100</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -768,19 +781,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div id="330cd485-1338-4547-8cf9-12a618261fa5" class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>esolmet[esolmet.index.duplicated()].index</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>esolmet[esolmet.index.duplicated()].index</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="6">
 <pre><code>DatetimeIndex([], dtype='datetime64[ns]', name='Fecha', freq='10min')</code></pre>
 </div>
 </div>
 <div id="b0a6fa18-c3bb-4c3c-ab36-8d71cda7b8a8" class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> pd.concat([ruoa,esolmet],axis<span class="op">=</span><span class="dv">1</span>)</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>data</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> pd.concat([ruoa,esolmet],axis<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>data</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="7">
 <div>
 
 
-<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -797,7 +810,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </thead>
 <tbody>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2018-01-01 00:00:00</td>
+<th data-quarto-table-cell-role="th">2018-01-01 00:00:00</th>
 <td>1.1817</td>
 <td>300.1500</td>
 <td>0.057</td>
@@ -809,7 +822,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>879.0692</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2018-01-01 00:10:00</td>
+<th data-quarto-table-cell-role="th">2018-01-01 00:10:00</th>
 <td>1.2568</td>
 <td>306.2400</td>
 <td>0.002</td>
@@ -821,7 +834,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>879.4363</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2018-01-01 00:20:00</td>
+<th data-quarto-table-cell-role="th">2018-01-01 00:20:00</th>
 <td>1.6964</td>
 <td>348.8100</td>
 <td>0.170</td>
@@ -833,7 +846,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>879.5181</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2018-01-01 00:30:00</td>
+<th data-quarto-table-cell-role="th">2018-01-01 00:30:00</th>
 <td>2.2944</td>
 <td>348.3400</td>
 <td>0.371</td>
@@ -845,7 +858,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>879.5826</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2018-01-01 00:40:00</td>
+<th data-quarto-table-cell-role="th">2018-01-01 00:40:00</th>
 <td>1.6643</td>
 <td>210.8732</td>
 <td>0.305</td>
@@ -857,7 +870,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>879.6826</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">...</td>
+<th data-quarto-table-cell-role="th">...</th>
 <td>...</td>
 <td>...</td>
 <td>...</td>
@@ -869,7 +882,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>...</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2018-12-31 23:10:00</td>
+<th data-quarto-table-cell-role="th">2018-12-31 23:10:00</th>
 <td>1.5977</td>
 <td>331.0400</td>
 <td>0.125</td>
@@ -881,7 +894,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>875.5595</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2018-12-31 23:20:00</td>
+<th data-quarto-table-cell-role="th">2018-12-31 23:20:00</th>
 <td>2.3029</td>
 <td>323.7000</td>
 <td>0.000</td>
@@ -893,7 +906,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>875.5595</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2018-12-31 23:30:00</td>
+<th data-quarto-table-cell-role="th">2018-12-31 23:30:00</th>
 <td>2.0789</td>
 <td>186.7430</td>
 <td>0.044</td>
@@ -905,7 +918,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>875.2889</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2018-12-31 23:40:00</td>
+<th data-quarto-table-cell-role="th">2018-12-31 23:40:00</th>
 <td>0.8253</td>
 <td>80.1400</td>
 <td>0.170</td>
@@ -917,7 +930,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>875.0606</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2018-12-31 23:50:00</td>
+<th data-quarto-table-cell-role="th">2018-12-31 23:50:00</th>
 <td>1.0315</td>
 <td>276.9384</td>
 <td>0.003</td>
@@ -936,10 +949,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div id="872852c6-28d9-4aa5-bd7b-a39bdbaa787c" class="cell" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>data.to_csv(<span class="st">"../data/002_processed/esolmet_ruoaWSWD_2018.parquet"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>data.to_csv(<span class="st">"../data/002_processed/esolmet_ruoaWSWD_2018.parquet"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div id="66f777d4-167b-45db-8fcc-2fd4ee161825" class="cell" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>msno.matrix(data)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>msno.matrix(data)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -1016,13 +1029,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

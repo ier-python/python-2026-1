@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.30">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -58,7 +58,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -69,18 +69,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../clases/020_importa_XLS.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-de070a7b0ab54f8780927367ac907214.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-2b3e328b71be8d25427581baeb23079b.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-de070a7b0ab54f8780927367ac907214.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-707d8167ce6003fca903bfe2be84ab7f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-3fdc0c57fcd691b300e3c41e3e4a687d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-863ab20449d2f3d5951a2e693f5499b5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-3fdc0c57fcd691b300e3c41e3e4a687d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-cf2152be41a2e4c556b86648c5ebb4cf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-86014854a496e61009a3305fce3a688e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-cf2152be41a2e4c556b86648c5ebb4cf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -95,7 +96,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "Sin resultados",
+    "search-no-results-text": "No se han encontrado resultados",
     "search-matching-documents-text": "documentos encontrados",
     "search-copy-link-title": "Copiar el enlace en la búsqueda",
     "search-hide-matches-text": "Ocultar resultados adicionales",
@@ -108,7 +109,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Buscar"
   }
 }</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
 
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
@@ -284,6 +285,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Proyectos de ciencia de datos con Python</span>
     </a>
@@ -310,6 +313,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../index.html" class="sidebar-logo-link">
+      </a>
+      </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
@@ -524,8 +531,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../clases/032_dia_promedio.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Como hago :</span></span></a>
+  <a href="../clases/032a_heatmap_mensual_diario.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">032a_heatmap_mensual_diario.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../clases/032b_dia_promedio.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">Como hago :</span></span></a>
   </div>
 </li>
     </ul>
@@ -560,16 +573,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <div id="50ace776-76aa-482a-96e3-9617f80a6ad9" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div id="3f94810e-c31c-4cca-8f9e-be3fe9d9d7cc" class="cell" data-scrolled="true" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="st">"../data/Ti_blanco.csv"</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="st">"../data/Ti_blanco.csv"</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>blanco <span class="op">=</span> pd.read_csv(f,index_col<span class="op">=</span><span class="dv">0</span>,parse_dates<span class="op">=</span><span class="va">True</span>)</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>blanco.info()</span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="st">"../data/Ti_negro.csv"</span></span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>negro <span class="op">=</span> pd.read_csv(f,index_col<span class="op">=</span><span class="dv">0</span>,parse_dates<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>negro.info()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>negro.info()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
 DatetimeIndex: 52560 entries, 2006-01-01 00:10:00 to 2007-01-01 00:00:00
@@ -596,12 +609,12 @@ memory usage: 2.0 MB</code></pre>
 </div>
 </div>
 <div id="791e2eaa-5274-4da1-a9c4-533f9f251aba" class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>blanco</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>blanco</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="5">
 <div>
 
 
-<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -620,77 +633,77 @@ memory usage: 2.0 MB</code></pre>
 </thead>
 <tbody>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2006-01-01 00:10:00</td>
+<th data-quarto-table-cell-role="th">2006-01-01 00:10:00</th>
 <td>19.014610</td>
 <td>19.024472</td>
 <td>19.065057</td>
 <td>19.106503</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2006-01-01 00:20:00</td>
+<th data-quarto-table-cell-role="th">2006-01-01 00:20:00</th>
 <td>19.012693</td>
 <td>19.022505</td>
 <td>19.062782</td>
 <td>19.104997</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2006-01-01 00:30:00</td>
+<th data-quarto-table-cell-role="th">2006-01-01 00:30:00</th>
 <td>19.011030</td>
 <td>19.020820</td>
 <td>19.060846</td>
 <td>19.103773</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2006-01-01 00:40:00</td>
+<th data-quarto-table-cell-role="th">2006-01-01 00:40:00</th>
 <td>19.009526</td>
 <td>19.019312</td>
 <td>19.059129</td>
 <td>19.102714</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2006-01-01 00:50:00</td>
+<th data-quarto-table-cell-role="th">2006-01-01 00:50:00</th>
 <td>19.008070</td>
 <td>19.017864</td>
 <td>19.057494</td>
 <td>19.101684</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">...</td>
+<th data-quarto-table-cell-role="th">...</th>
 <td>...</td>
 <td>...</td>
 <td>...</td>
 <td>...</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2006-12-31 23:20:00</td>
+<th data-quarto-table-cell-role="th">2006-12-31 23:20:00</th>
 <td>19.589577</td>
 <td>19.517255</td>
 <td>19.780842</td>
 <td>19.902851</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2006-12-31 23:30:00</td>
+<th data-quarto-table-cell-role="th">2006-12-31 23:30:00</th>
 <td>19.572531</td>
 <td>19.500154</td>
 <td>19.757842</td>
 <td>19.882044</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2006-12-31 23:40:00</td>
+<th data-quarto-table-cell-role="th">2006-12-31 23:40:00</th>
 <td>19.555469</td>
 <td>19.482987</td>
 <td>19.734803</td>
 <td>19.861207</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2006-12-31 23:50:00</td>
+<th data-quarto-table-cell-role="th">2006-12-31 23:50:00</th>
 <td>19.538364</td>
 <td>19.465734</td>
 <td>19.711720</td>
 <td>19.840302</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2007-01-01 00:00:00</td>
+<th data-quarto-table-cell-role="th">2007-01-01 00:00:00</th>
 <td>19.521151</td>
 <td>19.448329</td>
 <td>19.688533</td>
@@ -704,12 +717,12 @@ memory usage: 2.0 MB</code></pre>
 </div>
 </div>
 <div id="0324b555-cdf3-46aa-b3fa-443ce0b27fca" class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>negro</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>negro</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="6">
 <div>
 
 
-<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -728,77 +741,77 @@ memory usage: 2.0 MB</code></pre>
 </thead>
 <tbody>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2006-01-01 00:10:00</td>
+<th data-quarto-table-cell-role="th">2006-01-01 00:10:00</th>
 <td>19.038413</td>
 <td>19.047696</td>
 <td>19.087096</td>
 <td>19.129994</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2006-01-01 00:20:00</td>
+<th data-quarto-table-cell-role="th">2006-01-01 00:20:00</th>
 <td>19.035998</td>
 <td>19.045313</td>
 <td>19.084383</td>
 <td>19.128110</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2006-01-01 00:30:00</td>
+<th data-quarto-table-cell-role="th">2006-01-01 00:30:00</th>
 <td>19.033880</td>
 <td>19.043235</td>
 <td>19.082035</td>
 <td>19.126533</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2006-01-01 00:40:00</td>
+<th data-quarto-table-cell-role="th">2006-01-01 00:40:00</th>
 <td>19.031973</td>
 <td>19.041355</td>
 <td>19.079928</td>
 <td>19.125138</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2006-01-01 00:50:00</td>
+<th data-quarto-table-cell-role="th">2006-01-01 00:50:00</th>
 <td>19.030158</td>
 <td>19.039552</td>
 <td>19.077921</td>
 <td>19.123787</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">...</td>
+<th data-quarto-table-cell-role="th">...</th>
 <td>...</td>
 <td>...</td>
 <td>...</td>
 <td>...</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2006-12-31 23:20:00</td>
+<th data-quarto-table-cell-role="th">2006-12-31 23:20:00</th>
 <td>24.137526</td>
 <td>23.391216</td>
 <td>23.667201</td>
 <td>24.646797</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2006-12-31 23:30:00</td>
+<th data-quarto-table-cell-role="th">2006-12-31 23:30:00</th>
 <td>24.064361</td>
 <td>23.323456</td>
 <td>23.589420</td>
 <td>24.567420</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2006-12-31 23:40:00</td>
+<th data-quarto-table-cell-role="th">2006-12-31 23:40:00</th>
 <td>23.990232</td>
 <td>23.257064</td>
 <td>23.512465</td>
 <td>24.488597</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2006-12-31 23:50:00</td>
+<th data-quarto-table-cell-role="th">2006-12-31 23:50:00</th>
 <td>23.917165</td>
 <td>23.191858</td>
 <td>23.436305</td>
 <td>24.410237</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2007-01-01 00:00:00</td>
+<th data-quarto-table-cell-role="th">2007-01-01 00:00:00</th>
 <td>23.846178</td>
 <td>23.127226</td>
 <td>23.360837</td>
@@ -812,22 +825,22 @@ memory usage: 2.0 MB</code></pre>
 </div>
 </div>
 <div id="ce27261b-ea29-417b-8e64-37b6b53f4a5a" class="cell" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>diff  <span class="op">=</span> blanco <span class="op">-</span> negro</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>diff  <span class="op">=</span> blanco <span class="op">-</span> negro</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div id="6b486a2e-5a3f-426b-9d88-f6503e8a7fc7" class="cell" data-execution_count="11">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>(blanco.Ti_C <span class="op">-</span> negro.Ti_C ).mean()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>(blanco.Ti_C <span class="op">-</span> negro.Ti_C ).mean()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="11">
 <pre><code>np.float64(-5.308517736666285)</code></pre>
 </div>
 </div>
 <div id="a3567a64-441b-4bb1-aff0-a4ff1bd30f98" class="cell" data-execution_count="13">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>(blanco.Ti_C <span class="op">-</span> negro.Ti_C ).std()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>(blanco.Ti_C <span class="op">-</span> negro.Ti_C ).std()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="13">
 <pre><code>np.float64(2.11990130443126)</code></pre>
 </div>
 </div>
 <div id="929b15f5-dd03-4f90-b383-64cc5079da8b" class="cell" data-execution_count="12">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>diff.mean()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>diff.mean()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="12">
 <pre><code>Ti_C    -5.308518
 Ti_R1   -5.111807
@@ -837,7 +850,7 @@ dtype: float64</code></pre>
 </div>
 </div>
 <div id="6ec3e21f-5e6b-4eaa-b8d4-423e1ada99c5" class="cell" data-execution_count="16">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>diff.median()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>diff.median()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="16">
 <pre><code>Ti_C    -5.132381
 Ti_R1   -4.885755
@@ -847,7 +860,7 @@ dtype: float64</code></pre>
 </div>
 </div>
 <div id="ee7ad9ff-e21d-4030-a32b-aae702ec3c4f" class="cell" data-execution_count="19">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>diff.resample(<span class="st">"M"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>diff.resample(<span class="st">"M"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>C:\Users\gbv\AppData\Local\Temp\ipykernel_57928\2919733548.py:1: FutureWarning: 'M' is deprecated and will be removed in a future version, please use 'ME' instead.
   diff.resample("M")</code></pre>
@@ -857,7 +870,7 @@ dtype: float64</code></pre>
 </div>
 </div>
 <div id="b5893ce8-44c0-4387-825b-9a4a0f07e507" class="cell" data-execution_count="21">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>diff.resample(<span class="st">"3H"</span>).mean()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>diff.resample(<span class="st">"3H"</span>).mean()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>C:\Users\gbv\AppData\Local\Temp\ipykernel_57928\3329997795.py:1: FutureWarning: 'H' is deprecated and will be removed in a future version, please use 'h' instead.
   diff.resample("3H").mean()</code></pre>
@@ -866,7 +879,7 @@ dtype: float64</code></pre>
 <div>
 
 
-<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -885,77 +898,77 @@ dtype: float64</code></pre>
 </thead>
 <tbody>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2006-01-01 00:00:00</td>
+<th data-quarto-table-cell-role="th">2006-01-01 00:00:00</th>
 <td>-0.021167</td>
 <td>-0.020358</td>
 <td>-0.019159</td>
 <td>-0.020962</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2006-01-01 03:00:00</td>
+<th data-quarto-table-cell-role="th">2006-01-01 03:00:00</th>
 <td>-0.017316</td>
 <td>-0.015935</td>
 <td>-0.014671</td>
 <td>-0.016956</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2006-01-01 06:00:00</td>
+<th data-quarto-table-cell-role="th">2006-01-01 06:00:00</th>
 <td>-0.015232</td>
 <td>-0.013807</td>
 <td>-0.012120</td>
 <td>-0.014461</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2006-01-01 09:00:00</td>
+<th data-quarto-table-cell-role="th">2006-01-01 09:00:00</th>
 <td>-0.023016</td>
 <td>-0.022017</td>
 <td>-0.021280</td>
 <td>-0.022006</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2006-01-01 12:00:00</td>
+<th data-quarto-table-cell-role="th">2006-01-01 12:00:00</th>
 <td>-0.031571</td>
 <td>-0.031032</td>
 <td>-0.031827</td>
 <td>-0.031410</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">...</td>
+<th data-quarto-table-cell-role="th">...</th>
 <td>...</td>
 <td>...</td>
 <td>...</td>
 <td>...</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2006-12-31 12:00:00</td>
+<th data-quarto-table-cell-role="th">2006-12-31 12:00:00</th>
 <td>-5.025595</td>
 <td>-4.172613</td>
 <td>-4.128075</td>
 <td>-4.715904</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2006-12-31 15:00:00</td>
+<th data-quarto-table-cell-role="th">2006-12-31 15:00:00</th>
 <td>-6.143345</td>
 <td>-5.158807</td>
 <td>-5.343249</td>
 <td>-6.114931</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2006-12-31 18:00:00</td>
+<th data-quarto-table-cell-role="th">2006-12-31 18:00:00</th>
 <td>-5.896546</td>
 <td>-5.067058</td>
 <td>-5.307056</td>
 <td>-6.196140</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2006-12-31 21:00:00</td>
+<th data-quarto-table-cell-role="th">2006-12-31 21:00:00</th>
 <td>-4.859050</td>
 <td>-4.156382</td>
 <td>-4.210848</td>
 <td>-5.082399</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2007-01-01 00:00:00</td>
+<th data-quarto-table-cell-role="th">2007-01-01 00:00:00</th>
 <td>-4.325027</td>
 <td>-3.678896</td>
 <td>-3.672305</td>
@@ -969,7 +982,7 @@ dtype: float64</code></pre>
 </div>
 </div>
 <div id="32db17b6-2d8a-4ee7-8fc4-151bd9fa0221" class="cell" data-execution_count="22">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>diff.resample(<span class="st">"3M"</span>).mean()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>diff.resample(<span class="st">"3M"</span>).mean()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>C:\Users\gbv\AppData\Local\Temp\ipykernel_57928\1973734845.py:1: FutureWarning: 'M' is deprecated and will be removed in a future version, please use 'ME' instead.
   diff.resample("3M").mean()</code></pre>
@@ -978,7 +991,7 @@ dtype: float64</code></pre>
 <div>
 
 
-<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -997,35 +1010,35 @@ dtype: float64</code></pre>
 </thead>
 <tbody>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2006-01-31</td>
+<th data-quarto-table-cell-role="th">2006-01-31</th>
 <td>-4.314191</td>
 <td>-3.491715</td>
 <td>-3.456784</td>
 <td>-4.163554</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2006-04-30</td>
+<th data-quarto-table-cell-role="th">2006-04-30</th>
 <td>-5.205744</td>
 <td>-4.988880</td>
 <td>-4.892002</td>
 <td>-5.013828</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2006-07-31</td>
+<th data-quarto-table-cell-role="th">2006-07-31</th>
 <td>-5.998308</td>
 <td>-6.372570</td>
 <td>-6.308787</td>
 <td>-5.721852</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2006-10-31</td>
+<th data-quarto-table-cell-role="th">2006-10-31</th>
 <td>-5.717239</td>
 <td>-5.572823</td>
 <td>-5.484666</td>
 <td>-5.413686</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2007-01-31</td>
+<th data-quarto-table-cell-role="th">2007-01-31</th>
 <td>-4.307009</td>
 <td>-3.517697</td>
 <td>-3.474178</td>
@@ -1038,12 +1051,12 @@ dtype: float64</code></pre>
 </div>
 </div>
 <div id="cf1ef358-9134-40a9-8601-616927e1c374" class="cell" data-execution_count="25">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>diff.resample(<span class="st">"D"</span>).<span class="bu">max</span>()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>diff.resample(<span class="st">"D"</span>).<span class="bu">max</span>()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="25">
 <div>
 
 
-<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -1062,77 +1075,77 @@ dtype: float64</code></pre>
 </thead>
 <tbody>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2006-01-01</td>
+<th data-quarto-table-cell-role="th">2006-01-01</th>
 <td>-0.013989</td>
 <td>-0.012218</td>
 <td>-0.010572</td>
 <td>-0.013044</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2006-01-02</td>
+<th data-quarto-table-cell-role="th">2006-01-02</th>
 <td>-0.009047</td>
 <td>-0.008165</td>
 <td>-0.005351</td>
 <td>-0.008393</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2006-01-03</td>
+<th data-quarto-table-cell-role="th">2006-01-03</th>
 <td>-0.519950</td>
 <td>-0.480064</td>
 <td>-0.422005</td>
 <td>-0.484904</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2006-01-04</td>
+<th data-quarto-table-cell-role="th">2006-01-04</th>
 <td>-0.630201</td>
 <td>-0.561868</td>
 <td>-0.494864</td>
 <td>-0.577895</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2006-01-05</td>
+<th data-quarto-table-cell-role="th">2006-01-05</th>
 <td>-2.829595</td>
 <td>-2.438844</td>
 <td>-2.349026</td>
 <td>-2.968532</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">...</td>
+<th data-quarto-table-cell-role="th">...</th>
 <td>...</td>
 <td>...</td>
 <td>...</td>
 <td>...</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2006-12-28</td>
+<th data-quarto-table-cell-role="th">2006-12-28</th>
 <td>-2.573831</td>
 <td>-2.098926</td>
 <td>-1.923344</td>
 <td>-2.577069</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2006-12-29</td>
+<th data-quarto-table-cell-role="th">2006-12-29</th>
 <td>-2.717307</td>
 <td>-2.238275</td>
 <td>-1.970042</td>
 <td>-2.660889</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2006-12-30</td>
+<th data-quarto-table-cell-role="th">2006-12-30</th>
 <td>-3.269922</td>
 <td>-2.662732</td>
 <td>-2.256935</td>
 <td>-3.187538</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2006-12-31</td>
+<th data-quarto-table-cell-role="th">2006-12-31</th>
 <td>-3.297358</td>
 <td>-2.686110</td>
 <td>-2.239008</td>
 <td>-3.165496</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2007-01-01</td>
+<th data-quarto-table-cell-role="th">2007-01-01</th>
 <td>-4.325027</td>
 <td>-3.678896</td>
 <td>-3.672305</td>
@@ -1146,12 +1159,12 @@ dtype: float64</code></pre>
 </div>
 </div>
 <div id="1ff455c0-c2a9-4bfa-a12b-39ded7b99ebf" class="cell" data-execution_count="28">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>blanco.resample(<span class="st">"YE"</span>).<span class="bu">max</span>()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>blanco.resample(<span class="st">"YE"</span>).<span class="bu">max</span>()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="28">
 <div>
 
 
-<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -1170,14 +1183,14 @@ dtype: float64</code></pre>
 </thead>
 <tbody>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2006-12-31</td>
+<th data-quarto-table-cell-role="th">2006-12-31</th>
 <td>27.291816</td>
 <td>27.796187</td>
 <td>28.240923</td>
 <td>28.290655</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2007-12-31</td>
+<th data-quarto-table-cell-role="th">2007-12-31</th>
 <td>19.521151</td>
 <td>19.448329</td>
 <td>19.688533</td>
@@ -1197,12 +1210,12 @@ dtype: float64</code></pre>
 <li>mean absolute error mean(sum| Ti_b - Ti_n | )</li>
 </ol>
 <div id="6fd305d7-9b6c-483c-8fac-47ba4b983766" class="cell" data-scrolled="true" data-execution_count="30">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>blanco</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>blanco</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="30">
 <div>
 
 
-<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -1221,77 +1234,77 @@ dtype: float64</code></pre>
 </thead>
 <tbody>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2006-01-01 00:10:00</td>
+<th data-quarto-table-cell-role="th">2006-01-01 00:10:00</th>
 <td>19.014610</td>
 <td>19.024472</td>
 <td>19.065057</td>
 <td>19.106503</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2006-01-01 00:20:00</td>
+<th data-quarto-table-cell-role="th">2006-01-01 00:20:00</th>
 <td>19.012693</td>
 <td>19.022505</td>
 <td>19.062782</td>
 <td>19.104997</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2006-01-01 00:30:00</td>
+<th data-quarto-table-cell-role="th">2006-01-01 00:30:00</th>
 <td>19.011030</td>
 <td>19.020820</td>
 <td>19.060846</td>
 <td>19.103773</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2006-01-01 00:40:00</td>
+<th data-quarto-table-cell-role="th">2006-01-01 00:40:00</th>
 <td>19.009526</td>
 <td>19.019312</td>
 <td>19.059129</td>
 <td>19.102714</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2006-01-01 00:50:00</td>
+<th data-quarto-table-cell-role="th">2006-01-01 00:50:00</th>
 <td>19.008070</td>
 <td>19.017864</td>
 <td>19.057494</td>
 <td>19.101684</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">...</td>
+<th data-quarto-table-cell-role="th">...</th>
 <td>...</td>
 <td>...</td>
 <td>...</td>
 <td>...</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2006-12-31 23:20:00</td>
+<th data-quarto-table-cell-role="th">2006-12-31 23:20:00</th>
 <td>19.589577</td>
 <td>19.517255</td>
 <td>19.780842</td>
 <td>19.902851</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2006-12-31 23:30:00</td>
+<th data-quarto-table-cell-role="th">2006-12-31 23:30:00</th>
 <td>19.572531</td>
 <td>19.500154</td>
 <td>19.757842</td>
 <td>19.882044</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2006-12-31 23:40:00</td>
+<th data-quarto-table-cell-role="th">2006-12-31 23:40:00</th>
 <td>19.555469</td>
 <td>19.482987</td>
 <td>19.734803</td>
 <td>19.861207</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2006-12-31 23:50:00</td>
+<th data-quarto-table-cell-role="th">2006-12-31 23:50:00</th>
 <td>19.538364</td>
 <td>19.465734</td>
 <td>19.711720</td>
 <td>19.840302</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2007-01-01 00:00:00</td>
+<th data-quarto-table-cell-role="th">2007-01-01 00:00:00</th>
 <td>19.521151</td>
 <td>19.448329</td>
 <td>19.688533</td>
@@ -1305,12 +1318,12 @@ dtype: float64</code></pre>
 </div>
 </div>
 <div id="1b8f9047-4bf7-423b-b301-ecf7dfce2bb7" class="cell" data-execution_count="31">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>negro</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>negro</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="31">
 <div>
 
 
-<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -1329,77 +1342,77 @@ dtype: float64</code></pre>
 </thead>
 <tbody>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2006-01-01 00:10:00</td>
+<th data-quarto-table-cell-role="th">2006-01-01 00:10:00</th>
 <td>19.038413</td>
 <td>19.047696</td>
 <td>19.087096</td>
 <td>19.129994</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2006-01-01 00:20:00</td>
+<th data-quarto-table-cell-role="th">2006-01-01 00:20:00</th>
 <td>19.035998</td>
 <td>19.045313</td>
 <td>19.084383</td>
 <td>19.128110</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2006-01-01 00:30:00</td>
+<th data-quarto-table-cell-role="th">2006-01-01 00:30:00</th>
 <td>19.033880</td>
 <td>19.043235</td>
 <td>19.082035</td>
 <td>19.126533</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2006-01-01 00:40:00</td>
+<th data-quarto-table-cell-role="th">2006-01-01 00:40:00</th>
 <td>19.031973</td>
 <td>19.041355</td>
 <td>19.079928</td>
 <td>19.125138</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2006-01-01 00:50:00</td>
+<th data-quarto-table-cell-role="th">2006-01-01 00:50:00</th>
 <td>19.030158</td>
 <td>19.039552</td>
 <td>19.077921</td>
 <td>19.123787</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">...</td>
+<th data-quarto-table-cell-role="th">...</th>
 <td>...</td>
 <td>...</td>
 <td>...</td>
 <td>...</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2006-12-31 23:20:00</td>
+<th data-quarto-table-cell-role="th">2006-12-31 23:20:00</th>
 <td>24.137526</td>
 <td>23.391216</td>
 <td>23.667201</td>
 <td>24.646797</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2006-12-31 23:30:00</td>
+<th data-quarto-table-cell-role="th">2006-12-31 23:30:00</th>
 <td>24.064361</td>
 <td>23.323456</td>
 <td>23.589420</td>
 <td>24.567420</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2006-12-31 23:40:00</td>
+<th data-quarto-table-cell-role="th">2006-12-31 23:40:00</th>
 <td>23.990232</td>
 <td>23.257064</td>
 <td>23.512465</td>
 <td>24.488597</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2006-12-31 23:50:00</td>
+<th data-quarto-table-cell-role="th">2006-12-31 23:50:00</th>
 <td>23.917165</td>
 <td>23.191858</td>
 <td>23.436305</td>
 <td>24.410237</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2007-01-01 00:00:00</td>
+<th data-quarto-table-cell-role="th">2007-01-01 00:00:00</th>
 <td>23.846178</td>
 <td>23.127226</td>
 <td>23.360837</td>
@@ -1413,7 +1426,7 @@ dtype: float64</code></pre>
 </div>
 </div>
 <div id="cb5bbfd0-5a26-4731-8f29-51c2c9638230" class="cell" data-scrolled="true" data-execution_count="32">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>blanco.Ti_C <span class="op">*</span> negro.Ti_C</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>blanco.Ti_C <span class="op">*</span> negro.Ti_C</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="32">
 <pre><code>date
 2006-01-01 00:10:00    362.007996
@@ -1498,13 +1511,14 @@ Name: Ti_C, Length: 52560, dtype: float64</code></pre>
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

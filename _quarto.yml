@@ -64,7 +64,8 @@ book:
     - clases/030_amplitud_promedio.ipynb
     - clases/031_importa_exceles.ipynb
     - clases/uv-git-github.qmd
-    - clases/032_dia_promedio.ipynb
+    - clases/032a_heatmap_mensual_diario.ipynb
+    - clases/032b_dia_promedio.ipynb
 
 format:
   html: 

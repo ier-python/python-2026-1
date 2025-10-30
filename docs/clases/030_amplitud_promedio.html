@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.30">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -58,7 +58,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -69,18 +69,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../clases/029_EDA.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-de070a7b0ab54f8780927367ac907214.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-2b3e328b71be8d25427581baeb23079b.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-de070a7b0ab54f8780927367ac907214.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-707d8167ce6003fca903bfe2be84ab7f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-3fdc0c57fcd691b300e3c41e3e4a687d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-863ab20449d2f3d5951a2e693f5499b5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-3fdc0c57fcd691b300e3c41e3e4a687d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-cf2152be41a2e4c556b86648c5ebb4cf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-86014854a496e61009a3305fce3a688e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-cf2152be41a2e4c556b86648c5ebb4cf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -95,7 +96,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "Sin resultados",
+    "search-no-results-text": "No se han encontrado resultados",
     "search-matching-documents-text": "documentos encontrados",
     "search-copy-link-title": "Copiar el enlace en la búsqueda",
     "search-hide-matches-text": "Ocultar resultados adicionales",
@@ -108,7 +109,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Buscar"
   }
 }</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
 
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
@@ -284,6 +285,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Proyectos de ciencia de datos con Python</span>
     </a>
@@ -310,6 +313,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+      <a href="../index.html" class="sidebar-logo-link">
+      </a>
+      </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
@@ -524,8 +531,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../clases/032_dia_promedio.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Como hago :</span></span></a>
+  <a href="../clases/032a_heatmap_mensual_diario.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">032a_heatmap_mensual_diario.html</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../clases/032b_dia_promedio.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">Como hago :</span></span></a>
   </div>
 </li>
     </ul>
@@ -585,11 +598,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li></li>
 </ol>
 <div id="aaf129d9-f3cc-4960-bd00-e31101b8f32c" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div id="8d30f88f-a3c3-48b8-84d0-f890b0abe56e" class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="st">"../data/002_processed/esolmet_2018.parquet"</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="st">"../data/002_processed/esolmet_2018.parquet"</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>esolmet <span class="op">=</span> pd.read_parquet(f)</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>To_diaria_promedio <span class="op">=</span> esolmet.To.resample(<span class="st">"D"</span>).mean()</span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>esolmet[<span class="st">"amplitud"</span>] <span class="op">=</span> (</span>
@@ -599,12 +612,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>esolmet[<span class="st">"Tpromedio"</span>] <span class="op">=</span> esolmet.To.resample(<span class="st">"MS"</span>).mean()</span>
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>esolmet.amplitud <span class="op">=</span> esolmet.amplitud.ffill()</span>
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>esolmet.Tpromedio <span class="op">=</span> esolmet.Tpromedio.ffill()</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>esolmet</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>esolmet</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
 <div>
 
 
-<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -635,7 +648,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </thead>
 <tbody>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2018-01-01 00:00:00</td>
+<th data-quarto-table-cell-role="th">2018-01-01 00:00:00</th>
 <td>0.057</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -648,7 +661,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>20.019848</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2018-01-01 00:10:00</td>
+<th data-quarto-table-cell-role="th">2018-01-01 00:10:00</th>
 <td>0.002</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -661,7 +674,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>20.019848</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2018-01-01 00:20:00</td>
+<th data-quarto-table-cell-role="th">2018-01-01 00:20:00</th>
 <td>0.170</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -674,7 +687,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>20.019848</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2018-01-01 00:30:00</td>
+<th data-quarto-table-cell-role="th">2018-01-01 00:30:00</th>
 <td>0.371</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -687,7 +700,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>20.019848</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2018-01-01 00:40:00</td>
+<th data-quarto-table-cell-role="th">2018-01-01 00:40:00</th>
 <td>0.305</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -700,7 +713,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>20.019848</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">...</td>
+<th data-quarto-table-cell-role="th">...</th>
 <td>...</td>
 <td>...</td>
 <td>...</td>
@@ -713,7 +726,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>...</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2018-12-31 23:10:00</td>
+<th data-quarto-table-cell-role="th">2018-12-31 23:10:00</th>
 <td>0.125</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -726,7 +739,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>20.362943</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2018-12-31 23:20:00</td>
+<th data-quarto-table-cell-role="th">2018-12-31 23:20:00</th>
 <td>0.000</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -739,7 +752,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>20.362943</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2018-12-31 23:30:00</td>
+<th data-quarto-table-cell-role="th">2018-12-31 23:30:00</th>
 <td>0.044</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -752,7 +765,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>20.362943</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2018-12-31 23:40:00</td>
+<th data-quarto-table-cell-role="th">2018-12-31 23:40:00</th>
 <td>0.170</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -765,7 +778,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>20.362943</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2018-12-31 23:50:00</td>
+<th data-quarto-table-cell-role="th">2018-12-31 23:50:00</th>
 <td>0.003</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -785,14 +798,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div id="6ea3feac-fca7-4f80-924f-c5e161566e32" class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>esolmet[<span class="st">"Tpromedio"</span>] <span class="op">=</span> esolmet.To.resample(<span class="st">"MS"</span>).mean()</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>esolmet[<span class="st">"Tpromedio"</span>] <span class="op">=</span> esolmet.To.resample(<span class="st">"MS"</span>).mean()</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>esolmet[<span class="st">"Tpromedio"</span>] <span class="op">=</span> esolmet.Tpromedio.ffill()</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>esolmet</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>esolmet</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
 <div>
 
 
-<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -823,7 +836,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </thead>
 <tbody>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2018-01-01 00:00:00</td>
+<th data-quarto-table-cell-role="th">2018-01-01 00:00:00</th>
 <td>0.057</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -836,7 +849,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>20.019848</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2018-01-01 00:10:00</td>
+<th data-quarto-table-cell-role="th">2018-01-01 00:10:00</th>
 <td>0.002</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -849,7 +862,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>20.019848</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2018-01-01 00:20:00</td>
+<th data-quarto-table-cell-role="th">2018-01-01 00:20:00</th>
 <td>0.170</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -862,7 +875,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>20.019848</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2018-01-01 00:30:00</td>
+<th data-quarto-table-cell-role="th">2018-01-01 00:30:00</th>
 <td>0.371</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -875,7 +888,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>20.019848</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2018-01-01 00:40:00</td>
+<th data-quarto-table-cell-role="th">2018-01-01 00:40:00</th>
 <td>0.305</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -888,7 +901,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>20.019848</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">...</td>
+<th data-quarto-table-cell-role="th">...</th>
 <td>...</td>
 <td>...</td>
 <td>...</td>
@@ -901,7 +914,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>...</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2018-12-31 23:10:00</td>
+<th data-quarto-table-cell-role="th">2018-12-31 23:10:00</th>
 <td>0.125</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -914,7 +927,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>20.362943</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2018-12-31 23:20:00</td>
+<th data-quarto-table-cell-role="th">2018-12-31 23:20:00</th>
 <td>0.000</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -927,7 +940,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>20.362943</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2018-12-31 23:30:00</td>
+<th data-quarto-table-cell-role="th">2018-12-31 23:30:00</th>
 <td>0.044</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -940,7 +953,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>20.362943</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2018-12-31 23:40:00</td>
+<th data-quarto-table-cell-role="th">2018-12-31 23:40:00</th>
 <td>0.170</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -953,7 +966,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>20.362943</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2018-12-31 23:50:00</td>
+<th data-quarto-table-cell-role="th">2018-12-31 23:50:00</th>
 <td>0.003</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -973,12 +986,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div id="8e567086-001d-42b0-a580-fb25a3f7dfaa" class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>esolmet.loc[<span class="st">"2018-01-31 23:40"</span>:<span class="st">"2018-02-01 01:00"</span>]</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>esolmet.loc[<span class="st">"2018-01-31 23:40"</span>:<span class="st">"2018-02-01 01:00"</span>]</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="4">
 <div>
 
 
-<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -1009,7 +1022,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </thead>
 <tbody>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2018-01-31 23:40:00</td>
+<th data-quarto-table-cell-role="th">2018-01-31 23:40:00</th>
 <td>0.081</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -1022,7 +1035,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>20.019848</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2018-01-31 23:50:00</td>
+<th data-quarto-table-cell-role="th">2018-01-31 23:50:00</th>
 <td>0.075</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -1035,7 +1048,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>20.019848</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2018-02-01 00:00:00</td>
+<th data-quarto-table-cell-role="th">2018-02-01 00:00:00</th>
 <td>0.003</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -1048,7 +1061,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>23.522289</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2018-02-01 00:00:00</td>
+<th data-quarto-table-cell-role="th">2018-02-01 00:00:00</th>
 <td>0.003</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -1061,7 +1074,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>23.522289</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2018-02-01 00:10:00</td>
+<th data-quarto-table-cell-role="th">2018-02-01 00:10:00</th>
 <td>0.313</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -1074,7 +1087,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>23.522289</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2018-02-01 00:20:00</td>
+<th data-quarto-table-cell-role="th">2018-02-01 00:20:00</th>
 <td>0.029</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -1087,7 +1100,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>23.522289</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2018-02-01 00:30:00</td>
+<th data-quarto-table-cell-role="th">2018-02-01 00:30:00</th>
 <td>0.013</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -1100,7 +1113,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>23.522289</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2018-02-01 00:40:00</td>
+<th data-quarto-table-cell-role="th">2018-02-01 00:40:00</th>
 <td>0.001</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -1113,7 +1126,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>23.522289</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2018-02-01 00:50:00</td>
+<th data-quarto-table-cell-role="th">2018-02-01 00:50:00</th>
 <td>0.065</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -1126,7 +1139,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>23.522289</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2018-02-01 01:00:00</td>
+<th data-quarto-table-cell-role="th">2018-02-01 01:00:00</th>
 <td>0.086</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -1145,12 +1158,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div id="58b4de03-c053-4e2b-ac89-0fc0b31cb929" class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>esolmet.loc[<span class="st">"2018-01-31 00:00"</span>:<span class="st">"2018-02-01 01:00"</span>]</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>esolmet.loc[<span class="st">"2018-01-31 00:00"</span>:<span class="st">"2018-02-01 01:00"</span>]</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="5">
 <div>
 
 
-<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -1181,7 +1194,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </thead>
 <tbody>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2018-01-31 00:00:00</td>
+<th data-quarto-table-cell-role="th">2018-01-31 00:00:00</th>
 <td>0.264</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -1194,7 +1207,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>20.019848</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2018-01-31 00:10:00</td>
+<th data-quarto-table-cell-role="th">2018-01-31 00:10:00</th>
 <td>0.138</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -1207,7 +1220,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>20.019848</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2018-01-31 00:20:00</td>
+<th data-quarto-table-cell-role="th">2018-01-31 00:20:00</th>
 <td>0.000</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -1220,7 +1233,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>20.019848</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2018-01-31 00:30:00</td>
+<th data-quarto-table-cell-role="th">2018-01-31 00:30:00</th>
 <td>0.000</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -1233,7 +1246,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>20.019848</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2018-01-31 00:40:00</td>
+<th data-quarto-table-cell-role="th">2018-01-31 00:40:00</th>
 <td>0.005</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -1246,7 +1259,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>20.019848</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">...</td>
+<th data-quarto-table-cell-role="th">...</th>
 <td>...</td>
 <td>...</td>
 <td>...</td>
@@ -1259,7 +1272,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>...</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2018-02-01 00:20:00</td>
+<th data-quarto-table-cell-role="th">2018-02-01 00:20:00</th>
 <td>0.029</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -1272,7 +1285,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>23.522289</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2018-02-01 00:30:00</td>
+<th data-quarto-table-cell-role="th">2018-02-01 00:30:00</th>
 <td>0.013</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -1285,7 +1298,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>23.522289</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2018-02-01 00:40:00</td>
+<th data-quarto-table-cell-role="th">2018-02-01 00:40:00</th>
 <td>0.001</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -1298,7 +1311,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>23.522289</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2018-02-01 00:50:00</td>
+<th data-quarto-table-cell-role="th">2018-02-01 00:50:00</th>
 <td>0.065</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -1311,7 +1324,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <td>23.522289</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2018-02-01 01:00:00</td>
+<th data-quarto-table-cell-role="th">2018-02-01 01:00:00</th>
 <td>0.086</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -1333,7 +1346,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="promedio-mensual-de-to-del-máximo-diario-memo" class="level1" data-number="33">
 <h1 data-number="33"><span class="header-section-number">33</span> Promedio mensual de To del máximo diario (memo)</h1>
 <div id="2c8617af-cc7a-4ee3-909b-7359f81b47e4" class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>esolmet.To.resample(<span class="st">"D"</span>).<span class="bu">max</span>()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>esolmet.To.resample(<span class="st">"D"</span>).<span class="bu">max</span>()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="6">
 <pre><code>Fecha
 2018-01-01    29.30
@@ -1351,7 +1364,7 @@ Freq: D, Name: To, Length: 365, dtype: float64</code></pre>
 </div>
 </div>
 <div id="87f1dc37-0201-4c37-964d-280a44382334" class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>esolmet.To.resample(<span class="st">"D"</span>).<span class="bu">max</span>().resample(<span class="st">"ME"</span>).mean()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>esolmet.To.resample(<span class="st">"D"</span>).<span class="bu">max</span>().resample(<span class="st">"ME"</span>).mean()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="7">
 <pre><code>Fecha
 2018-01-31    28.455484
@@ -1370,14 +1383,14 @@ Freq: ME, Name: To, dtype: float64</code></pre>
 </div>
 </div>
 <div id="63fef82c-a98f-4a13-bb52-15c4a2b85279" class="cell" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">12</span>,<span class="dv">4</span>))</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">12</span>,<span class="dv">4</span>))</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>ax.plot(esolmet.To.resample(<span class="st">"D"</span>).<span class="bu">max</span>().resample(<span class="st">"ME"</span>).mean(),<span class="st">"ro-"</span>,label<span class="op">=</span><span class="st">"Tmax"</span>)</span>
 <span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>ax.plot(esolmet.To.resample(<span class="st">"D"</span>).<span class="bu">max</span>().resample(<span class="st">"ME"</span>).<span class="bu">max</span>(),<span class="st">"ro-"</span>,label<span class="op">=</span><span class="st">""</span>,alpha<span class="op">=</span><span class="fl">0.2</span>)</span>
 <span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>ax.plot(esolmet.To,<span class="st">"r-"</span>,label<span class="op">=</span><span class="st">""</span>,alpha<span class="op">=</span><span class="fl">0.1</span>)</span>
 <span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>ax.legend()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>ax.legend()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -1387,12 +1400,12 @@ Freq: ME, Name: To, dtype: float64</code></pre>
 </div>
 </div>
 <div id="484ec105-d073-4993-9248-9159460b72cc" class="cell" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>esolmet</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>esolmet</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="9">
 <div>
 
 
-<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -1423,7 +1436,7 @@ Freq: ME, Name: To, dtype: float64</code></pre>
 </thead>
 <tbody>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2018-01-01 00:00:00</td>
+<th data-quarto-table-cell-role="th">2018-01-01 00:00:00</th>
 <td>0.057</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -1436,7 +1449,7 @@ Freq: ME, Name: To, dtype: float64</code></pre>
 <td>20.019848</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2018-01-01 00:10:00</td>
+<th data-quarto-table-cell-role="th">2018-01-01 00:10:00</th>
 <td>0.002</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -1449,7 +1462,7 @@ Freq: ME, Name: To, dtype: float64</code></pre>
 <td>20.019848</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2018-01-01 00:20:00</td>
+<th data-quarto-table-cell-role="th">2018-01-01 00:20:00</th>
 <td>0.170</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -1462,7 +1475,7 @@ Freq: ME, Name: To, dtype: float64</code></pre>
 <td>20.019848</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2018-01-01 00:30:00</td>
+<th data-quarto-table-cell-role="th">2018-01-01 00:30:00</th>
 <td>0.371</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -1475,7 +1488,7 @@ Freq: ME, Name: To, dtype: float64</code></pre>
 <td>20.019848</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2018-01-01 00:40:00</td>
+<th data-quarto-table-cell-role="th">2018-01-01 00:40:00</th>
 <td>0.305</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -1488,7 +1501,7 @@ Freq: ME, Name: To, dtype: float64</code></pre>
 <td>20.019848</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">...</td>
+<th data-quarto-table-cell-role="th">...</th>
 <td>...</td>
 <td>...</td>
 <td>...</td>
@@ -1501,7 +1514,7 @@ Freq: ME, Name: To, dtype: float64</code></pre>
 <td>...</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2018-12-31 23:10:00</td>
+<th data-quarto-table-cell-role="th">2018-12-31 23:10:00</th>
 <td>0.125</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -1514,7 +1527,7 @@ Freq: ME, Name: To, dtype: float64</code></pre>
 <td>20.362943</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2018-12-31 23:20:00</td>
+<th data-quarto-table-cell-role="th">2018-12-31 23:20:00</th>
 <td>0.000</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -1527,7 +1540,7 @@ Freq: ME, Name: To, dtype: float64</code></pre>
 <td>20.362943</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2018-12-31 23:30:00</td>
+<th data-quarto-table-cell-role="th">2018-12-31 23:30:00</th>
 <td>0.044</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -1540,7 +1553,7 @@ Freq: ME, Name: To, dtype: float64</code></pre>
 <td>20.362943</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2018-12-31 23:40:00</td>
+<th data-quarto-table-cell-role="th">2018-12-31 23:40:00</th>
 <td>0.170</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -1553,7 +1566,7 @@ Freq: ME, Name: To, dtype: float64</code></pre>
 <td>20.362943</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2018-12-31 23:50:00</td>
+<th data-quarto-table-cell-role="th">2018-12-31 23:50:00</th>
 <td>0.003</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -1575,47 +1588,47 @@ Freq: ME, Name: To, dtype: float64</code></pre>
 <section id="mes-más-cálido-con-la-to-promedio-mensual-lili" class="level2">
 <h2 class="anchored" data-anchor-id="mes-más-cálido-con-la-to-promedio-mensual-lili">Mes más cálido con la To promedio mensual (Lili)</h2>
 <div id="38369028-66b3-4553-b160-0d2c2f4f035b" class="cell" data-execution_count="10">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>esolmet.To.resample(<span class="st">"ME"</span>).mean().<span class="bu">max</span>(),  esolmet.To.resample(<span class="st">"ME"</span>).mean().idxmax()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>esolmet.To.resample(<span class="st">"ME"</span>).mean().<span class="bu">max</span>(),  esolmet.To.resample(<span class="st">"ME"</span>).mean().idxmax()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="10">
 <pre><code>(np.float64(26.052599537037036), Timestamp('2018-04-30 00:00:00'))</code></pre>
 </div>
 </div>
 <div id="cda0348b-2529-491d-9287-51e2d4dcbee6" class="cell" data-execution_count="11">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> identifica_To_mes_calido(esolmet:pd.DataFrame, columna:<span class="bu">str</span> <span class="op">=</span> <span class="st">"To"</span>)<span class="op">-&gt;</span> (<span class="bu">float</span>, <span class="bu">float</span>):</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> identifica_To_mes_calido(esolmet:pd.DataFrame, columna:<span class="bu">str</span> <span class="op">=</span> <span class="st">"To"</span>)<span class="op">-&gt;</span> (<span class="bu">float</span>, <span class="bu">float</span>):</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Recibe un df que tiene un indice que es datetime </span></span>
 <span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="co">    y regresa en una tupla el valor máximo promedio To_max y el mes en el que sucede mes_max</span></span>
 <span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
 <span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>    To_max <span class="op">=</span> esolmet[columna].resample(<span class="st">"ME"</span>).mean().<span class="bu">max</span>()</span>
 <span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>    mes_calido <span class="op">=</span> esolmet[columna].resample(<span class="st">"ME"</span>).mean().idxmax().month</span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> To_max, mes_calido</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> To_max, mes_calido</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div id="d9d03868-9afe-4414-9106-f2bfa5a95919" class="cell" data-execution_count="12">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>maximos <span class="op">=</span> identifica_To_mes_calido(esolmet,columna<span class="op">=</span><span class="st">"hr"</span>)</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>maximos</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>maximos <span class="op">=</span> identifica_To_mes_calido(esolmet,columna<span class="op">=</span><span class="st">"hr"</span>)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>maximos</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="12">
 <pre><code>(np.float64(74.50158759546402), 9)</code></pre>
 </div>
 </div>
 <div id="75df72a0-6723-479c-b2e7-116f9cfc9871" class="cell" data-execution_count="13">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>To_max, mes_max <span class="op">=</span> identifica_To_mes_calido(esolmet,columna<span class="op">=</span><span class="st">"hr"</span>)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>To_max, mes_max <span class="op">=</span> identifica_To_mes_calido(esolmet,columna<span class="op">=</span><span class="st">"hr"</span>)</span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="co"># print(To_max)</span></span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="co"># print(mes_max)</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="co"># print(mes_max)</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 </section>
 <section id="amplitud-diaria-de-la-to-fer-ipn" class="level1" data-number="34">
 <h1 data-number="34"><span class="header-section-number">34</span> Amplitud diaria de la To (Fer ipn)</h1>
 <div id="d0c1969a-d919-45d4-add2-972d26b70109" class="cell" data-execution_count="14">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>deltaTo_diaria <span class="op">=</span> esolmet.To.resample(<span class="st">"D"</span>).<span class="bu">max</span>() <span class="op">-</span> esolmet.To.resample(<span class="st">"D"</span>).<span class="bu">min</span>()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>deltaTo_diaria <span class="op">=</span> esolmet.To.resample(<span class="st">"D"</span>).<span class="bu">max</span>() <span class="op">-</span> esolmet.To.resample(<span class="st">"D"</span>).<span class="bu">min</span>()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div id="9d94beab-57cd-4ebd-9983-3609471bf2a5" class="cell" data-execution_count="15">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">12</span>,<span class="dv">4</span>))</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">12</span>,<span class="dv">4</span>))</span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>ax.plot(esolmet.To.resample(<span class="st">"D"</span>).mean() <span class="op">+</span> deltaTo_diaria<span class="op">/</span><span class="dv">2</span>,<span class="st">"r-"</span>,label<span class="op">=</span><span class="st">""</span>)</span>
 <span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>ax.plot(esolmet.To.resample(<span class="st">"D"</span>).mean() <span class="op">-</span> deltaTo_diaria<span class="op">/</span><span class="dv">2</span>,<span class="st">"r-"</span>,label<span class="op">=</span><span class="st">""</span>)</span>
 <span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>ax.plot(esolmet.To.resample(<span class="st">"D"</span>).mean())</span>
-<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>ax.plot(esolmet.To, alpha<span class="op">=</span><span class="fl">0.2</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>ax.plot(esolmet.To, alpha<span class="op">=</span><span class="fl">0.2</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -1625,12 +1638,12 @@ Freq: ME, Name: To, dtype: float64</code></pre>
 </div>
 </div>
 <div id="b6ff082a-0dac-4555-a66b-06f9291e5512" class="cell" data-execution_count="16">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>esolmet</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>esolmet</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="16">
 <div>
 
 
-<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -1661,7 +1674,7 @@ Freq: ME, Name: To, dtype: float64</code></pre>
 </thead>
 <tbody>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2018-01-01 00:00:00</td>
+<th data-quarto-table-cell-role="th">2018-01-01 00:00:00</th>
 <td>0.057</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -1674,7 +1687,7 @@ Freq: ME, Name: To, dtype: float64</code></pre>
 <td>20.019848</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2018-01-01 00:10:00</td>
+<th data-quarto-table-cell-role="th">2018-01-01 00:10:00</th>
 <td>0.002</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -1687,7 +1700,7 @@ Freq: ME, Name: To, dtype: float64</code></pre>
 <td>20.019848</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2018-01-01 00:20:00</td>
+<th data-quarto-table-cell-role="th">2018-01-01 00:20:00</th>
 <td>0.170</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -1700,7 +1713,7 @@ Freq: ME, Name: To, dtype: float64</code></pre>
 <td>20.019848</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2018-01-01 00:30:00</td>
+<th data-quarto-table-cell-role="th">2018-01-01 00:30:00</th>
 <td>0.371</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -1713,7 +1726,7 @@ Freq: ME, Name: To, dtype: float64</code></pre>
 <td>20.019848</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2018-01-01 00:40:00</td>
+<th data-quarto-table-cell-role="th">2018-01-01 00:40:00</th>
 <td>0.305</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -1726,7 +1739,7 @@ Freq: ME, Name: To, dtype: float64</code></pre>
 <td>20.019848</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">...</td>
+<th data-quarto-table-cell-role="th">...</th>
 <td>...</td>
 <td>...</td>
 <td>...</td>
@@ -1739,7 +1752,7 @@ Freq: ME, Name: To, dtype: float64</code></pre>
 <td>...</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2018-12-31 23:10:00</td>
+<th data-quarto-table-cell-role="th">2018-12-31 23:10:00</th>
 <td>0.125</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -1752,7 +1765,7 @@ Freq: ME, Name: To, dtype: float64</code></pre>
 <td>20.362943</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2018-12-31 23:20:00</td>
+<th data-quarto-table-cell-role="th">2018-12-31 23:20:00</th>
 <td>0.000</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -1765,7 +1778,7 @@ Freq: ME, Name: To, dtype: float64</code></pre>
 <td>20.362943</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2018-12-31 23:30:00</td>
+<th data-quarto-table-cell-role="th">2018-12-31 23:30:00</th>
 <td>0.044</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -1778,7 +1791,7 @@ Freq: ME, Name: To, dtype: float64</code></pre>
 <td>20.362943</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2018-12-31 23:40:00</td>
+<th data-quarto-table-cell-role="th">2018-12-31 23:40:00</th>
 <td>0.170</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -1791,7 +1804,7 @@ Freq: ME, Name: To, dtype: float64</code></pre>
 <td>20.362943</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2018-12-31 23:50:00</td>
+<th data-quarto-table-cell-role="th">2018-12-31 23:50:00</th>
 <td>0.003</td>
 <td>0.0</td>
 <td>0.0</td>
@@ -1811,7 +1824,7 @@ Freq: ME, Name: To, dtype: float64</code></pre>
 </div>
 </div>
 <div id="e3fd9cf1-8a28-41b2-b268-15f494a359f2" class="cell" data-execution_count="17">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>deltaTo_diaria <span class="op">=</span> (</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>deltaTo_diaria <span class="op">=</span> (</span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>    esolmet.To.resample(<span class="st">"D"</span>).<span class="bu">max</span>() <span class="op">-</span> </span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>    esolmet.To.resample(<span class="st">"D"</span>).<span class="bu">min</span>()</span>
 <span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>).resample(<span class="st">"ME"</span>,closed<span class="op">=</span><span class="st">"right"</span>).mean() </span>
@@ -1822,7 +1835,7 @@ Freq: ME, Name: To, dtype: float64</code></pre>
 <span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>ax.fill_between(esolmet.index, </span>
 <span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a>                esolmet.Tpromedio <span class="op">+</span> esolmet.amplitud<span class="op">/</span><span class="dv">2</span>,</span>
 <span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>                esolmet.Tpromedio <span class="op">-</span>esolmet.amplitud<span class="op">/</span><span class="dv">2</span>,</span>
-<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a>               )</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a>               )</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -1832,7 +1845,7 @@ Freq: ME, Name: To, dtype: float64</code></pre>
 </div>
 </div>
 <div id="c7ecba7a-2c46-4a55-a6eb-e658eb8c871d" class="cell" data-execution_count="18">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>esolmet.To.hist(bins<span class="op">=</span><span class="dv">50</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>esolmet.To.hist(bins<span class="op">=</span><span class="dv">50</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -1842,7 +1855,7 @@ Freq: ME, Name: To, dtype: float64</code></pre>
 </div>
 </div>
 <div id="672741ff-67e0-4d91-8a9f-2faa3a739e1e" class="cell" data-execution_count="19">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>deltaTo_diaria</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>deltaTo_diaria</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="19">
 <pre><code>Fecha
 2018-01-31    15.112258
@@ -1929,13 +1942,14 @@ Freq: ME, Name: To, dtype: float64</code></pre>
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
