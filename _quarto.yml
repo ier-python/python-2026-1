@@ -66,6 +66,7 @@ book:
     - clases/uv-git-github.qmd
     - clases/032a_heatmap_mensual_diario.ipynb
     - clases/032b_dia_promedio.ipynb
+    - clases/033_modificar_dataframe.ipynb
 
 format:
   html: 
