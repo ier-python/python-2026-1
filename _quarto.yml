@@ -67,6 +67,7 @@ book:
     - clases/032a_heatmap_mensual_diario.ipynb
     - clases/032b_dia_promedio.ipynb
     - clases/033_modificar_dataframe.ipynb
+    - clases/034_dia_promedio_dias.ipynb
 
 format:
   html: 

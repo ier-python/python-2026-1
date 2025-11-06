@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.25">
+<meta name="generator" content="quarto-1.7.30">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -58,7 +58,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -69,19 +69,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../clases/024_ETL.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-707d8167ce6003fca903bfe2be84ab7f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-de070a7b0ab54f8780927367ac907214.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-2b3e328b71be8d25427581baeb23079b.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-de070a7b0ab54f8780927367ac907214.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-cf2152be41a2e4c556b86648c5ebb4cf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-86014854a496e61009a3305fce3a688e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-cf2152be41a2e4c556b86648c5ebb4cf.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-3fdc0c57fcd691b300e3c41e3e4a687d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-863ab20449d2f3d5951a2e693f5499b5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-3fdc0c57fcd691b300e3c41e3e4a687d.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -96,7 +95,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   ],
   "show-item-context": false,
   "language": {
-    "search-no-results-text": "No se han encontrado resultados",
+    "search-no-results-text": "Sin resultados",
     "search-matching-documents-text": "documentos encontrados",
     "search-copy-link-title": "Copiar el enlace en la búsqueda",
     "search-hide-matches-text": "Ocultar resultados adicionales",
@@ -109,7 +108,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Buscar"
   }
 }</script>
-<script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
 
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
@@ -285,8 +284,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../index.html" class="navbar-brand navbar-brand-logo">
-    </a>
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Proyectos de ciencia de datos con Python</span>
     </a>
@@ -313,10 +310,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
-      <a href="../index.html" class="sidebar-logo-link">
-      </a>
-      </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
@@ -547,6 +540,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">033_modificar_dataframe.html</span></span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../clases/034_dia_promedio_dias.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">38</span>&nbsp; <span class="chapter-title">034_dia_promedio_dias.html</span></span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
@@ -585,17 +584,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <div id="38b4e663-51fa-4bdc-b6db-21d7962d570e" class="cell" data-execution_count="1">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="ca106366-dddf-4167-9ab3-bf322259c25a" class="cell" data-scrolled="true" data-execution_count="2">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span><span class="st">"../data/002_processed/ikiam_Igs.csv"</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>pd.read_csv(f,index_col<span class="op">=</span><span class="dv">0</span>,parse_dates<span class="op">=</span><span class="va">True</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span><span class="st">"../data/002_processed/ikiam_Igs.csv"</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>pd.read_csv(f,index_col<span class="op">=</span><span class="dv">0</span>,parse_dates<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
 <div>
 
 
-<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -610,57 +609,57 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </thead>
 <tbody>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">NaT</th>
+<td data-quarto-table-cell-role="th">NaT</td>
 <td>0.0</td>
 <td>0.0</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">2024-05-11 00:01:00</th>
+<td data-quarto-table-cell-role="th">2024-05-11 00:01:00</td>
 <td>0.0</td>
 <td>0.0</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">2024-05-11 00:02:00</th>
+<td data-quarto-table-cell-role="th">2024-05-11 00:02:00</td>
 <td>0.0</td>
 <td>0.0</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">2024-05-11 00:03:00</th>
+<td data-quarto-table-cell-role="th">2024-05-11 00:03:00</td>
 <td>0.0</td>
 <td>0.0</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">2024-05-11 00:04:00</th>
+<td data-quarto-table-cell-role="th">2024-05-11 00:04:00</td>
 <td>0.0</td>
 <td>0.0</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">...</th>
+<td data-quarto-table-cell-role="th">...</td>
 <td>...</td>
 <td>...</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">2024-12-30 23:56:00</th>
+<td data-quarto-table-cell-role="th">2024-12-30 23:56:00</td>
 <td>0.0</td>
 <td>0.0</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">2024-12-30 23:57:00</th>
+<td data-quarto-table-cell-role="th">2024-12-30 23:57:00</td>
 <td>0.0</td>
 <td>0.0</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">2024-12-30 23:58:00</th>
+<td data-quarto-table-cell-role="th">2024-12-30 23:58:00</td>
 <td>0.0</td>
 <td>0.0</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">2024-12-30 23:59:00</th>
+<td data-quarto-table-cell-role="th">2024-12-30 23:59:00</td>
 <td>0.0</td>
 <td>0.0</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">NaT</th>
+<td data-quarto-table-cell-role="th">NaT</td>
 <td>0.0</td>
 <td>0.0</td>
 </tr>
@@ -672,14 +671,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div id="0083c0f6-0ec4-4be5-b44c-20683ec0efcf" class="cell" data-execution_count="4">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="st">"../data/002_processed/ikiam_Igs.parquet"</span></span>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="st">"../data/002_processed/ikiam_Igs.parquet"</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>Igs <span class="op">=</span> pd.read_parquet(f)</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="st">"../data/002_processed/ikiam_tgs.parquet"</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>tgs <span class="op">=</span> pd.read_parquet(f)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>tgs <span class="op">=</span> pd.read_parquet(f)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="ff204bf0-89f6-4b62-b541-236bccba43c1" class="cell" data-execution_count="5">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>Igs.info()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>Igs.info()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
 DatetimeIndex: 336961 entries, NaT to NaT
@@ -693,12 +692,12 @@ memory usage: 7.7 MB</code></pre>
 </div>
 </div>
 <div id="1c07fd01-ad42-44b7-8ec3-42493848817a" class="cell" data-execution_count="6">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>Igs.describe()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>Igs.describe()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="6">
 <div>
 
 
-<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -708,42 +707,42 @@ memory usage: 7.7 MB</code></pre>
 </thead>
 <tbody>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">count</th>
+<td data-quarto-table-cell-role="th">count</td>
 <td>336961.000000</td>
 <td>276016.000000</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">mean</th>
+<td data-quarto-table-cell-role="th">mean</td>
 <td>0.007940</td>
 <td>124.647292</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">std</th>
+<td data-quarto-table-cell-role="th">std</td>
 <td>0.015134</td>
 <td>229.345926</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">min</th>
+<td data-quarto-table-cell-role="th">min</td>
 <td>0.000000</td>
 <td>0.000000</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">25%</th>
+<td data-quarto-table-cell-role="th">25%</td>
 <td>0.000000</td>
 <td>0.000000</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">50%</th>
+<td data-quarto-table-cell-role="th">50%</td>
 <td>0.000000</td>
 <td>0.760000</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">75%</th>
+<td data-quarto-table-cell-role="th">75%</td>
 <td>0.010000</td>
 <td>145.130000</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">max</th>
+<td data-quarto-table-cell-role="th">max</td>
 <td>0.080000</td>
 <td>1337.520000</td>
 </tr>
@@ -754,7 +753,7 @@ memory usage: 7.7 MB</code></pre>
 </div>
 </div>
 <div id="d55cc491-73d0-4b5c-9c4d-4a041a48f060" class="cell" data-execution_count="8">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>tgs.info()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>tgs.info()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
 DatetimeIndex: 336961 entries, NaT to NaT
@@ -773,12 +772,12 @@ memory usage: 20.6 MB</code></pre>
 </div>
 </div>
 <div id="8f735ef8-1d92-40fe-bcb3-adabcc128029" class="cell" data-execution_count="9">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>tgs.describe()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>tgs.describe()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="9">
 <div>
 
 
-<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -793,7 +792,7 @@ memory usage: 20.6 MB</code></pre>
 </thead>
 <tbody>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">count</th>
+<td data-quarto-table-cell-role="th">count</td>
 <td>276016.000000</td>
 <td>276016.000000</td>
 <td>276016.000000</td>
@@ -803,7 +802,7 @@ memory usage: 20.6 MB</code></pre>
 <td>276016.000000</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">mean</th>
+<td data-quarto-table-cell-role="th">mean</td>
 <td>24.548940</td>
 <td>24.533382</td>
 <td>24.504500</td>
@@ -813,7 +812,7 @@ memory usage: 20.6 MB</code></pre>
 <td>24.522438</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">std</th>
+<td data-quarto-table-cell-role="th">std</td>
 <td>4.649202</td>
 <td>3.813553</td>
 <td>1.985408</td>
@@ -823,7 +822,7 @@ memory usage: 20.6 MB</code></pre>
 <td>0.463283</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">min</th>
+<td data-quarto-table-cell-role="th">min</td>
 <td>17.230000</td>
 <td>18.500000</td>
 <td>20.820000</td>
@@ -833,7 +832,7 @@ memory usage: 20.6 MB</code></pre>
 <td>23.210000</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">25%</th>
+<td data-quarto-table-cell-role="th">25%</td>
 <td>21.600000</td>
 <td>22.110000</td>
 <td>23.190000</td>
@@ -843,7 +842,7 @@ memory usage: 20.6 MB</code></pre>
 <td>24.150000</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">50%</th>
+<td data-quarto-table-cell-role="th">50%</td>
 <td>22.930000</td>
 <td>23.310000</td>
 <td>24.090000</td>
@@ -853,7 +852,7 @@ memory usage: 20.6 MB</code></pre>
 <td>24.430000</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">75%</th>
+<td data-quarto-table-cell-role="th">75%</td>
 <td>25.900000</td>
 <td>25.700000</td>
 <td>25.370000</td>
@@ -863,7 +862,7 @@ memory usage: 20.6 MB</code></pre>
 <td>25.070000</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">max</th>
+<td data-quarto-table-cell-role="th">max</td>
 <td>48.000000</td>
 <td>45.360000</td>
 <td>35.520000</td>
@@ -879,7 +878,7 @@ memory usage: 20.6 MB</code></pre>
 </div>
 </div>
 <div id="912c5788-b8a4-4ddd-b81d-443a3bb5d910" class="cell" data-execution_count="10">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>Igs.plot(subplots<span class="op">=</span><span class="va">True</span>, figsize<span class="op">=</span>(<span class="dv">12</span>,<span class="dv">8</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>Igs.plot(subplots<span class="op">=</span><span class="va">True</span>, figsize<span class="op">=</span>(<span class="dv">12</span>,<span class="dv">8</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="10">
 <pre><code>array([&lt;Axes: xlabel='tiempo'&gt;, &lt;Axes: xlabel='tiempo'&gt;], dtype=object)</code></pre>
 </div>
@@ -892,7 +891,7 @@ memory usage: 20.6 MB</code></pre>
 </div>
 </div>
 <div id="4a4dcc3b-0d19-4da0-99c4-ca87a7d8fa96" class="cell" data-execution_count="11">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>tgs.plot(subplots<span class="op">=</span><span class="va">True</span>,figsize<span class="op">=</span>(<span class="dv">12</span>,<span class="dv">10</span>))<span class="op">;</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>tgs.plot(subplots<span class="op">=</span><span class="va">True</span>,figsize<span class="op">=</span>(<span class="dv">12</span>,<span class="dv">10</span>))<span class="op">;</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -904,12 +903,12 @@ memory usage: 20.6 MB</code></pre>
 <section id="contabilizar-nans-por-mes-y-columna" class="level2">
 <h2 class="anchored" data-anchor-id="contabilizar-nans-por-mes-y-columna">Contabilizar NaNs por mes y columna</h2>
 <div id="2fd8d442-4034-4125-a752-ab529fc3e5be" class="cell" data-execution_count="15">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>Igs.isna().resample(<span class="st">"ME"</span>).<span class="bu">sum</span>()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>Igs.isna().resample(<span class="st">"ME"</span>).<span class="bu">sum</span>()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="15">
 <div>
 
 
-<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -924,42 +923,42 @@ memory usage: 20.6 MB</code></pre>
 </thead>
 <tbody>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">2024-05-31</th>
+<td data-quarto-table-cell-role="th">2024-05-31</td>
 <td>0</td>
 <td>0</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">2024-06-30</th>
+<td data-quarto-table-cell-role="th">2024-06-30</td>
 <td>0</td>
 <td>0</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">2024-07-31</th>
+<td data-quarto-table-cell-role="th">2024-07-31</td>
 <td>0</td>
 <td>0</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">2024-08-31</th>
+<td data-quarto-table-cell-role="th">2024-08-31</td>
 <td>0</td>
 <td>23214</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">2024-09-30</th>
+<td data-quarto-table-cell-role="th">2024-09-30</td>
 <td>0</td>
 <td>37690</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">2024-10-31</th>
+<td data-quarto-table-cell-role="th">2024-10-31</td>
 <td>0</td>
 <td>0</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">2024-11-30</th>
+<td data-quarto-table-cell-role="th">2024-11-30</td>
 <td>0</td>
 <td>0</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">2024-12-31</th>
+<td data-quarto-table-cell-role="th">2024-12-31</td>
 <td>0</td>
 <td>0</td>
 </tr>
@@ -970,12 +969,12 @@ memory usage: 20.6 MB</code></pre>
 </div>
 </div>
 <div id="c00ea089-08c3-4cd7-81a3-52725d57e2ba" class="cell" data-execution_count="16">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>tgs.isna().resample(<span class="st">"ME"</span>).<span class="bu">sum</span>()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>tgs.isna().resample(<span class="st">"ME"</span>).<span class="bu">sum</span>()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="16">
 <div>
 
 
-<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
@@ -1000,7 +999,7 @@ memory usage: 20.6 MB</code></pre>
 </thead>
 <tbody>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">2024-05-31</th>
+<td data-quarto-table-cell-role="th">2024-05-31</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -1010,7 +1009,7 @@ memory usage: 20.6 MB</code></pre>
 <td>0</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">2024-06-30</th>
+<td data-quarto-table-cell-role="th">2024-06-30</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -1020,7 +1019,7 @@ memory usage: 20.6 MB</code></pre>
 <td>0</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">2024-07-31</th>
+<td data-quarto-table-cell-role="th">2024-07-31</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -1030,7 +1029,7 @@ memory usage: 20.6 MB</code></pre>
 <td>0</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">2024-08-31</th>
+<td data-quarto-table-cell-role="th">2024-08-31</td>
 <td>23214</td>
 <td>23214</td>
 <td>23214</td>
@@ -1040,7 +1039,7 @@ memory usage: 20.6 MB</code></pre>
 <td>23214</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">2024-09-30</th>
+<td data-quarto-table-cell-role="th">2024-09-30</td>
 <td>37690</td>
 <td>37690</td>
 <td>37690</td>
@@ -1050,7 +1049,7 @@ memory usage: 20.6 MB</code></pre>
 <td>37690</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">2024-10-31</th>
+<td data-quarto-table-cell-role="th">2024-10-31</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -1060,7 +1059,7 @@ memory usage: 20.6 MB</code></pre>
 <td>0</td>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">2024-11-30</th>
+<td data-quarto-table-cell-role="th">2024-11-30</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -1070,7 +1069,7 @@ memory usage: 20.6 MB</code></pre>
 <td>0</td>
 </tr>
 <tr class="even">
-<th data-quarto-table-cell-role="th">2024-12-31</th>
+<td data-quarto-table-cell-role="th">2024-12-31</td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -1154,14 +1153,13 @@ memory usage: 20.6 MB</code></pre>
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-      const outerScaffold = trigger.parentElement.cloneNode(true);
-      const codeEl = outerScaffold.querySelector('code');
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
         }
-      }
-      return codeEl.innerText;
+        return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
