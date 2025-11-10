@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>32&nbsp; Cosas a calcular – Proyectos de ciencia de datos con Python</title>
+<title>38&nbsp; import numpy as np – Proyectos de ciencia de datos con Python</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -65,8 +65,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../clases/031_importa_exceles.html" rel="next">
-<link href="../clases/029_EDA.html" rel="prev">
+<link href="../clases/033_modificar_dataframe.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -303,7 +302,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../clases/030_amplitud_promedio.html"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">Cosas a calcular</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../clases/034_Clases_metodos.html"><span class="chapter-number">38</span>&nbsp; <span class="chapter-title">034_Clases_metodos.html</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -513,7 +512,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../clases/030_amplitud_promedio.html" class="sidebar-item-text sidebar-link active">
+  <a href="../clases/030_amplitud_promedio.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">Cosas a calcular</span></span></a>
   </div>
 </li>
@@ -549,7 +548,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../clases/034_Clases_metodos.html" class="sidebar-item-text sidebar-link">
+  <a href="../clases/034_Clases_metodos.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">38</span>&nbsp; <span class="chapter-title">034_Clases_metodos.html</span></span></a>
   </div>
 </li>
@@ -558,18 +557,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Tabla de contenidos</h2>
-   
-  <ul>
-  <li><a href="#promedio-mensual-de-to-del-máximo-diario-memo" id="toc-promedio-mensual-de-to-del-máximo-diario-memo" class="nav-link active" data-scroll-target="#promedio-mensual-de-to-del-máximo-diario-memo"><span class="header-section-number">33</span> Promedio mensual de To del máximo diario (memo)</a>
-  <ul class="collapse">
-  <li><a href="#mes-más-cálido-con-la-to-promedio-mensual-lili" id="toc-mes-más-cálido-con-la-to-promedio-mensual-lili" class="nav-link" data-scroll-target="#mes-más-cálido-con-la-to-promedio-mensual-lili">Mes más cálido con la To promedio mensual (Lili)</a></li>
-  </ul></li>
-  <li><a href="#amplitud-diaria-de-la-to-fer-ipn" id="toc-amplitud-diaria-de-la-to-fer-ipn" class="nav-link" data-scroll-target="#amplitud-diaria-de-la-to-fer-ipn"><span class="header-section-number">34</span> Amplitud diaria de la To (Fer ipn)</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -577,7 +566,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">Cosas a calcular</span></h1>
+<h1 class="title"><span class="chapter-number">38</span>&nbsp; <span class="chapter-title">import numpy as np</span></h1>
 </div>
 
 
@@ -594,411 +583,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<ol type="1">
-<li>Promedio mensual de To del máximo diario (memo)</li>
-<li>Mes más cálido con la To promedio mensual (Lili)</li>
-<li>Amplitud diaria de la To (Fer ipn)</li>
-<li>Quartiles mensuales de la Ig (Nairo)</li>
-<li>Calcular la Ib a partir de la Ig, Id (rodolfo)</li>
-<li>Humedad promedio semanal (Luisa)</li>
-<li>Promedio mensual de la To mínima (Mitsue)</li>
-<li>Promedio diario mensual de la velocidad máxima del viento (Andre)</li>
-<li>Promedios mensual de la Ig y su visualización (Laura)</li>
-<li>Calcular la curva de la radiación solar del día más cálido (Fer ier)</li>
-<li>Dia promedio de todas las variables con máximos, minimos y desviacion estándard (yadira)</li>
-<li>Calculo diario/mensual/anual de la energia solar</li>
-<li></li>
-</ol>
-<div id="aaf129d9-f3cc-4960-bd00-e31101b8f32c" class="cell" data-execution_count="1">
+<div id="bd045eb5-4d4f-4a47-8141-395b588eedb6" class="cell" data-execution_count="26">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="8d30f88f-a3c3-48b8-84d0-f890b0abe56e" class="cell" data-execution_count="2">
+<div id="9f4d128b-6571-498f-a033-857128b67f06" class="cell" data-execution_count="4">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="st">"../data/002_processed/esolmet_2018.parquet"</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>esolmet <span class="op">=</span> pd.read_parquet(f)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>To_diaria_promedio <span class="op">=</span> esolmet.To.resample(<span class="st">"D"</span>).mean()</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>esolmet[<span class="st">"amplitud"</span>] <span class="op">=</span> (</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    esolmet.To.resample(<span class="st">"D"</span>).<span class="bu">max</span>() <span class="op">-</span> </span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    esolmet.To.resample(<span class="st">"D"</span>).<span class="bu">min</span>()</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>).resample(<span class="st">"MS"</span>).mean()</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>esolmet[<span class="st">"Tpromedio"</span>] <span class="op">=</span> esolmet.To.resample(<span class="st">"MS"</span>).mean()</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>esolmet.amplitud <span class="op">=</span> esolmet.amplitud.ffill()</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>esolmet.Tpromedio <span class="op">=</span> esolmet.Tpromedio.ffill()</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>esolmet</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="2">
-<div>
-
-
-<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">Ib</th>
-<th data-quarto-table-cell-role="th">Ig</th>
-<th data-quarto-table-cell-role="th">Id</th>
-<th data-quarto-table-cell-role="th">uv</th>
-<th data-quarto-table-cell-role="th">To</th>
-<th data-quarto-table-cell-role="th">hr</th>
-<th data-quarto-table-cell-role="th">ws</th>
-<th data-quarto-table-cell-role="th">p</th>
-<th data-quarto-table-cell-role="th">amplitud</th>
-<th data-quarto-table-cell-role="th">Tpromedio</th>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">Fecha</th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">2018-01-01 00:00:00</th>
-<td>0.057</td>
-<td>0.0</td>
-<td>0.0</td>
-<td>0.001</td>
-<td>18.93</td>
-<td>41.57</td>
-<td>1.253</td>
-<td>879.0692</td>
-<td>15.112258</td>
-<td>20.019848</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">2018-01-01 00:10:00</th>
-<td>0.002</td>
-<td>0.0</td>
-<td>0.0</td>
-<td>0.001</td>
-<td>18.76</td>
-<td>41.00</td>
-<td>0.418</td>
-<td>879.4363</td>
-<td>15.112258</td>
-<td>20.019848</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">2018-01-01 00:20:00</th>
-<td>0.170</td>
-<td>0.0</td>
-<td>0.0</td>
-<td>0.001</td>
-<td>18.92</td>
-<td>40.96</td>
-<td>0.955</td>
-<td>879.5181</td>
-<td>15.112258</td>
-<td>20.019848</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">2018-01-01 00:30:00</th>
-<td>0.371</td>
-<td>0.0</td>
-<td>0.0</td>
-<td>0.001</td>
-<td>18.52</td>
-<td>42.46</td>
-<td>1.823</td>
-<td>879.5826</td>
-<td>15.112258</td>
-<td>20.019848</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">2018-01-01 00:40:00</th>
-<td>0.305</td>
-<td>0.0</td>
-<td>0.0</td>
-<td>0.001</td>
-<td>18.49</td>
-<td>42.43</td>
-<td>2.149</td>
-<td>879.6826</td>
-<td>15.112258</td>
-<td>20.019848</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">...</th>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">2018-12-31 23:10:00</th>
-<td>0.125</td>
-<td>0.0</td>
-<td>0.0</td>
-<td>0.000</td>
-<td>18.88</td>
-<td>59.60</td>
-<td>2.145</td>
-<td>875.5595</td>
-<td>13.576452</td>
-<td>20.362943</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">2018-12-31 23:20:00</th>
-<td>0.000</td>
-<td>0.0</td>
-<td>0.0</td>
-<td>0.000</td>
-<td>18.71</td>
-<td>59.67</td>
-<td>1.638</td>
-<td>875.5595</td>
-<td>13.576452</td>
-<td>20.362943</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">2018-12-31 23:30:00</th>
-<td>0.044</td>
-<td>0.0</td>
-<td>0.0</td>
-<td>0.000</td>
-<td>18.52</td>
-<td>58.75</td>
-<td>1.923</td>
-<td>875.2889</td>
-<td>13.576452</td>
-<td>20.362943</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">2018-12-31 23:40:00</th>
-<td>0.170</td>
-<td>0.0</td>
-<td>0.0</td>
-<td>0.000</td>
-<td>18.36</td>
-<td>60.62</td>
-<td>2.089</td>
-<td>875.0606</td>
-<td>13.576452</td>
-<td>20.362943</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">2018-12-31 23:50:00</th>
-<td>0.003</td>
-<td>0.0</td>
-<td>0.0</td>
-<td>0.000</td>
-<td>17.99</td>
-<td>60.76</td>
-<td>0.744</td>
-<td>875.1424</td>
-<td>13.576452</td>
-<td>20.362943</td>
-</tr>
-</tbody>
-</table>
-
-<p>51173 rows × 10 columns</p>
-</div>
-</div>
-</div>
-<div id="6ea3feac-fca7-4f80-924f-c5e161566e32" class="cell" data-execution_count="3">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>esolmet[<span class="st">"Tpromedio"</span>] <span class="op">=</span> esolmet.To.resample(<span class="st">"MS"</span>).mean()</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>esolmet[<span class="st">"Tpromedio"</span>] <span class="op">=</span> esolmet.Tpromedio.ffill()</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>esolmet</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="3">
-<div>
-
-
-<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">Ib</th>
-<th data-quarto-table-cell-role="th">Ig</th>
-<th data-quarto-table-cell-role="th">Id</th>
-<th data-quarto-table-cell-role="th">uv</th>
-<th data-quarto-table-cell-role="th">To</th>
-<th data-quarto-table-cell-role="th">hr</th>
-<th data-quarto-table-cell-role="th">ws</th>
-<th data-quarto-table-cell-role="th">p</th>
-<th data-quarto-table-cell-role="th">amplitud</th>
-<th data-quarto-table-cell-role="th">Tpromedio</th>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">Fecha</th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">2018-01-01 00:00:00</th>
-<td>0.057</td>
-<td>0.0</td>
-<td>0.0</td>
-<td>0.001</td>
-<td>18.93</td>
-<td>41.57</td>
-<td>1.253</td>
-<td>879.0692</td>
-<td>15.112258</td>
-<td>20.019848</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">2018-01-01 00:10:00</th>
-<td>0.002</td>
-<td>0.0</td>
-<td>0.0</td>
-<td>0.001</td>
-<td>18.76</td>
-<td>41.00</td>
-<td>0.418</td>
-<td>879.4363</td>
-<td>15.112258</td>
-<td>20.019848</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">2018-01-01 00:20:00</th>
-<td>0.170</td>
-<td>0.0</td>
-<td>0.0</td>
-<td>0.001</td>
-<td>18.92</td>
-<td>40.96</td>
-<td>0.955</td>
-<td>879.5181</td>
-<td>15.112258</td>
-<td>20.019848</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">2018-01-01 00:30:00</th>
-<td>0.371</td>
-<td>0.0</td>
-<td>0.0</td>
-<td>0.001</td>
-<td>18.52</td>
-<td>42.46</td>
-<td>1.823</td>
-<td>879.5826</td>
-<td>15.112258</td>
-<td>20.019848</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">2018-01-01 00:40:00</th>
-<td>0.305</td>
-<td>0.0</td>
-<td>0.0</td>
-<td>0.001</td>
-<td>18.49</td>
-<td>42.43</td>
-<td>2.149</td>
-<td>879.6826</td>
-<td>15.112258</td>
-<td>20.019848</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">...</th>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">2018-12-31 23:10:00</th>
-<td>0.125</td>
-<td>0.0</td>
-<td>0.0</td>
-<td>0.000</td>
-<td>18.88</td>
-<td>59.60</td>
-<td>2.145</td>
-<td>875.5595</td>
-<td>13.576452</td>
-<td>20.362943</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">2018-12-31 23:20:00</th>
-<td>0.000</td>
-<td>0.0</td>
-<td>0.0</td>
-<td>0.000</td>
-<td>18.71</td>
-<td>59.67</td>
-<td>1.638</td>
-<td>875.5595</td>
-<td>13.576452</td>
-<td>20.362943</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">2018-12-31 23:30:00</th>
-<td>0.044</td>
-<td>0.0</td>
-<td>0.0</td>
-<td>0.000</td>
-<td>18.52</td>
-<td>58.75</td>
-<td>1.923</td>
-<td>875.2889</td>
-<td>13.576452</td>
-<td>20.362943</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">2018-12-31 23:40:00</th>
-<td>0.170</td>
-<td>0.0</td>
-<td>0.0</td>
-<td>0.000</td>
-<td>18.36</td>
-<td>60.62</td>
-<td>2.089</td>
-<td>875.0606</td>
-<td>13.576452</td>
-<td>20.362943</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">2018-12-31 23:50:00</th>
-<td>0.003</td>
-<td>0.0</td>
-<td>0.0</td>
-<td>0.000</td>
-<td>17.99</td>
-<td>60.76</td>
-<td>0.744</td>
-<td>875.1424</td>
-<td>13.576452</td>
-<td>20.362943</td>
-</tr>
-</tbody>
-</table>
-
-<p>51173 rows × 10 columns</p>
-</div>
-</div>
-</div>
-<div id="8e567086-001d-42b0-a580-fb25a3f7dfaa" class="cell" data-execution_count="4">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>esolmet.loc[<span class="st">"2018-01-31 23:40"</span>:<span class="st">"2018-02-01 01:00"</span>]</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>tmx <span class="op">=</span> pd.read_parquet(f)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>tmx</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display" data-execution_count="4">
 <div>
 
@@ -1015,427 +607,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <th data-quarto-table-cell-role="th">hr</th>
 <th data-quarto-table-cell-role="th">ws</th>
 <th data-quarto-table-cell-role="th">p</th>
-<th data-quarto-table-cell-role="th">amplitud</th>
-<th data-quarto-table-cell-role="th">Tpromedio</th>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">Fecha</th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">2018-01-31 23:40:00</th>
-<td>0.081</td>
-<td>0.0</td>
-<td>0.0</td>
-<td>0.001</td>
-<td>15.28</td>
-<td>53.26</td>
-<td>2.083</td>
-<td>878.6181</td>
-<td>15.112258</td>
-<td>20.019848</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">2018-01-31 23:50:00</th>
-<td>0.075</td>
-<td>0.0</td>
-<td>0.0</td>
-<td>0.001</td>
-<td>15.32</td>
-<td>52.38</td>
-<td>2.500</td>
-<td>878.3397</td>
-<td>15.112258</td>
-<td>20.019848</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">2018-02-01 00:00:00</th>
-<td>0.003</td>
-<td>0.0</td>
-<td>0.0</td>
-<td>0.001</td>
-<td>15.38</td>
-<td>53.71</td>
-<td>1.531</td>
-<td>878.2341</td>
-<td>15.353929</td>
-<td>23.522289</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">2018-02-01 00:00:00</th>
-<td>0.003</td>
-<td>0.0</td>
-<td>0.0</td>
-<td>0.001</td>
-<td>15.38</td>
-<td>53.71</td>
-<td>1.531</td>
-<td>878.2341</td>
-<td>15.353929</td>
-<td>23.522289</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">2018-02-01 00:10:00</th>
-<td>0.313</td>
-<td>0.0</td>
-<td>0.0</td>
-<td>0.001</td>
-<td>15.71</td>
-<td>50.03</td>
-<td>2.339</td>
-<td>878.1605</td>
-<td>15.353929</td>
-<td>23.522289</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">2018-02-01 00:20:00</th>
-<td>0.029</td>
-<td>0.0</td>
-<td>0.0</td>
-<td>0.001</td>
-<td>15.57</td>
-<td>51.52</td>
-<td>2.836</td>
-<td>877.9796</td>
-<td>15.353929</td>
-<td>23.522289</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">2018-02-01 00:30:00</th>
-<td>0.013</td>
-<td>0.0</td>
-<td>0.0</td>
-<td>0.001</td>
-<td>15.23</td>
-<td>52.00</td>
-<td>2.780</td>
-<td>877.9725</td>
-<td>15.353929</td>
-<td>23.522289</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">2018-02-01 00:40:00</th>
-<td>0.001</td>
-<td>0.0</td>
-<td>0.0</td>
-<td>0.001</td>
-<td>15.28</td>
-<td>51.80</td>
-<td>2.541</td>
-<td>878.0463</td>
-<td>15.353929</td>
-<td>23.522289</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">2018-02-01 00:50:00</th>
-<td>0.065</td>
-<td>0.0</td>
-<td>0.0</td>
-<td>0.001</td>
-<td>15.38</td>
-<td>50.84</td>
-<td>2.434</td>
-<td>878.1319</td>
-<td>15.353929</td>
-<td>23.522289</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">2018-02-01 01:00:00</th>
-<td>0.086</td>
-<td>0.0</td>
-<td>0.0</td>
-<td>0.001</td>
-<td>15.41</td>
-<td>51.53</td>
-<td>2.271</td>
-<td>878.2111</td>
-<td>15.353929</td>
-<td>23.522289</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
-</div>
-<div id="58b4de03-c053-4e2b-ac89-0fc0b31cb929" class="cell" data-execution_count="5">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>esolmet.loc[<span class="st">"2018-01-31 00:00"</span>:<span class="st">"2018-02-01 01:00"</span>]</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="5">
-<div>
-
-
-<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">Ib</th>
-<th data-quarto-table-cell-role="th">Ig</th>
-<th data-quarto-table-cell-role="th">Id</th>
-<th data-quarto-table-cell-role="th">uv</th>
-<th data-quarto-table-cell-role="th">To</th>
-<th data-quarto-table-cell-role="th">hr</th>
-<th data-quarto-table-cell-role="th">ws</th>
-<th data-quarto-table-cell-role="th">p</th>
-<th data-quarto-table-cell-role="th">amplitud</th>
-<th data-quarto-table-cell-role="th">Tpromedio</th>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">Fecha</th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">2018-01-31 00:00:00</th>
-<td>0.264</td>
-<td>0.0</td>
-<td>0.0</td>
-<td>0.001</td>
-<td>14.04</td>
-<td>42.97</td>
-<td>2.628</td>
-<td>879.9633</td>
-<td>15.112258</td>
-<td>20.019848</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">2018-01-31 00:10:00</th>
-<td>0.138</td>
-<td>0.0</td>
-<td>0.0</td>
-<td>0.001</td>
-<td>14.12</td>
-<td>43.45</td>
-<td>2.650</td>
-<td>880.0983</td>
-<td>15.112258</td>
-<td>20.019848</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">2018-01-31 00:20:00</th>
-<td>0.000</td>
-<td>0.0</td>
-<td>0.0</td>
-<td>0.001</td>
-<td>14.03</td>
-<td>43.86</td>
-<td>1.230</td>
-<td>880.0222</td>
-<td>15.112258</td>
-<td>20.019848</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">2018-01-31 00:30:00</th>
-<td>0.000</td>
-<td>0.0</td>
-<td>0.0</td>
-<td>0.001</td>
-<td>13.59</td>
-<td>44.24</td>
-<td>2.009</td>
-<td>879.8823</td>
-<td>15.112258</td>
-<td>20.019848</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">2018-01-31 00:40:00</th>
-<td>0.005</td>
-<td>0.0</td>
-<td>0.0</td>
-<td>0.001</td>
-<td>13.74</td>
-<td>44.24</td>
-<td>1.560</td>
-<td>879.8358</td>
-<td>15.112258</td>
-<td>20.019848</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">...</th>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">2018-02-01 00:20:00</th>
-<td>0.029</td>
-<td>0.0</td>
-<td>0.0</td>
-<td>0.001</td>
-<td>15.57</td>
-<td>51.52</td>
-<td>2.836</td>
-<td>877.9796</td>
-<td>15.353929</td>
-<td>23.522289</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">2018-02-01 00:30:00</th>
-<td>0.013</td>
-<td>0.0</td>
-<td>0.0</td>
-<td>0.001</td>
-<td>15.23</td>
-<td>52.00</td>
-<td>2.780</td>
-<td>877.9725</td>
-<td>15.353929</td>
-<td>23.522289</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">2018-02-01 00:40:00</th>
-<td>0.001</td>
-<td>0.0</td>
-<td>0.0</td>
-<td>0.001</td>
-<td>15.28</td>
-<td>51.80</td>
-<td>2.541</td>
-<td>878.0463</td>
-<td>15.353929</td>
-<td>23.522289</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">2018-02-01 00:50:00</th>
-<td>0.065</td>
-<td>0.0</td>
-<td>0.0</td>
-<td>0.001</td>
-<td>15.38</td>
-<td>50.84</td>
-<td>2.434</td>
-<td>878.1319</td>
-<td>15.353929</td>
-<td>23.522289</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">2018-02-01 01:00:00</th>
-<td>0.086</td>
-<td>0.0</td>
-<td>0.0</td>
-<td>0.001</td>
-<td>15.41</td>
-<td>51.53</td>
-<td>2.271</td>
-<td>878.2111</td>
-<td>15.353929</td>
-<td>23.522289</td>
-</tr>
-</tbody>
-</table>
-
-<p>152 rows × 10 columns</p>
-</div>
-</div>
-</div>
-<section id="promedio-mensual-de-to-del-máximo-diario-memo" class="level1" data-number="33">
-<h1 data-number="33"><span class="header-section-number">33</span> Promedio mensual de To del máximo diario (memo)</h1>
-<div id="2c8617af-cc7a-4ee3-909b-7359f81b47e4" class="cell" data-execution_count="6">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>esolmet.To.resample(<span class="st">"D"</span>).<span class="bu">max</span>()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="6">
-<pre><code>Fecha
-2018-01-01    29.30
-2018-01-02    28.89
-2018-01-03    28.12
-2018-01-04    28.30
-2018-01-05    29.57
-              ...  
-2018-12-27    26.92
-2018-12-28    27.70
-2018-12-29    30.01
-2018-12-30    27.76
-2018-12-31    27.31
-Freq: D, Name: To, Length: 365, dtype: float64</code></pre>
-</div>
-</div>
-<div id="87f1dc37-0201-4c37-964d-280a44382334" class="cell" data-execution_count="7">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>esolmet.To.resample(<span class="st">"D"</span>).<span class="bu">max</span>().resample(<span class="st">"ME"</span>).mean()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="7">
-<pre><code>Fecha
-2018-01-31    28.455484
-2018-02-28    31.873929
-2018-03-31    34.029355
-2018-04-30    33.984333
-2018-05-31    31.782333
-2018-06-30    30.436667
-2018-07-31    29.096774
-2018-08-31    28.932258
-2018-09-30    28.838333
-2018-10-31    29.023871
-2018-11-30    27.871667
-2018-12-31    27.880645
-Freq: ME, Name: To, dtype: float64</code></pre>
-</div>
-</div>
-<div id="63fef82c-a98f-4a13-bb52-15c4a2b85279" class="cell" data-execution_count="8">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">12</span>,<span class="dv">4</span>))</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>ax.plot(esolmet.To.resample(<span class="st">"D"</span>).<span class="bu">max</span>().resample(<span class="st">"ME"</span>).mean(),<span class="st">"ro-"</span>,label<span class="op">=</span><span class="st">"Tmax"</span>)</span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>ax.plot(esolmet.To.resample(<span class="st">"D"</span>).<span class="bu">max</span>().resample(<span class="st">"ME"</span>).<span class="bu">max</span>(),<span class="st">"ro-"</span>,label<span class="op">=</span><span class="st">""</span>,alpha<span class="op">=</span><span class="fl">0.2</span>)</span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>ax.plot(esolmet.To,<span class="st">"r-"</span>,label<span class="op">=</span><span class="st">""</span>,alpha<span class="op">=</span><span class="fl">0.1</span>)</span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>ax.legend()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="030_amplitud_promedio_files/figure-html/cell-10-output-1.png" class="img-fluid figure-img"></p>
-</figure>
-</div>
-</div>
-</div>
-<div id="484ec105-d073-4993-9248-9159460b72cc" class="cell" data-execution_count="9">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>esolmet</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="9">
-<div>
-
-
-<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">Ib</th>
-<th data-quarto-table-cell-role="th">Ig</th>
-<th data-quarto-table-cell-role="th">Id</th>
-<th data-quarto-table-cell-role="th">uv</th>
-<th data-quarto-table-cell-role="th">To</th>
-<th data-quarto-table-cell-role="th">hr</th>
-<th data-quarto-table-cell-role="th">ws</th>
-<th data-quarto-table-cell-role="th">p</th>
-<th data-quarto-table-cell-role="th">amplitud</th>
-<th data-quarto-table-cell-role="th">Tpromedio</th>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">Fecha</th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th"></th>
@@ -1457,8 +631,6 @@ Freq: ME, Name: To, dtype: float64</code></pre>
 <td>41.57</td>
 <td>1.253</td>
 <td>879.0692</td>
-<td>15.112258</td>
-<td>20.019848</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">2018-01-01 00:10:00</th>
@@ -1470,8 +642,6 @@ Freq: ME, Name: To, dtype: float64</code></pre>
 <td>41.00</td>
 <td>0.418</td>
 <td>879.4363</td>
-<td>15.112258</td>
-<td>20.019848</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">2018-01-01 00:20:00</th>
@@ -1483,8 +653,6 @@ Freq: ME, Name: To, dtype: float64</code></pre>
 <td>40.96</td>
 <td>0.955</td>
 <td>879.5181</td>
-<td>15.112258</td>
-<td>20.019848</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">2018-01-01 00:30:00</th>
@@ -1496,8 +664,6 @@ Freq: ME, Name: To, dtype: float64</code></pre>
 <td>42.46</td>
 <td>1.823</td>
 <td>879.5826</td>
-<td>15.112258</td>
-<td>20.019848</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">2018-01-01 00:40:00</th>
@@ -1509,13 +675,9 @@ Freq: ME, Name: To, dtype: float64</code></pre>
 <td>42.43</td>
 <td>2.149</td>
 <td>879.6826</td>
-<td>15.112258</td>
-<td>20.019848</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">...</th>
-<td>...</td>
-<td>...</td>
 <td>...</td>
 <td>...</td>
 <td>...</td>
@@ -1535,8 +697,6 @@ Freq: ME, Name: To, dtype: float64</code></pre>
 <td>59.60</td>
 <td>2.145</td>
 <td>875.5595</td>
-<td>13.576452</td>
-<td>20.362943</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">2018-12-31 23:20:00</th>
@@ -1548,8 +708,6 @@ Freq: ME, Name: To, dtype: float64</code></pre>
 <td>59.67</td>
 <td>1.638</td>
 <td>875.5595</td>
-<td>13.576452</td>
-<td>20.362943</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">2018-12-31 23:30:00</th>
@@ -1561,8 +719,6 @@ Freq: ME, Name: To, dtype: float64</code></pre>
 <td>58.75</td>
 <td>1.923</td>
 <td>875.2889</td>
-<td>13.576452</td>
-<td>20.362943</td>
 </tr>
 <tr class="even">
 <th data-quarto-table-cell-role="th">2018-12-31 23:40:00</th>
@@ -1574,8 +730,6 @@ Freq: ME, Name: To, dtype: float64</code></pre>
 <td>60.62</td>
 <td>2.089</td>
 <td>875.0606</td>
-<td>13.576452</td>
-<td>20.362943</td>
 </tr>
 <tr class="odd">
 <th data-quarto-table-cell-role="th">2018-12-31 23:50:00</th>
@@ -1587,307 +741,590 @@ Freq: ME, Name: To, dtype: float64</code></pre>
 <td>60.76</td>
 <td>0.744</td>
 <td>875.1424</td>
-<td>13.576452</td>
-<td>20.362943</td>
 </tr>
 </tbody>
 </table>
 
-<p>51173 rows × 10 columns</p>
+<p>51173 rows × 8 columns</p>
 </div>
 </div>
 </div>
-<section id="mes-más-cálido-con-la-to-promedio-mensual-lili" class="level2">
-<h2 class="anchored" data-anchor-id="mes-más-cálido-con-la-to-promedio-mensual-lili">Mes más cálido con la To promedio mensual (Lili)</h2>
-<div id="38369028-66b3-4553-b160-0d2c2f4f035b" class="cell" data-execution_count="10">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>esolmet.To.resample(<span class="st">"ME"</span>).mean().<span class="bu">max</span>(),  esolmet.To.resample(<span class="st">"ME"</span>).mean().idxmax()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="10">
-<pre><code>(np.float64(26.052599537037036), Timestamp('2018-04-30 00:00:00'))</code></pre>
+<div id="114dfcf9-14fb-4293-a7e6-27dc1b5c2174" class="cell" data-execution_count="67">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> analisis_meteo:</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>,filepath,lat, lon):</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>        <span class="co"># self.data =  self._limpia_csv(f)</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.data <span class="op">=</span> pd.read_parquet(filepath)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.lat <span class="op">=</span> lat</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.lon <span class="op">=</span> lon</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>._estatica <span class="op">=</span> <span class="dv">225</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> grafica_columna(<span class="va">self</span>,columna<span class="op">=</span><span class="st">"To"</span>):</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>        fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">12</span>,<span class="dv">3</span>))</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>        ax.plot(<span class="va">self</span>.data[columna])</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>        <span class="co"># ax.set_ylim(0,self._estatica)</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>        plt.show()</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> promedios_mensuales(<span class="va">self</span>,columna<span class="op">=</span><span class="st">"To"</span>):</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">self</span>.data[columna].resample(<span class="st">"ME"</span>).mean()</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> _limpia_csv(<span class="va">self</span>,filepath):</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>        <span class="cf">pass</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>temix <span class="op">=</span> analisis_meteo(<span class="st">"../data/002_processed/esolmet_2018.parquet"</span>,lat<span class="op">=</span><span class="fl">18.9</span>,lon<span class="op">=-</span><span class="dv">99</span>)   </span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="co"># wswd = analisis_meteo("../data/002_processed/esolmet_ruoaWSWD_2018.parquet",lat=18.9,lon=-99)   </span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="42df7319-8c12-4720-aa80-6a27dd788a4d" class="cell" data-execution_count="68">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>temix._estatica</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="68">
+<pre><code>225</code></pre>
 </div>
 </div>
-<div id="cda0348b-2529-491d-9287-51e2d4dcbee6" class="cell" data-execution_count="11">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> identifica_To_mes_calido(esolmet:pd.DataFrame, columna:<span class="bu">str</span> <span class="op">=</span> <span class="st">"To"</span>)<span class="op">-&gt;</span> (<span class="bu">float</span>, <span class="bu">float</span>):</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Recibe un df que tiene un indice que es datetime </span></span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="co">    y regresa en una tupla el valor máximo promedio To_max y el mes en el que sucede mes_max</span></span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>    To_max <span class="op">=</span> esolmet[columna].resample(<span class="st">"ME"</span>).mean().<span class="bu">max</span>()</span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>    mes_calido <span class="op">=</span> esolmet[columna].resample(<span class="st">"ME"</span>).mean().idxmax().month</span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> To_max, mes_calido</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<div id="d9d03868-9afe-4414-9106-f2bfa5a95919" class="cell" data-execution_count="12">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>maximos <span class="op">=</span> identifica_To_mes_calido(esolmet,columna<span class="op">=</span><span class="st">"hr"</span>)</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>maximos</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="12">
-<pre><code>(np.float64(74.50158759546402), 9)</code></pre>
-</div>
-</div>
-<div id="75df72a0-6723-479c-b2e7-116f9cfc9871" class="cell" data-execution_count="13">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>To_max, mes_max <span class="op">=</span> identifica_To_mes_calido(esolmet,columna<span class="op">=</span><span class="st">"hr"</span>)</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="co"># print(To_max)</span></span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="co"># print(mes_max)</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</section>
-</section>
-<section id="amplitud-diaria-de-la-to-fer-ipn" class="level1" data-number="34">
-<h1 data-number="34"><span class="header-section-number">34</span> Amplitud diaria de la To (Fer ipn)</h1>
-<div id="d0c1969a-d919-45d4-add2-972d26b70109" class="cell" data-execution_count="14">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>deltaTo_diaria <span class="op">=</span> esolmet.To.resample(<span class="st">"D"</span>).<span class="bu">max</span>() <span class="op">-</span> esolmet.To.resample(<span class="st">"D"</span>).<span class="bu">min</span>()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<div id="9d94beab-57cd-4ebd-9983-3609471bf2a5" class="cell" data-execution_count="15">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">12</span>,<span class="dv">4</span>))</span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>ax.plot(esolmet.To.resample(<span class="st">"D"</span>).mean() <span class="op">+</span> deltaTo_diaria<span class="op">/</span><span class="dv">2</span>,<span class="st">"r-"</span>,label<span class="op">=</span><span class="st">""</span>)</span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>ax.plot(esolmet.To.resample(<span class="st">"D"</span>).mean() <span class="op">-</span> deltaTo_diaria<span class="op">/</span><span class="dv">2</span>,<span class="st">"r-"</span>,label<span class="op">=</span><span class="st">""</span>)</span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>ax.plot(esolmet.To.resample(<span class="st">"D"</span>).mean())</span>
-<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>ax.plot(esolmet.To, alpha<span class="op">=</span><span class="fl">0.2</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="96d79731-10be-4e68-abc7-24b7cfb16ddf" class="cell" data-execution_count="69">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>temix.grafica_columna()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="030_amplitud_promedio_files/figure-html/cell-17-output-1.png" class="img-fluid figure-img"></p>
+<p><img src="034_Clases_metodos_files/figure-html/cell-6-output-1.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>
 </div>
-<div id="b6ff082a-0dac-4555-a66b-06f9291e5512" class="cell" data-execution_count="16">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>esolmet</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="16">
-<div>
-
-
-<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">Ib</th>
-<th data-quarto-table-cell-role="th">Ig</th>
-<th data-quarto-table-cell-role="th">Id</th>
-<th data-quarto-table-cell-role="th">uv</th>
-<th data-quarto-table-cell-role="th">To</th>
-<th data-quarto-table-cell-role="th">hr</th>
-<th data-quarto-table-cell-role="th">ws</th>
-<th data-quarto-table-cell-role="th">p</th>
-<th data-quarto-table-cell-role="th">amplitud</th>
-<th data-quarto-table-cell-role="th">Tpromedio</th>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">Fecha</th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th"></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">2018-01-01 00:00:00</th>
-<td>0.057</td>
-<td>0.0</td>
-<td>0.0</td>
-<td>0.001</td>
-<td>18.93</td>
-<td>41.57</td>
-<td>1.253</td>
-<td>879.0692</td>
-<td>15.112258</td>
-<td>20.019848</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">2018-01-01 00:10:00</th>
-<td>0.002</td>
-<td>0.0</td>
-<td>0.0</td>
-<td>0.001</td>
-<td>18.76</td>
-<td>41.00</td>
-<td>0.418</td>
-<td>879.4363</td>
-<td>15.112258</td>
-<td>20.019848</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">2018-01-01 00:20:00</th>
-<td>0.170</td>
-<td>0.0</td>
-<td>0.0</td>
-<td>0.001</td>
-<td>18.92</td>
-<td>40.96</td>
-<td>0.955</td>
-<td>879.5181</td>
-<td>15.112258</td>
-<td>20.019848</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">2018-01-01 00:30:00</th>
-<td>0.371</td>
-<td>0.0</td>
-<td>0.0</td>
-<td>0.001</td>
-<td>18.52</td>
-<td>42.46</td>
-<td>1.823</td>
-<td>879.5826</td>
-<td>15.112258</td>
-<td>20.019848</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">2018-01-01 00:40:00</th>
-<td>0.305</td>
-<td>0.0</td>
-<td>0.0</td>
-<td>0.001</td>
-<td>18.49</td>
-<td>42.43</td>
-<td>2.149</td>
-<td>879.6826</td>
-<td>15.112258</td>
-<td>20.019848</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">...</th>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-<td>...</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">2018-12-31 23:10:00</th>
-<td>0.125</td>
-<td>0.0</td>
-<td>0.0</td>
-<td>0.000</td>
-<td>18.88</td>
-<td>59.60</td>
-<td>2.145</td>
-<td>875.5595</td>
-<td>13.576452</td>
-<td>20.362943</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">2018-12-31 23:20:00</th>
-<td>0.000</td>
-<td>0.0</td>
-<td>0.0</td>
-<td>0.000</td>
-<td>18.71</td>
-<td>59.67</td>
-<td>1.638</td>
-<td>875.5595</td>
-<td>13.576452</td>
-<td>20.362943</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">2018-12-31 23:30:00</th>
-<td>0.044</td>
-<td>0.0</td>
-<td>0.0</td>
-<td>0.000</td>
-<td>18.52</td>
-<td>58.75</td>
-<td>1.923</td>
-<td>875.2889</td>
-<td>13.576452</td>
-<td>20.362943</td>
-</tr>
-<tr class="even">
-<th data-quarto-table-cell-role="th">2018-12-31 23:40:00</th>
-<td>0.170</td>
-<td>0.0</td>
-<td>0.0</td>
-<td>0.000</td>
-<td>18.36</td>
-<td>60.62</td>
-<td>2.089</td>
-<td>875.0606</td>
-<td>13.576452</td>
-<td>20.362943</td>
-</tr>
-<tr class="odd">
-<th data-quarto-table-cell-role="th">2018-12-31 23:50:00</th>
-<td>0.003</td>
-<td>0.0</td>
-<td>0.0</td>
-<td>0.000</td>
-<td>17.99</td>
-<td>60.76</td>
-<td>0.744</td>
-<td>875.1424</td>
-<td>13.576452</td>
-<td>20.362943</td>
-</tr>
-</tbody>
-</table>
-
-<p>51173 rows × 10 columns</p>
+<div id="b5c26560-02c0-4b20-9653-a0bdb794ec9d" class="cell" data-execution_count="55">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">dir</span>(df_wswd)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="55">
+<pre><code>['Ib',
+ 'Id',
+ 'Ig',
+ 'T',
+ 'To',
+ '_AXIS_LEN',
+ '_AXIS_ORDERS',
+ '_AXIS_TO_AXIS_NUMBER',
+ '_HANDLED_TYPES',
+ '__abs__',
+ '__add__',
+ '__and__',
+ '__annotations__',
+ '__array__',
+ '__array_priority__',
+ '__array_ufunc__',
+ '__arrow_c_stream__',
+ '__bool__',
+ '__class__',
+ '__contains__',
+ '__copy__',
+ '__dataframe__',
+ '__dataframe_consortium_standard__',
+ '__deepcopy__',
+ '__delattr__',
+ '__delitem__',
+ '__dict__',
+ '__dir__',
+ '__divmod__',
+ '__doc__',
+ '__eq__',
+ '__finalize__',
+ '__floordiv__',
+ '__format__',
+ '__ge__',
+ '__getattr__',
+ '__getattribute__',
+ '__getitem__',
+ '__getstate__',
+ '__gt__',
+ '__hash__',
+ '__iadd__',
+ '__iand__',
+ '__ifloordiv__',
+ '__imod__',
+ '__imul__',
+ '__init__',
+ '__init_subclass__',
+ '__invert__',
+ '__ior__',
+ '__ipow__',
+ '__isub__',
+ '__iter__',
+ '__itruediv__',
+ '__ixor__',
+ '__le__',
+ '__len__',
+ '__lt__',
+ '__matmul__',
+ '__mod__',
+ '__module__',
+ '__mul__',
+ '__ne__',
+ '__neg__',
+ '__new__',
+ '__nonzero__',
+ '__or__',
+ '__pandas_priority__',
+ '__pos__',
+ '__pow__',
+ '__radd__',
+ '__rand__',
+ '__rdivmod__',
+ '__reduce__',
+ '__reduce_ex__',
+ '__repr__',
+ '__rfloordiv__',
+ '__rmatmul__',
+ '__rmod__',
+ '__rmul__',
+ '__ror__',
+ '__round__',
+ '__rpow__',
+ '__rsub__',
+ '__rtruediv__',
+ '__rxor__',
+ '__setattr__',
+ '__setitem__',
+ '__setstate__',
+ '__sizeof__',
+ '__str__',
+ '__sub__',
+ '__subclasshook__',
+ '__truediv__',
+ '__weakref__',
+ '__xor__',
+ '_accessors',
+ '_accum_func',
+ '_agg_examples_doc',
+ '_agg_see_also_doc',
+ '_align_for_op',
+ '_align_frame',
+ '_align_series',
+ '_append',
+ '_arith_method',
+ '_arith_method_with_reindex',
+ '_as_manager',
+ '_attrs',
+ '_box_col_values',
+ '_can_fast_transpose',
+ '_check_inplace_and_allows_duplicate_labels',
+ '_check_is_chained_assignment_possible',
+ '_check_label_or_level_ambiguity',
+ '_check_setitem_copy',
+ '_clear_item_cache',
+ '_clip_with_one_bound',
+ '_clip_with_scalar',
+ '_cmp_method',
+ '_combine_frame',
+ '_consolidate',
+ '_consolidate_inplace',
+ '_construct_axes_dict',
+ '_construct_result',
+ '_constructor',
+ '_constructor_from_mgr',
+ '_constructor_sliced',
+ '_constructor_sliced_from_mgr',
+ '_create_data_for_split_and_tight_to_dict',
+ '_data',
+ '_deprecate_downcast',
+ '_dir_additions',
+ '_dir_deletions',
+ '_dispatch_frame_op',
+ '_drop_axis',
+ '_drop_labels_or_levels',
+ '_ensure_valid_index',
+ '_find_valid_index',
+ '_flags',
+ '_flex_arith_method',
+ '_flex_cmp_method',
+ '_from_arrays',
+ '_from_mgr',
+ '_get_agg_axis',
+ '_get_axis',
+ '_get_axis_name',
+ '_get_axis_number',
+ '_get_axis_resolvers',
+ '_get_block_manager_axis',
+ '_get_bool_data',
+ '_get_cleaned_column_resolvers',
+ '_get_column_array',
+ '_get_index_resolvers',
+ '_get_item_cache',
+ '_get_label_or_level_values',
+ '_get_numeric_data',
+ '_get_value',
+ '_get_values_for_csv',
+ '_getitem_bool_array',
+ '_getitem_multilevel',
+ '_getitem_nocopy',
+ '_getitem_slice',
+ '_gotitem',
+ '_hidden_attrs',
+ '_indexed_same',
+ '_info_axis',
+ '_info_axis_name',
+ '_info_axis_number',
+ '_info_repr',
+ '_init_mgr',
+ '_inplace_method',
+ '_internal_names',
+ '_internal_names_set',
+ '_is_copy',
+ '_is_homogeneous_type',
+ '_is_label_or_level_reference',
+ '_is_label_reference',
+ '_is_level_reference',
+ '_is_mixed_type',
+ '_is_view',
+ '_is_view_after_cow_rules',
+ '_iset_item',
+ '_iset_item_mgr',
+ '_iset_not_inplace',
+ '_item_cache',
+ '_iter_column_arrays',
+ '_ixs',
+ '_logical_func',
+ '_logical_method',
+ '_maybe_align_series_as_frame',
+ '_maybe_cache_changed',
+ '_maybe_update_cacher',
+ '_metadata',
+ '_mgr',
+ '_min_count_stat_function',
+ '_needs_reindex_multi',
+ '_pad_or_backfill',
+ '_protect_consolidate',
+ '_reduce',
+ '_reduce_axis1',
+ '_reindex_axes',
+ '_reindex_multi',
+ '_reindex_with_indexers',
+ '_rename',
+ '_replace_columnwise',
+ '_repr_data_resource_',
+ '_repr_fits_horizontal_',
+ '_repr_fits_vertical_',
+ '_repr_html_',
+ '_repr_latex_',
+ '_reset_cache',
+ '_reset_cacher',
+ '_sanitize_column',
+ '_series',
+ '_set_axis',
+ '_set_axis_name',
+ '_set_axis_nocheck',
+ '_set_is_copy',
+ '_set_item',
+ '_set_item_frame_value',
+ '_set_item_mgr',
+ '_set_value',
+ '_setitem_array',
+ '_setitem_frame',
+ '_setitem_slice',
+ '_shift_with_freq',
+ '_should_reindex_frame_op',
+ '_slice',
+ '_stat_function',
+ '_stat_function_ddof',
+ '_take_with_is_copy',
+ '_to_dict_of_blocks',
+ '_to_latex_via_styler',
+ '_typ',
+ '_update_inplace',
+ '_validate_dtype',
+ '_values',
+ '_where',
+ 'abs',
+ 'add',
+ 'add_prefix',
+ 'add_suffix',
+ 'agg',
+ 'aggregate',
+ 'align',
+ 'all',
+ 'any',
+ 'apply',
+ 'applymap',
+ 'asfreq',
+ 'asof',
+ 'assign',
+ 'astype',
+ 'at',
+ 'at_time',
+ 'attrs',
+ 'axes',
+ 'backfill',
+ 'between_time',
+ 'bfill',
+ 'bool',
+ 'boxplot',
+ 'clip',
+ 'columns',
+ 'combine',
+ 'combine_first',
+ 'compare',
+ 'convert_dtypes',
+ 'copy',
+ 'corr',
+ 'corrwith',
+ 'count',
+ 'cov',
+ 'cummax',
+ 'cummin',
+ 'cumprod',
+ 'cumsum',
+ 'describe',
+ 'diff',
+ 'div',
+ 'divide',
+ 'dot',
+ 'drop',
+ 'drop_duplicates',
+ 'droplevel',
+ 'dropna',
+ 'dtypes',
+ 'duplicated',
+ 'empty',
+ 'eq',
+ 'equals',
+ 'eval',
+ 'ewm',
+ 'expanding',
+ 'explode',
+ 'ffill',
+ 'fillna',
+ 'filter',
+ 'first',
+ 'first_valid_index',
+ 'flags',
+ 'floordiv',
+ 'from_dict',
+ 'from_records',
+ 'ge',
+ 'get',
+ 'groupby',
+ 'gt',
+ 'head',
+ 'hist',
+ 'hr',
+ 'iat',
+ 'idxmax',
+ 'idxmin',
+ 'iloc',
+ 'index',
+ 'infer_objects',
+ 'info',
+ 'insert',
+ 'interpolate',
+ 'isetitem',
+ 'isin',
+ 'isna',
+ 'isnull',
+ 'items',
+ 'iterrows',
+ 'itertuples',
+ 'join',
+ 'keys',
+ 'kurt',
+ 'kurtosis',
+ 'last',
+ 'last_valid_index',
+ 'le',
+ 'loc',
+ 'lt',
+ 'map',
+ 'mask',
+ 'max',
+ 'mean',
+ 'median',
+ 'melt',
+ 'memory_usage',
+ 'merge',
+ 'min',
+ 'mod',
+ 'mode',
+ 'mul',
+ 'multiply',
+ 'ndim',
+ 'ne',
+ 'nlargest',
+ 'notna',
+ 'notnull',
+ 'nsmallest',
+ 'nunique',
+ 'p',
+ 'pad',
+ 'pct_change',
+ 'pipe',
+ 'pivot',
+ 'pivot_table',
+ 'plot',
+ 'pop',
+ 'pow',
+ 'prod',
+ 'product',
+ 'quantile',
+ 'query',
+ 'radd',
+ 'rank',
+ 'rdiv',
+ 'reindex',
+ 'reindex_like',
+ 'rename',
+ 'rename_axis',
+ 'reorder_levels',
+ 'replace',
+ 'resample',
+ 'reset_index',
+ 'rfloordiv',
+ 'rmod',
+ 'rmul',
+ 'rolling',
+ 'round',
+ 'rpow',
+ 'rsub',
+ 'rtruediv',
+ 'sample',
+ 'select_dtypes',
+ 'sem',
+ 'set_axis',
+ 'set_flags',
+ 'set_index',
+ 'shape',
+ 'shift',
+ 'size',
+ 'skew',
+ 'sort_index',
+ 'sort_values',
+ 'squeeze',
+ 'stack',
+ 'std',
+ 'style',
+ 'sub',
+ 'subtract',
+ 'sum',
+ 'swapaxes',
+ 'swaplevel',
+ 'tail',
+ 'take',
+ 'to_clipboard',
+ 'to_csv',
+ 'to_dict',
+ 'to_excel',
+ 'to_feather',
+ 'to_gbq',
+ 'to_hdf',
+ 'to_html',
+ 'to_json',
+ 'to_latex',
+ 'to_markdown',
+ 'to_numpy',
+ 'to_orc',
+ 'to_parquet',
+ 'to_period',
+ 'to_pickle',
+ 'to_records',
+ 'to_sql',
+ 'to_stata',
+ 'to_string',
+ 'to_timestamp',
+ 'to_xarray',
+ 'to_xml',
+ 'transform',
+ 'transpose',
+ 'truediv',
+ 'truncate',
+ 'tz_convert',
+ 'tz_localize',
+ 'unstack',
+ 'update',
+ 'uv',
+ 'value_counts',
+ 'values',
+ 'var',
+ 'where',
+ 'ws',
+ 'xs']</code></pre>
 </div>
 </div>
-</div>
-<div id="e3fd9cf1-8a28-41b2-b268-15f494a359f2" class="cell" data-execution_count="17">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>deltaTo_diaria <span class="op">=</span> (</span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>    esolmet.To.resample(<span class="st">"D"</span>).<span class="bu">max</span>() <span class="op">-</span> </span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>    esolmet.To.resample(<span class="st">"D"</span>).<span class="bu">min</span>()</span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>).resample(<span class="st">"ME"</span>,closed<span class="op">=</span><span class="st">"right"</span>).mean() </span>
-<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">12</span>,<span class="dv">4</span>))</span>
-<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>ax.plot(esolmet.To,<span class="st">"r-"</span>,alpha<span class="op">=</span><span class="fl">0.3</span>)</span>
-<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>ax.fill_between(esolmet.index, </span>
-<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a>                esolmet.Tpromedio <span class="op">+</span> esolmet.amplitud<span class="op">/</span><span class="dv">2</span>,</span>
-<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>                esolmet.Tpromedio <span class="op">-</span>esolmet.amplitud<span class="op">/</span><span class="dv">2</span>,</span>
-<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a>               )</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="030_amplitud_promedio_files/figure-html/cell-19-output-1.png" class="img-fluid figure-img"></p>
-</figure>
+<div id="3f61d547-2533-49c7-b990-e08c86e2f4d9" class="cell" data-execution_count="51">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>wswd.lat</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="51">
+<pre><code>18.9</code></pre>
 </div>
 </div>
+<div id="0b3b9562-3b13-4e46-8e20-f1884cc81638" class="cell" data-execution_count="44">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="bu">dir</span>(temix)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="44">
+<pre><code>['__class__',
+ '__delattr__',
+ '__dict__',
+ '__dir__',
+ '__doc__',
+ '__eq__',
+ '__format__',
+ '__ge__',
+ '__getattribute__',
+ '__getstate__',
+ '__gt__',
+ '__hash__',
+ '__init__',
+ '__init_subclass__',
+ '__le__',
+ '__lt__',
+ '__module__',
+ '__ne__',
+ '__new__',
+ '__reduce__',
+ '__reduce_ex__',
+ '__repr__',
+ '__setattr__',
+ '__sizeof__',
+ '__str__',
+ '__subclasshook__',
+ '__weakref__',
+ '_limpia_csv',
+ 'data',
+ 'grafica_columna',
+ 'lat',
+ 'lon',
+ 'promedios_mensuales']</code></pre>
 </div>
-<div id="c7ecba7a-2c46-4a55-a6eb-e658eb8c871d" class="cell" data-execution_count="18">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>esolmet.To.hist(bins<span class="op">=</span><span class="dv">50</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="030_amplitud_promedio_files/figure-html/cell-20-output-1.png" class="img-fluid figure-img"></p>
-</figure>
 </div>
+<div id="79acc708-45b9-4dce-b291-baeb00af6740" class="cell" data-execution_count="40">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>promed_tmx <span class="op">=</span> temix.promedios_mensuales()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-</div>
-<div id="672741ff-67e0-4d91-8a9f-2faa3a739e1e" class="cell" data-execution_count="19">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>deltaTo_diaria</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="19">
+<div id="4e96d56b-77a5-49a7-9f4e-975df10c1746" class="cell" data-execution_count="41">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>promed_tmx</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="41">
 <pre><code>Fecha
-2018-01-31    15.112258
-2018-02-28    15.353929
-2018-03-31    15.435806
-2018-04-30    14.948667
-2018-05-31    12.143333
-2018-06-30    11.999667
-2018-07-31    14.802258
-2018-08-31    11.357097
-2018-09-30    11.137667
-2018-10-31    11.472581
-2018-11-30    12.017333
-2018-12-31    13.576452
+2018-01-31    20.019848
+2018-02-28    23.522289
+2018-03-31    25.841069
+2018-04-30    26.052600
+2018-05-31    25.793943
+2018-06-30    23.487846
+2018-07-31    20.822079
+2018-08-31    22.601895
+2018-09-30    22.765825
+2018-10-31    22.670980
+2018-11-30    21.068598
+2018-12-31    20.362943
 Freq: ME, Name: To, dtype: float64</code></pre>
 </div>
 </div>
+<div id="f84fd4c1-a85b-494a-b7de-e0c6f7a75e2b" class="cell" data-execution_count="35">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> temix.grafica_columna(<span class="st">"ws"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="034_Clases_metodos_files/figure-html/cell-12-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<div id="ec994f4f-7024-4e96-aaa2-ab0356108bcb" class="cell" data-execution_count="37">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>ax.plot(<span class="st">"To"</span>)</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="4c42837a-69f3-421c-b8e5-3f7280dbdf7b" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># </span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -2305,14 +1742,11 @@ Freq: ME, Name: To, dtype: float64</code></pre>
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../clases/029_EDA.html" class="pagination-link" aria-label="Cosas a calcular">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">Cosas a calcular</span></span>
+      <a href="../clases/033_modificar_dataframe.html" class="pagination-link" aria-label="033_modificar_dataframe.html">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">033_modificar_dataframe.html</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../clases/031_importa_exceles.html" class="pagination-link" aria-label="Une dos archivos en un dataframe, esolmet y ruoa">
-        <span class="nav-page-text"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">Une dos archivos en un dataframe, esolmet y ruoa</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
