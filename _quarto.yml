@@ -68,6 +68,9 @@ book:
     - clases/032b_dia_promedio.ipynb
     - clases/033_modificar_dataframe.ipynb
     - clases/034_Clases_metodos.ipynb
+    - clases/034_dia_promedio_dias.ipynb
+    - clases/035_numpy.ipynb
+    - clases/036_promedio_magnitud.ipynb
 
 format:
   html: 
